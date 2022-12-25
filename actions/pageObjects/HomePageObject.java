@@ -5,7 +5,6 @@ import org.testng.Assert;
 
 import commons.BasePage;
 import pageUIs.HomePageUI;
-
 public class HomePageObject extends BasePage{
 	private WebDriver driver;
 	

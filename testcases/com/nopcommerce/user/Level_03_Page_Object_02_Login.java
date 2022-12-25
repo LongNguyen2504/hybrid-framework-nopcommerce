@@ -18,7 +18,6 @@ import pageObjects.RegisterPageObject;
 //Apply POM cho test case
 
 public class Level_03_Page_Object_02_Login{
-	//extends class BasePage để có thể dùng tất cả các method có modifier là protected của BasePage và giúp che giấu việc khởi tạo new BasePage,khai báo
 	private WebDriver driver;
 	private String existingEmail,notFoundEmail,invalidEmail,firstName,lastName,password,confirmPassword,incorrectPassword;
 	private HomePageObject homePage;
@@ -65,7 +64,9 @@ public class Level_03_Page_Object_02_Login{
 
 		System.out.println("Pre-condition - Step 05 : Click to continue button");
 		registerPage.clickToContinueButton();
-		homePage = new HomePageObject(driver); // nguyên tắc cứ chuyển page là phải tạo instance
+		homePage = new HomePageObject(driver); 
+		// nguyên tắc cứ chuyển page là phải tạo instance
+		//dù refresh tại trang đang đứng thì sau khi refresh cũng phải tạo lại instance vì nếu không sẽ k tìm dc element trong page đang đứng
 		
 		
 
@@ -93,10 +94,6 @@ public class Level_03_Page_Object_02_Login{
 		loginPage.clickToLoginButton();
 		Assert.assertEquals(loginPage.getErrorMessageAtEmailTxtBox(), "Wrong email");
 
-		
-		
-
-
 	}
 
 	@Test
@@ -107,7 +104,6 @@ public class Level_03_Page_Object_02_Login{
 		loginPage.inputToEmailTxtBox(notFoundEmail);
 		loginPage.clickToLoginButton();
 		Assert.assertEquals(loginPage.getUnsuccessErrorMessageAtEmailTxtBox(), "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found");
-
 
 	}
 
@@ -134,8 +130,6 @@ public class Level_03_Page_Object_02_Login{
 		loginPage.inputToPasswordTxtBox(incorrectPassword);
 		loginPage.clickToLoginButton();
 		Assert.assertEquals(loginPage.getUnsuccessErrorMessageAtEmailTxtBox(), "Login was unsuccessful. Please correct the errors and try again.\nThe credentials provided are incorrect");
-
-
 
 	}
 

@@ -5,32 +5,48 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.opera.OperaDriver;
 import org.testng.Assert;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import pageObjects.HomePageObject;
 import pageObjects.RegisterPageObject;
 
 public class BaseTest {
 	private WebDriver driverBaseTest;
-	private String projectPath = System.getProperty("user.dir");
+//	private String projectPath = System.getProperty("user.dir");
 
 	public WebDriver getBrowserDriver(String browserName) {
 		System.out.println("Run on "+ browserName);
 		
 		if(browserName.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDriver\\geckodriver.exe");
+//			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDriver\\geckodriver.exe");
+			WebDriverManager.firefoxdriver().setup(); // tự tải driver tương ứng và thay thế step setProperty
 			driverBaseTest = new FirefoxDriver();
-			System.out.println(driverBaseTest.toString());
-		}else if (browserName.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", projectPath + "\\browserDriver\\chromedriver.exe");
+		}
+		else if (browserName.equalsIgnoreCase("chrome")) {
+			WebDriverManager.chromedriver().setup();
 			driverBaseTest = new ChromeDriver();
-			System.out.println(driverBaseTest.toString());
 		}else if (browserName.equalsIgnoreCase("edge")) {
-			System.setProperty("webdriver.edge.driver", projectPath + "\\browserDriver\\msedgedriver.exe");
+			WebDriverManager.edgedriver().setup();
 			driverBaseTest = new EdgeDriver();
-			System.out.println(driverBaseTest.toString());
+		}else if (browserName.equalsIgnoreCase("opera")) {
+			//Selenium 4 không hỗ trợ opera và phantomJS chỉ có selenium 3.x
+			WebDriverManager.operadriver().setup();
+			driverBaseTest = new OperaDriver();
+		}else if (browserName.equalsIgnoreCase("ie")) {
+			WebDriverManager.iedriver().arch32().setup();
+			driverBaseTest = new InternetExplorerDriver();
+		}else if (browserName.equalsIgnoreCase("CocCoc")) {
+			WebDriverManager.chromedriver().driverVersion("x").setup(); // x = version chrome driver trước 6 ver của CocCoc browser
+			ChromeOptions opt = new ChromeOptions();
+			opt.setBinary("C:\\Program Files\\CocCoc\\Browser\\Application\\browser.exe");
+			driverBaseTest = new ChromeDriver(opt);
 		}else {
 			throw new RuntimeException("Browser name invalid");
 		}

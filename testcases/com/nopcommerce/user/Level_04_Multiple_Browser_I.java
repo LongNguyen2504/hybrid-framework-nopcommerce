@@ -20,7 +20,6 @@ import pageObjects.RegisterPageObject;
 //Apply POM cho test case
 
 public class Level_04_Multiple_Browser_I{
-	//extends class BasePage để có thể dùng tất cả các method có modifier là protected của BasePage và giúp che giấu việc khởi tạo new BasePage,khai báo
 	private WebDriver driver;
 	private String emailAddress,firstName,lastName,password,confirmPassword;
 	private HomePageObject homePage;
