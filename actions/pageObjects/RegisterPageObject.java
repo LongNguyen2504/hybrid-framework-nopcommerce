@@ -108,6 +108,14 @@ public class RegisterPageObject extends BasePage{
 	}
 
 
+	public void clickToContinueButton() {
+		// TODO Auto-generated method stub
+		waitForElementClickable(driver, RegisterPageUI.CONTINUE_BUTTON);
+		clickToElement(driver, RegisterPageUI.CONTINUE_BUTTON);
+		
+	}
+
+
 
 
 }

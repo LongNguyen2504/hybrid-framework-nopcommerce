@@ -16,7 +16,7 @@ import pageObjects.RegisterPageObject;
 
 //Apply POM cho test case
 
-public class Level_03_Page_Object{
+public class Level_03_Page_Object_01_Register{
 	//extends class BasePage để có thể dùng tất cả các method có modifier là protected của BasePage và giúp che giấu việc khởi tạo new BasePage,khai báo
 	private WebDriver driver;
 	private String emailAddress,firstName,lastName,password,confirmPassword;
@@ -30,12 +30,33 @@ public class Level_03_Page_Object{
 		driver = new FirefoxDriver();
 		driver.get("https://demo.nopcommerce.com/");
 		homePage = new HomePageObject(driver);
-		registerPage = new RegisterPageObject(driver);
+		
 		firstName = "Automation";
 		lastName = "FC" ;
 		password = "123456" ;
 		confirmPassword = "123456" ;
 		emailAddress = "afc" + randNumber() + "@mail.vn";
+		
+		System.out.println("Register_03 - Step 01 : Click to register link");
+		homePage.clickToRegisterLink();
+
+		System.out.println("Register_03 - Step 02 : Input to required fields");
+		registerPage = new RegisterPageObject(driver);
+		registerPage.inputToFirstnameTxtBox(firstName);
+		registerPage.inputToLastnameTxtBox(lastName);
+		registerPage.inputToEmailTxtBox(emailAddress);
+		registerPage.inputToPasswordTxtBox(password);
+		registerPage.inputToConfirmPasswordTxtBox(confirmPassword);
+
+		System.out.println("Register_03 - Step 03 : Click to register button");
+		registerPage.clickToRegisterButton();
+
+		
+		System.out.println("Register_03 - Step 04 : Verify success message displayed");
+		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
+		
+		System.out.println("Register_03 - Step 05 : Click to continue button");
+		registerPage.clickToContinueButton();
 		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
@@ -48,6 +69,8 @@ public class Level_03_Page_Object{
 //		clickToElement(driver, "//a[@class='ico-register']");
 		System.out.println("Register_01 - Step 01 : Click to register link");
 		homePage.clickToRegisterLink();
+		
+		registerPage = new RegisterPageObject(driver);
 		
 //		waitForElementClickable(driver, "//button[@id='register-button']");
 //		clickToElement(driver, "//button[@id='register-button']");
@@ -69,6 +92,7 @@ public class Level_03_Page_Object{
 		Assert.assertEquals(getElementText(driver, "span[@id='ConfirmPassword-error']"), "Password is required.");
 */
 
+
 	}
 
 	@Test
@@ -78,6 +102,7 @@ public class Level_03_Page_Object{
 		System.out.println("Register_02 - Step 01 : Click to register link");
 		homePage.clickToRegisterLink();
 		
+		registerPage = new RegisterPageObject(driver);
 		
 //		sendkeyToElement(driver, "//input[@id='FirstName']", "Automation");
 //		sendkeyToElement(driver, "//input[@id='LastName']", "FC");
@@ -109,6 +134,8 @@ public class Level_03_Page_Object{
 	public void Register_03_Success() {
 		System.out.println("Register_03 - Step 01 : Click to register link");
 		homePage.clickToRegisterLink();
+		
+		registerPage = new RegisterPageObject(driver);
 
 		System.out.println("Register_03 - Step 02 : Input to required fields");
 		registerPage.inputToFirstnameTxtBox(firstName);
@@ -131,6 +158,8 @@ public class Level_03_Page_Object{
 	public void Register_04_Existing_Email() {
 		System.out.println("Register_04 -Step 01 : Click to register link");
 		homePage.clickToRegisterLink();
+		
+		registerPage = new RegisterPageObject(driver);
 
 		System.out.println("Register_04 - Step 02 : Input to required fields");
 		registerPage.inputToFirstnameTxtBox(firstName);
@@ -152,6 +181,8 @@ public class Level_03_Page_Object{
 	public void Register_05_Pwd_Less_Than_6_Chars() {
 		System.out.println("Register_05 - Step 01 : Click to register link");
 		homePage.clickToRegisterLink();
+		
+		registerPage = new RegisterPageObject(driver);
 
 		System.out.println("Register_05 - Step 02 : Input to required fields");
 		registerPage.inputToFirstnameTxtBox(firstName);
@@ -172,6 +203,8 @@ public class Level_03_Page_Object{
 	public void Register_06_Invalid_Confirm_Pwd() {
 		System.out.println("Register_06 - Step 01 : Click to register link");
 		homePage.clickToRegisterLink();
+		
+		registerPage = new RegisterPageObject(driver);
 
 		System.out.println("Register_06 - Step 02 : Input to required fields");
 		registerPage.inputToFirstnameTxtBox(firstName);
