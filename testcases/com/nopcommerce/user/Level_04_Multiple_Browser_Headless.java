@@ -15,8 +15,8 @@ import org.testng.annotations.Test;
 
 import commons.BaseTest;
 import commons.BaseTestHeadless;
-import pageObjects.HomePageObject;
-import pageObjects.RegisterPageObject;
+import pageObjects.nopcommerce.HomePageObject;
+import pageObjects.nopcommerce.RegisterPageObject;
 
 //Setting headless trong basetest
 

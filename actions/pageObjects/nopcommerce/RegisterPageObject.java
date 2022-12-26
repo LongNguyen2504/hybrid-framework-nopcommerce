@@ -1,10 +1,10 @@
-package pageObjects;
+package pageObjects.nopcommerce;
 
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageUIs.HomePageUI;
-import pageUIs.RegisterPageUI;
+import pageUIs.nopcommerce.HomePageUI;
+import pageUIs.nopcommerce.RegisterPageUI;
 // Ở các page object class này chỉ nên viết những hàm nào thật sự cần cho testcase,không nên viết dư thừa các hàm chưa sử dụng tới
 public class RegisterPageObject extends BasePage{
 	private WebDriver driver;
@@ -108,11 +108,12 @@ public class RegisterPageObject extends BasePage{
 	}
 
 
-	public void clickToContinueButton() {
+	public HomePageObject clickToContinueButton() {
 		// TODO Auto-generated method stub
 		waitForElementClickable(driver, RegisterPageUI.CONTINUE_BUTTON);
 		clickToElement(driver, RegisterPageUI.CONTINUE_BUTTON);
-		
+		//return new HomePageObject(driver); cách 2 page generator
+		return PageGeneratorManager.getHomePageObject(driver); //Cách 3 : thông qua hàm của PageGeneratorManager
 	}
 
 

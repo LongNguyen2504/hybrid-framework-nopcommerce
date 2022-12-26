@@ -1,4 +1,4 @@
-package pageFactory;
+package pageFactory.nopcommerce;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import commons.BasePageFactory;
-import pageUIs.RegisterPageUI;
+import pageUIs.nopcommerce.RegisterPageUI;
 
 public class RegisterPageObject extends BasePageFactory{
 	private WebDriver driver;
@@ -164,6 +164,7 @@ public class RegisterPageObject extends BasePageFactory{
 		// TODO Auto-generated method stub
 		waitForElementClickable(driver, continueButton);
 		clickToElement(driver, continueButton);
+		
 		
 	}
 

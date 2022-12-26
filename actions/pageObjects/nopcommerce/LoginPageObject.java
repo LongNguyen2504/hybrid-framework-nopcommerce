@@ -1,9 +1,9 @@
-package pageObjects;
+package pageObjects.nopcommerce;
 
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageUIs.LoginPageUI;
+import pageUIs.nopcommerce.LoginPageUI;
 
 public class LoginPageObject extends BasePage{
 	WebDriver driver;
@@ -12,11 +12,12 @@ public class LoginPageObject extends BasePage{
 		this.driver = driver;
 	}
 
-	public void clickToLoginButton() {
+	public HomePageObject clickToLoginButton() {
 		// TODO Auto-generated method stub
 		waitForElementClickable(driver, LoginPageUI.LOGIN_BUTTON);
 		clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
-		
+		//return new HomePageObject(driver); // cách 2 page generator manager
+		return PageGeneratorManager.getHomePageObject(driver); //Cách 3 : thông qua hàm của PageGeneratorManager
 		
 		
 	}

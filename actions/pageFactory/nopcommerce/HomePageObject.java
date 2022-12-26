@@ -1,4 +1,4 @@
-package pageFactory;
+package pageFactory.nopcommerce;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,7 +7,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import commons.BasePageFactory;
-import pageUIs.HomePageUI;
+import pageUIs.nopcommerce.HomePageUI;
 //HomePageObject Factory
 public class HomePageObject extends BasePageFactory{
 	private WebDriver driver;
@@ -38,12 +38,15 @@ public class HomePageObject extends BasePageFactory{
 
 	public void clickToRegisterLink() {
 		waitForElementClickable(driver, registerLink); // gọi lên line 29 để tìm element registerLink  lần thứ 1
+	
 		clickToElement(driver, registerLink); // gọi lên line 29 để tìm element registerLink lần thứ 2 => pageFactory ko hiệu quả bằng POM thuần
+		
 	}
 	
 	public void clickToLoginLink() {
 		waitForElementClickable(driver, loginLink);
 		clickToElement(driver, loginLink);
+		
 	}
 	
 	public void clickMyAccountLink() {

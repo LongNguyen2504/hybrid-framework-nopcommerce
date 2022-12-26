@@ -15,6 +15,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageObjects.nopcommerce.AddressPageObject;
+import pageObjects.nopcommerce.CustomerInfoPageObject;
+import pageObjects.nopcommerce.RewardPointPageObject;
+import pageUIs.nopcommerce.BasePageUI;
+import pageUIs.nopcommerce.CustomerInfoPageUI;
+
 //Chứa các hàm dùng chung cho các class ở tầng page objects(gọi là các page của webapp) với dạng automation testing theo mô hình modular
 //Class basepage có thể dùng cho các dự án web tương tự hoặc import sang một thư viện để tái sử dụng,update,..
 
@@ -26,11 +32,9 @@ public class BasePage {
 	private long longTimeout = 30;
 //	private long shortTimeout = 5;
 	
-	
 	public static BasePage getBasePageObject() {
 		return new BasePage();
 	}
-	
 	
 	//Open Url
 	protected void openPageUrl(WebDriver driver,String pageURL) {
@@ -356,5 +360,27 @@ public class BasePage {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(xpathLocator)));
 	}
+
+
+	//----Các hàm switch page này cần để modifier public để testcase có thể truy cập qua instance của pageObject(đã extends basepage này)-----------------
+	public AddressPageObject openAddressPage(WebDriver driver) {
+		waitForElementVisible(driver, BasePageUI.ADDRESS_LINK);
+		clickToElement(driver, BasePageUI.ADDRESS_LINK);
+		// TODO Auto-generated method stub
+		return new AddressPageObject(driver);
+	}
+	public RewardPointPageObject openRewardPointPage(WebDriver driver) {
+		waitForElementVisible(driver, BasePageUI.REWARD_POINT_LINK);
+		clickToElement(driver, BasePageUI.REWARD_POINT_LINK);
+		// TODO Auto-generated method stub
+		return new RewardPointPageObject(driver);
+	}
+	public CustomerInfoPageObject openCustomerInfoPage(WebDriver driver) {
+		waitForElementVisible(driver, BasePageUI.CUSTOMER_INFO_LINK);
+		clickToElement(driver, BasePageUI.CUSTOMER_INFO_LINK);
+		// TODO Auto-generated method stub
+		return new CustomerInfoPageObject(driver);
+	}
+	//--------------------------------------------------------------------------------------------------------------
 
 }

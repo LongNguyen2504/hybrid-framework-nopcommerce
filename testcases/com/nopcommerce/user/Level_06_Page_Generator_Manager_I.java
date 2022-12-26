@@ -8,29 +8,30 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import pageObjects.nopcommerce.HomePageObject;
-import pageObjects.nopcommerce.LoginPageObject;
-import pageObjects.nopcommerce.RegisterPageObject;
+import commons.BaseTest;
+import pageFactory.nopcommerce.HomePageObject;
+import pageFactory.nopcommerce.LoginPageObject;
+import pageFactory.nopcommerce.RegisterPageObject;
 
 
 //Apply POM cho test case
 
-public class Level_03_Page_Object_02_Login{
+public class Level_06_Page_Generator_Manager_I extends BaseTest{
 	private WebDriver driver;
 	private String existingEmail,notFoundEmail,invalidEmail,firstName,lastName,password,confirmPassword,incorrectPassword;
 	private HomePageObject homePage;
 	private RegisterPageObject registerPage;
 	private LoginPageObject loginPage;
-	private String projectPath = System.getProperty("user.dir");
 
+	//Cách 1 : Khởi tạo trực tiếp instance pageObject trong testcase(vd homePage = new HomePageObject(driver);registerPage = new RegisterPageObject(driver);) 
+	//-> vi phạm encapsulation,dry,khó quản lý do lặp lại nhiều
+	@Parameters("browser")
 	@BeforeClass
-	public void beforeClass() {
-		System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDriver\\geckodriver.exe");
-		driver = new FirefoxDriver();
-		driver.get("https://demo.nopcommerce.com/");
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	public void beforeClass(String browserName) {
+		driver = getBrowserDriver(browserName);
 		homePage = new HomePageObject(driver);
 		
 		firstName = "Automation";
@@ -64,9 +65,7 @@ public class Level_03_Page_Object_02_Login{
 
 		System.out.println("Pre-condition - Step 05 : Click to continue button");
 		registerPage.clickToContinueButton();
-		homePage = new HomePageObject(driver); 
-		// nguyên tắc cứ chuyển page là phải tạo instance
-		//dù refresh tại trang đang đứng thì sau khi refresh cũng phải tạo lại instance vì nếu không sẽ k tìm dc element trong page đang đứng
+		homePage = new HomePageObject(driver); // nguyên tắc cứ chuyển page là phải tạo instance
 		
 		
 
@@ -77,7 +76,6 @@ public class Level_03_Page_Object_02_Login{
 		
 		homePage.clickToLoginLink();
 		
-		//home page - login link - login page
 		loginPage = new LoginPageObject(driver);
 		loginPage.clickToLoginButton();
 		
@@ -88,22 +86,25 @@ public class Level_03_Page_Object_02_Login{
 	@Test
 	public void Login_02_Invalid_Email() {
 		homePage.clickToLoginLink();
-		//home page - login link - login page
 		loginPage = new LoginPageObject(driver);
 		loginPage.inputToEmailTxtBox(invalidEmail);
 		loginPage.clickToLoginButton();
 		Assert.assertEquals(loginPage.getErrorMessageAtEmailTxtBox(), "Wrong email");
+
+		
+		
+
 
 	}
 
 	@Test
 	public void Login_03_Email_Not_Found() {
 		homePage.clickToLoginLink();
-		//home page - login link - login page
 		loginPage = new LoginPageObject(driver);
 		loginPage.inputToEmailTxtBox(notFoundEmail);
 		loginPage.clickToLoginButton();
 		Assert.assertEquals(loginPage.getUnsuccessErrorMessageAtEmailTxtBox(), "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found");
+
 
 	}
 
@@ -111,7 +112,6 @@ public class Level_03_Page_Object_02_Login{
 	public void Login_04_Existing_Email_Empty_Password() {
 		System.out.println("Register_04 -Step 01 : Click to register link");
 		homePage.clickToLoginLink();
-		//home page - login link - login page
 		loginPage = new LoginPageObject(driver);
 		loginPage.inputToEmailTxtBox(existingEmail);
 		loginPage.inputToPasswordTxtBox("");
@@ -124,12 +124,13 @@ public class Level_03_Page_Object_02_Login{
 	public void Login_05_Existing_Email_Incorrect_Password() {
 		System.out.println("Register_05 - Step 01 : Click to register link");
 		homePage.clickToLoginLink();
-		//home page - login link - login page
 		loginPage = new LoginPageObject(driver);
 		loginPage.inputToEmailTxtBox(existingEmail);
 		loginPage.inputToPasswordTxtBox(incorrectPassword);
 		loginPage.clickToLoginButton();
 		Assert.assertEquals(loginPage.getUnsuccessErrorMessageAtEmailTxtBox(), "Login was unsuccessful. Please correct the errors and try again.\nThe credentials provided are incorrect");
+
+
 
 	}
 
@@ -137,27 +138,18 @@ public class Level_03_Page_Object_02_Login{
 	public void Login_06_Valid_Email_password() {
 		System.out.println("Register_06 - Step 01 : Click to register link");
 		homePage.clickToLoginLink();
-		//home page - login link - login page
 		loginPage = new LoginPageObject(driver);
 		loginPage.inputToEmailTxtBox(existingEmail);
 		loginPage.inputToPasswordTxtBox(password);
 		loginPage.clickToLoginButton();
 
-		//Login thành công -> homepage
 
 		HomePageObject homePage = new HomePageObject(driver);
 		
 		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
-
-
-		
 	}
 
-	int randNumber() {
-		Random rand = new Random();
-		return rand.nextInt(99999);
-	}
-
+	
 	@AfterClass
 	public void afterClass() {
 		driver.quit();

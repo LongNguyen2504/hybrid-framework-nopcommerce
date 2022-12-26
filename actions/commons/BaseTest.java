@@ -1,6 +1,7 @@
 package commons;
 //Chứa các hàm dùng chung cho cả tầng testcases
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -14,8 +15,8 @@ import org.openqa.selenium.opera.OperaDriver;
 import org.testng.Assert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import pageObjects.HomePageObject;
-import pageObjects.RegisterPageObject;
+import pageObjects.nopcommerce.HomePageObject;
+import pageObjects.nopcommerce.RegisterPageObject;
 
 public class BaseTest {
 	private WebDriver driverBaseTest;
@@ -54,14 +55,11 @@ public class BaseTest {
 		driverBaseTest.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driverBaseTest.get("https://demo.nopcommerce.com/");
 		return driverBaseTest;
-	
-		
-		
-		
-		
-		
-
 	}
 	
 
+	protected int randNumber() {
+		Random rand = new Random();
+		return rand.nextInt(99999);
+	}
 }

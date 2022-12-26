@@ -14,8 +14,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObjects.HomePageObject;
-import pageObjects.RegisterPageObject;
+import pageObjects.nopcommerce.HomePageObject;
+import pageObjects.nopcommerce.RegisterPageObject;
 
 
 //Apply POM cho test case
@@ -87,10 +87,6 @@ public class Level_04_Multiple_Browser_II extends BaseTest{
 	}
 
 
-	int randNumber() {
-		Random rand = new Random();
-		return rand.nextInt(99999);
-	}
 
 	@AfterClass
 	public void afterClass() {

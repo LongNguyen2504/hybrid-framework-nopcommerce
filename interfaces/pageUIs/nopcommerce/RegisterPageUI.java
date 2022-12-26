@@ -1,4 +1,4 @@
-package pageUIs;
+package pageUIs.nopcommerce;
 
 public class RegisterPageUI {
 	//Cách đặt tên : tên field_loại filed

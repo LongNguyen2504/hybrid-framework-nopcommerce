@@ -12,9 +12,9 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageFactory.HomePageObject;
-import pageFactory.LoginPageObject;
-import pageFactory.RegisterPageObject;
+import pageFactory.nopcommerce.HomePageObject;
+import pageFactory.nopcommerce.LoginPageObject;
+import pageFactory.nopcommerce.RegisterPageObject;
 
 
 //Apply POM cho test case
@@ -150,10 +150,6 @@ public class Level_05_Page_Factory extends BaseTest{
 		
 	}
 
-	int randNumber() {
-		Random rand = new Random();
-		return rand.nextInt(99999);
-	}
 
 	@AfterClass
 	public void afterClass() {
