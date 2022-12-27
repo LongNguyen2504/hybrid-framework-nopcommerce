@@ -3,8 +3,8 @@ package pageObjects.liveGuru;
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageUIs.nopcommerce.HomePageUI;
-import pageUIs.nopcommerce.RegisterPageUI;
+import pageUIs.user.nopcommerce.HomePageUI;
+import pageUIs.user.nopcommerce.RegisterPageUI;
 // Ở các page object class này chỉ nên viết những hàm nào thật sự cần cho testcase,không nên viết dư thừa các hàm chưa sử dụng tới
 public class RegisterPageObject extends BasePage{
 	private WebDriver driver;

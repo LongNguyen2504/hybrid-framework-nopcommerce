@@ -15,8 +15,8 @@ import org.testng.annotations.Test;
 
 import commons.BaseTest;
 import commons.BaseTestHeadless;
-import pageObjects.nopcommerce.HomePageObject;
-import pageObjects.nopcommerce.RegisterPageObject;
+import pageObjects.user.nopCommerce.UserHomePageObject;
+import pageObjects.user.nopCommerce.UserRegisterPageObject;
 
 //Setting headless trong basetest
 
@@ -24,8 +24,8 @@ public class Level_04_Multiple_Browser_Headless extends BaseTestHeadless{
 	//extends class BaseTest để xử lý và gán lại driver đã dc khởi tạo bên trong BaseTest -> làm gọn @BeforeClass và dễ bảo trì
 	private WebDriver driver;
 	private String emailAddress,firstName,lastName,password,confirmPassword;
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
+	private UserHomePageObject homePage;
+	private UserRegisterPageObject registerPage;
 	
 	@Parameters("browser")
 	@BeforeClass
@@ -42,10 +42,10 @@ public class Level_04_Multiple_Browser_Headless extends BaseTestHeadless{
 	@Test
 	public void Register_01_Empty_Data() {
 		System.out.println("Register_01 - Step 01 : Click to register link");
-		homePage = new HomePageObject(driver);
+		homePage = new UserHomePageObject(driver);
 		homePage.clickToRegisterLink();
 		
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new UserRegisterPageObject(driver);
 		
 		System.out.println("Register_01 - Step 02 : Click to register button");
 		registerPage.clickToRegisterButton();
@@ -67,7 +67,7 @@ public class Level_04_Multiple_Browser_Headless extends BaseTestHeadless{
 		System.out.println("Register_02 - Step 01 : Click to register link");
 		homePage.clickToRegisterLink();
 		
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new UserRegisterPageObject(driver);
 		System.out.println("Register_02 - Step 02 : Input to required fields");
 		registerPage.inputToFirstnameTxtBox(firstName);
 		registerPage.inputToLastnameTxtBox(lastName);

@@ -12,9 +12,9 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageFactory.nopcommerce.HomePageObject;
-import pageFactory.nopcommerce.LoginPageObject;
-import pageFactory.nopcommerce.RegisterPageObject;
+import pageObjects.user.nopCommerce.UserHomePageObject;
+import pageObjects.user.nopCommerce.UserLoginPageObject;
+import pageObjects.user.nopCommerce.UserRegisterPageObject;
 
 
 //Apply POM cho test case
@@ -22,16 +22,16 @@ import pageFactory.nopcommerce.RegisterPageObject;
 public class Level_06_Page_Generator_Manager_II extends BaseTest{
 	private WebDriver driver;
 	private String existingEmail,notFoundEmail,invalidEmail,firstName,lastName,password,confirmPassword,incorrectPassword;
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
-	private LoginPageObject loginPage;
+	private UserHomePageObject homePage;
+	private UserRegisterPageObject registerPage;
+	private UserLoginPageObject loginPage;
 
 	//Cách 2 : Ko tạo instance trực tiếp trong testcase nữa
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
-		homePage = new HomePageObject(driver); //Cách 2 page manager vẫn phải để nguyên line này -> vẫn bị lặp lại -> dùng cách 3 
+		homePage = new UserHomePageObject(driver); //Cách 2 page manager vẫn phải để nguyên line này -> vẫn bị lặp lại -> dùng cách 3 
 		
 		firstName = "Automation";
 		lastName = "FC" ;
@@ -47,7 +47,7 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest{
 		homePage.clickToRegisterLink(); 
 		
 		
-		registerPage = new RegisterPageObject(driver);// Cách 2 : page manager : registerPage = homePage.clickToRegisterLink(); // method clickToRegisterLink return new RegisterPageObject()
+		registerPage = new UserRegisterPageObject(driver);// Cách 2 : page manager : registerPage = homePage.clickToRegisterLink(); // method clickToRegisterLink return new RegisterPageObject()
 
 
 		System.out.println("Pre-condition - Step 02 : Input to required fields");
@@ -66,7 +66,7 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest{
 
 		System.out.println("Pre-condition - Step 05 : Click to continue button");
 		registerPage.clickToContinueButton();
-		homePage = new HomePageObject(driver); // nguyên tắc cứ chuyển page là phải tạo instance
+		homePage = new UserHomePageObject(driver); // nguyên tắc cứ chuyển page là phải tạo instance
 		//homePage = registerPage.clickToContinueButton(); // Cách 2 : page manager,line này thay thế 2 line trên
 		
 
@@ -76,7 +76,7 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest{
 	public void Login_01_Empty_Data() {
 		
 		homePage.clickToLoginLink();
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 		//loginPage = homePage.clickToLoginLink();// Cách 2 : page manager,line này thay thế 2 line trên
 		loginPage.clickToLoginButton();
 		
@@ -87,7 +87,7 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest{
 	@Test
 	public void Login_02_Invalid_Email() {
 		homePage.clickToLoginLink();
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 		//loginPage = homePage.clickToLoginLink();// Cách 2 : page manager,line này thay thế 2 line trên
 		loginPage.inputToEmailTxtBox(invalidEmail);
 		loginPage.clickToLoginButton();
@@ -102,7 +102,7 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest{
 	@Test
 	public void Login_03_Email_Not_Found() {
 		homePage.clickToLoginLink();
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 		//loginPage = homePage.clickToLoginLink();// Cách 2 : page manager,line này thay thế 2 line trên
 		loginPage.inputToEmailTxtBox(notFoundEmail);
 		loginPage.clickToLoginButton();
@@ -115,7 +115,7 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest{
 	public void Login_04_Existing_Email_Empty_Password() {
 		System.out.println("Register_04 -Step 01 : Click to register link");
 		homePage.clickToLoginLink();
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 		//loginPage = homePage.clickToLoginLink();// Cách 2 : page manager,line này thay thế 2 line trên
 		loginPage.inputToEmailTxtBox(existingEmail);
 		loginPage.inputToPasswordTxtBox("");
@@ -128,7 +128,7 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest{
 	public void Login_05_Existing_Email_Incorrect_Password() {
 		System.out.println("Register_05 - Step 01 : Click to register link");
 		homePage.clickToLoginLink();
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 		//loginPage = homePage.clickToLoginLink();// Cách 2 : page manager,line này thay thế 2 line trên
 		loginPage.inputToEmailTxtBox(existingEmail);
 		loginPage.inputToPasswordTxtBox(incorrectPassword);
@@ -143,12 +143,12 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest{
 	public void Login_06_Valid_Email_password() {
 		System.out.println("Register_06 - Step 01 : Click to register link");
 		homePage.clickToLoginLink();
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 		//loginPage = homePage.clickToLoginLink();// Cách 2 : page manager,line này thay thế 2 line trên
 		loginPage.inputToEmailTxtBox(existingEmail);
 		loginPage.inputToPasswordTxtBox(password);
 		loginPage.clickToLoginButton();
-		HomePageObject homePage = new HomePageObject(driver);
+		UserHomePageObject homePage = new UserHomePageObject(driver);
 		//homePage = loginPage.clickToLoginButton(); // Cách 2 : page manager,line này thay thế 2 line trên
 		
 		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());

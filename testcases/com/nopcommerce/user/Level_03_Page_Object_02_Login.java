@@ -10,9 +10,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import pageObjects.nopcommerce.HomePageObject;
-import pageObjects.nopcommerce.LoginPageObject;
-import pageObjects.nopcommerce.RegisterPageObject;
+import pageObjects.user.nopCommerce.UserHomePageObject;
+import pageObjects.user.nopCommerce.UserLoginPageObject;
+import pageObjects.user.nopCommerce.UserRegisterPageObject;
 
 
 //Apply POM cho test case
@@ -20,9 +20,9 @@ import pageObjects.nopcommerce.RegisterPageObject;
 public class Level_03_Page_Object_02_Login{
 	private WebDriver driver;
 	private String existingEmail,notFoundEmail,invalidEmail,firstName,lastName,password,confirmPassword,incorrectPassword;
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
-	private LoginPageObject loginPage;
+	private UserHomePageObject homePage;
+	private UserRegisterPageObject registerPage;
+	private UserLoginPageObject loginPage;
 	private String projectPath = System.getProperty("user.dir");
 
 	@BeforeClass
@@ -31,7 +31,7 @@ public class Level_03_Page_Object_02_Login{
 		driver = new FirefoxDriver();
 		driver.get("https://demo.nopcommerce.com/");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		homePage = new HomePageObject(driver);
+		homePage = new UserHomePageObject(driver);
 		
 		firstName = "Automation";
 		lastName = "FC" ;
@@ -46,7 +46,7 @@ public class Level_03_Page_Object_02_Login{
 		System.out.println("Pre-condition - Step 01 : Click to register link");
 		homePage.clickToRegisterLink();
 		
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new UserRegisterPageObject(driver);
 
 		System.out.println("Pre-condition - Step 02 : Input to required fields");
 		registerPage.inputToFirstnameTxtBox(firstName);
@@ -64,7 +64,7 @@ public class Level_03_Page_Object_02_Login{
 
 		System.out.println("Pre-condition - Step 05 : Click to continue button");
 		registerPage.clickToContinueButton();
-		homePage = new HomePageObject(driver); 
+		homePage = new UserHomePageObject(driver); 
 		// nguyên tắc cứ chuyển page là phải tạo instance
 		//dù refresh tại trang đang đứng thì sau khi refresh cũng phải tạo lại instance vì nếu không sẽ k tìm dc element trong page đang đứng
 		
@@ -78,7 +78,7 @@ public class Level_03_Page_Object_02_Login{
 		homePage.clickToLoginLink();
 		
 		//home page - login link - login page
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 		loginPage.clickToLoginButton();
 		
 		
@@ -89,7 +89,7 @@ public class Level_03_Page_Object_02_Login{
 	public void Login_02_Invalid_Email() {
 		homePage.clickToLoginLink();
 		//home page - login link - login page
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 		loginPage.inputToEmailTxtBox(invalidEmail);
 		loginPage.clickToLoginButton();
 		Assert.assertEquals(loginPage.getErrorMessageAtEmailTxtBox(), "Wrong email");
@@ -100,7 +100,7 @@ public class Level_03_Page_Object_02_Login{
 	public void Login_03_Email_Not_Found() {
 		homePage.clickToLoginLink();
 		//home page - login link - login page
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 		loginPage.inputToEmailTxtBox(notFoundEmail);
 		loginPage.clickToLoginButton();
 		Assert.assertEquals(loginPage.getUnsuccessErrorMessageAtEmailTxtBox(), "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found");
@@ -112,7 +112,7 @@ public class Level_03_Page_Object_02_Login{
 		System.out.println("Register_04 -Step 01 : Click to register link");
 		homePage.clickToLoginLink();
 		//home page - login link - login page
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 		loginPage.inputToEmailTxtBox(existingEmail);
 		loginPage.inputToPasswordTxtBox("");
 		loginPage.clickToLoginButton();
@@ -125,7 +125,7 @@ public class Level_03_Page_Object_02_Login{
 		System.out.println("Register_05 - Step 01 : Click to register link");
 		homePage.clickToLoginLink();
 		//home page - login link - login page
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 		loginPage.inputToEmailTxtBox(existingEmail);
 		loginPage.inputToPasswordTxtBox(incorrectPassword);
 		loginPage.clickToLoginButton();
@@ -138,14 +138,14 @@ public class Level_03_Page_Object_02_Login{
 		System.out.println("Register_06 - Step 01 : Click to register link");
 		homePage.clickToLoginLink();
 		//home page - login link - login page
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 		loginPage.inputToEmailTxtBox(existingEmail);
 		loginPage.inputToPasswordTxtBox(password);
 		loginPage.clickToLoginButton();
 
 		//Login thành công -> homepage
 
-		HomePageObject homePage = new HomePageObject(driver);
+		UserHomePageObject homePage = new UserHomePageObject(driver);
 		
 		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
 

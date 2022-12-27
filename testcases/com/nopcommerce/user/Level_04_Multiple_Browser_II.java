@@ -14,8 +14,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObjects.nopcommerce.HomePageObject;
-import pageObjects.nopcommerce.RegisterPageObject;
+import pageObjects.user.nopCommerce.UserHomePageObject;
+import pageObjects.user.nopCommerce.UserRegisterPageObject;
 
 
 //Apply POM cho test case
@@ -23,8 +23,8 @@ import pageObjects.nopcommerce.RegisterPageObject;
 public class Level_04_Multiple_Browser_II extends BaseTest{
 	private WebDriver driver;
 	private String emailAddress,firstName,lastName,password,confirmPassword;
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
+	private UserHomePageObject homePage;
+	private UserRegisterPageObject registerPage;
 	
 	//Run multi browser cách 1 : dùng parameter của testNG và if else trong @Before class để control browser value từ xml gửi qua 
 	//-> làm cách này thì phải update bằng tay nếu có vài trăm class thì không khả thi -> implement base test để các test class extend và sử dụng
@@ -43,10 +43,10 @@ public class Level_04_Multiple_Browser_II extends BaseTest{
 	@Test
 	public void Register_01_Empty_Data() {
 		System.out.println("Register_01 - Step 01 : Click to register link");
-		homePage = new HomePageObject(driver);
+		homePage = new UserHomePageObject(driver);
 		homePage.clickToRegisterLink();
 		
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new UserRegisterPageObject(driver);
 		
 		System.out.println("Register_01 - Step 02 : Click to register button");
 		registerPage.clickToRegisterButton();
@@ -68,7 +68,7 @@ public class Level_04_Multiple_Browser_II extends BaseTest{
 		System.out.println("Register_02 - Step 01 : Click to register link");
 		homePage.clickToRegisterLink();
 		
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new UserRegisterPageObject(driver);
 		System.out.println("Register_02 - Step 02 : Input to required fields");
 		registerPage.inputToFirstnameTxtBox(firstName);
 		registerPage.inputToLastnameTxtBox(lastName);

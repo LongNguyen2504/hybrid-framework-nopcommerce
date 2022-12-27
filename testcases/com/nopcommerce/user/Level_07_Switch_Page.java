@@ -12,13 +12,13 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObjects.nopcommerce.HomePageObject;
-import pageObjects.nopcommerce.LoginPageObject;
-import pageObjects.nopcommerce.AddressPageObject;
-import pageObjects.nopcommerce.CustomerInfoPageObject;
-import pageObjects.nopcommerce.PageGeneratorManager;
-import pageObjects.nopcommerce.RegisterPageObject;
-import pageObjects.nopcommerce.RewardPointPageObject;
+import commons.PageGeneratorManager;
+import pageObjects.user.nopCommerce.UserAddressPageObject;
+import pageObjects.user.nopCommerce.UserCustomerInfoPageObject;
+import pageObjects.user.nopCommerce.UserHomePageObject;
+import pageObjects.user.nopCommerce.UserLoginPageObject;
+import pageObjects.user.nopCommerce.UserRegisterPageObject;
+import pageObjects.user.nopCommerce.UserRewardPointPageObject;
 
 
 //Apply POM cho test case
@@ -26,19 +26,19 @@ import pageObjects.nopcommerce.RewardPointPageObject;
 public class Level_07_Switch_Page extends BaseTest{
 	private WebDriver driver;
 	private String email,firstName,lastName,validPassword,confirmPassword;
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
-	private LoginPageObject loginPage;
-	private CustomerInfoPageObject customerInfoPage;
-	private AddressPageObject addressPage;
-	private RewardPointPageObject rewardPointPage;
+	private UserHomePageObject homePage;
+	private UserRegisterPageObject registerPage;
+	private UserLoginPageObject loginPage;
+	private UserCustomerInfoPageObject customerInfoPage;
+	private UserAddressPageObject addressPage;
+	private UserRewardPointPageObject rewardPointPage;
 
 	//Cách 3 : Khởi tạo qua method của class PageGeneratorManager
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
-		homePage = PageGeneratorManager.getHomePageObject(driver);
+		homePage = PageGeneratorManager.getUserHomePageObject(driver);
 		firstName = "Automation";
 		lastName = "FC" ;
 		validPassword = "123456" ;
@@ -48,7 +48,7 @@ public class Level_07_Switch_Page extends BaseTest{
 
 	@Test
 	public void User_01_Register() {
-		registerPage =homePage.clickToRegisterLink(); 
+		registerPage = homePage.clickToRegisterLink(); 
 		registerPage.inputToFirstnameTxtBox(firstName);
 		registerPage.inputToLastnameTxtBox(lastName);
 		registerPage.inputToEmailTxtBox(email);

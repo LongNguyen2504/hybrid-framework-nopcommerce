@@ -15,8 +15,8 @@ import org.openqa.selenium.opera.OperaDriver;
 import org.testng.Assert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import pageObjects.nopcommerce.HomePageObject;
-import pageObjects.nopcommerce.RegisterPageObject;
+import pageObjects.user.nopCommerce.UserHomePageObject;
+import pageObjects.user.nopCommerce.UserRegisterPageObject;
 
 public class BaseTest {
 	private WebDriver driverBaseTest;
@@ -53,7 +53,7 @@ public class BaseTest {
 		}
 		//Driver action here
 		driverBaseTest.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driverBaseTest.get("https://demo.nopcommerce.com/");
+		driverBaseTest.get(GlobalConstants.PORTAL_PAGE);
 		return driverBaseTest;
 	}
 	

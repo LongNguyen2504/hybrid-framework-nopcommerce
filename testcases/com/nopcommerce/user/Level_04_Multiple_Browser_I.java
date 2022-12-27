@@ -13,8 +13,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import pageObjects.nopcommerce.HomePageObject;
-import pageObjects.nopcommerce.RegisterPageObject;
+import pageObjects.user.nopCommerce.UserHomePageObject;
+import pageObjects.user.nopCommerce.UserRegisterPageObject;
 
 
 //Apply POM cho test case
@@ -22,8 +22,8 @@ import pageObjects.nopcommerce.RegisterPageObject;
 public class Level_04_Multiple_Browser_I{
 	private WebDriver driver;
 	private String emailAddress,firstName,lastName,password,confirmPassword;
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
+	private UserHomePageObject homePage;
+	private UserRegisterPageObject registerPage;
 	private String projectPath = System.getProperty("user.dir");
 
 	//Run multi browser cách 1 : dùng parameter của testNG và if else trong @Before class để control browser value từ xml gửi qua 
@@ -50,7 +50,7 @@ public class Level_04_Multiple_Browser_I{
 		}
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.get("https://demo.nopcommerce.com/");
-		homePage = new HomePageObject(driver);
+		homePage = new UserHomePageObject(driver);
 		
 		firstName = "Automation";
 		lastName = "FC" ;
@@ -62,7 +62,7 @@ public class Level_04_Multiple_Browser_I{
 		homePage.clickToRegisterLink();
 
 		System.out.println("Register_03 - Step 02 : Input to required fields");
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new UserRegisterPageObject(driver);
 		registerPage.inputToFirstnameTxtBox(firstName);
 		registerPage.inputToLastnameTxtBox(lastName);
 		registerPage.inputToEmailTxtBox(emailAddress);
@@ -89,7 +89,7 @@ public class Level_04_Multiple_Browser_I{
 		System.out.println("Register_01 - Step 01 : Click to register link");
 		homePage.clickToRegisterLink();
 		
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new UserRegisterPageObject(driver);
 		
 		System.out.println("Register_01 - Step 02 : Click to register button");
 		registerPage.clickToRegisterButton();
@@ -111,7 +111,7 @@ public class Level_04_Multiple_Browser_I{
 		System.out.println("Register_02 - Step 01 : Click to register link");
 		homePage.clickToRegisterLink();
 		
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new UserRegisterPageObject(driver);
 		System.out.println("Register_02 - Step 02 : Input to required fields");
 		registerPage.inputToFirstnameTxtBox(firstName);
 		registerPage.inputToLastnameTxtBox(lastName);

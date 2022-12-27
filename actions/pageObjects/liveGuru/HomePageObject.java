@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import commons.BasePage;
-import pageUIs.nopcommerce.HomePageUI;
+import pageUIs.user.nopcommerce.HomePageUI;
 public class HomePageObject extends BasePage{
 	private WebDriver driver;
 	
