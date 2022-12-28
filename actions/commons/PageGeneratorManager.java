@@ -8,6 +8,7 @@ import pageObjects.user.nopCommerce.UserAddressPageObject;
 import pageObjects.user.nopCommerce.UserCustomerInfoPageObject;
 import pageObjects.user.nopCommerce.UserHomePageObject;
 import pageObjects.user.nopCommerce.UserLoginPageObject;
+import pageObjects.user.nopCommerce.UserMyProductReviewPageObject;
 import pageObjects.user.nopCommerce.UserRegisterPageObject;
 import pageObjects.user.nopCommerce.UserRewardPointPageObject;
 
@@ -33,6 +34,10 @@ public class PageGeneratorManager {
 	public static UserRewardPointPageObject getUserRewardPointPage(WebDriver driver) {
 		// TODO Auto-generated method stub
 		return new UserRewardPointPageObject(driver);
+	}
+	public static UserMyProductReviewPageObject getUserMyProductReviewPage(WebDriver driver) {
+		// TODO Auto-generated method stub
+		return new UserMyProductReviewPageObject(driver);
 	}
 	
 	public static AdminLoginPageObject getAdminLoginPage(WebDriver driver) {

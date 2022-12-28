@@ -7,6 +7,13 @@ public class BasePageUI {
 	public static final String REWARD_POINT_LINK = "xpath=//div[@class='listbox']//a[text()='Reward points']";
 	public static final String CUSTOMER_INFO_LINK = "xpath=//div[@class='listbox']//a[text()='Customer info']";
 	public static final String ADDRESS_LINK = "xpath=//div[@class='listbox']//a[text()='Addresses']";
+	public static final String DYNAMIC_PAGE_AT_MY_ACCOUNT_AREA = "xpath=//div[@class='listbox']//a[text()='%s']";
+	
+	
+	
+	
+	public static final String USER_HOME_LOGOUT_LINK = "xpath=//div[@class='header-links']//a[text()='Log out']";
+	public static final String ADMIN_HOME_LOGOUT_LINK = "//div[@id='navbarText']//a[text()='Logout']']";
 	
 	
 }

@@ -11,7 +11,7 @@ public class Topic_14_StringFormat {
 	public static String DYNAMIC_LINK_BY_PAGE_NAME_1_PARAMETER = "//div[contains@class,'account-navigation')]//a[text()='%s']"; // truong hop 1 tham so %s
 	public static String DYNAMIC_LINK_BY_PAGE_NAME_2_PARAMETER = "//div[contains(@class,'%s')]//a[text()='%s']"; // %s tuong ung tham so cua String truyen vao
 	
-	
+	//
 	
 	public static void main(String[] args) {
 		
@@ -21,9 +21,10 @@ public class Topic_14_StringFormat {
 		clickToLink(DYNAMIC_LINK_BY_PAGE_NAME_2_PARAMETER, "account-navigation", "Customer info");
 		
 		
+	 
 		
 		
-	}
+	} 
 	//1 tham so dong
 //	public static void clickToLink(String dynamicLocator, String pageName) {
 //		String locator = String.format(dynamicLocator,pageName); // 
@@ -39,7 +40,8 @@ public class Topic_14_StringFormat {
 	//rest parameter se map cac value truyen vao tuong ung voi vi tri cua cac %s tu trai sang phai
 	
 	
-	//n tham so dong
+	//n tham so dong - khi dùng method này thì nên xóa 2 method bên trên vì method này đã cover n tham số
+
 	public static void clickToLink(String dynamicLocator, String... params) { // ki hieu ... dai dien cho 1 mang cac object tuong tu String hoac bat ky kieu data nao dung truoc VD int... ; char...;
 		String locator = String.format(dynamicLocator,(Object[])params); //phai cast params sang Object[]
 		System.out.println("Click to: " + locator);

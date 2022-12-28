@@ -19,7 +19,7 @@ public class Topic_12_String {
 		for (int i = 0; i < temp.length(); i++) {
 			if(temp.charAt(i) >= 65 && temp.charAt(i) <= 90) {
 				count++;
-			}
+			} 
 		}
 		System.out.println("in hoa "+count);
 		
