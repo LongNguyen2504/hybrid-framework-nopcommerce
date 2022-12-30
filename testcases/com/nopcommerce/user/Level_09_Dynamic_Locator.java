@@ -46,6 +46,7 @@ public class Level_09_Dynamic_Locator extends BaseTest{
 		confirmPassword = "123456" ;
 		email = "afc" + randNumber() + "@mail.vn";
 	}
+	 
 
 	@Test
 	public void User_01_User_Register() {
@@ -61,7 +62,7 @@ public class Level_09_Dynamic_Locator extends BaseTest{
 	}
 	@Test
 	public void User_02_User_Login() {
-		loginPage = homePage.clickToLoginLink();// Cách 2 : page manager
+		loginPage = homePage.clickToLoginLink();// Cách 2 : page manager 
 		loginPage.inputToEmailTxtBox(email);
 		loginPage.inputToPasswordTxtBox(validPassword);
 		homePage = loginPage.clickToLoginButton();
