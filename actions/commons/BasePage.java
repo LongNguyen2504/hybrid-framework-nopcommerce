@@ -3,11 +3,7 @@ package commons;
 import java.util.List;
 import java.util.Set;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -31,7 +27,7 @@ import pageUIs.user.nopcommerce.CustomerInfoPageUI;
 
 //Common class chứa các common functions
 public class BasePage {
-	private long longTimeout = 30;
+	private long longTimeout = GlobalConstants.LONG_TIMEOUT;
 //	private long shortTimeout = 5;
 	
 	public static BasePage getBasePageObject() {
@@ -66,7 +62,7 @@ public class BasePage {
 		driver.navigate().forward();
 	}
 	
-	protected void refreshPage(WebDriver driver) {
+	public void refreshPage(WebDriver driver) {
 		driver.navigate().refresh();
 	}
 	
@@ -161,7 +157,6 @@ public class BasePage {
 	//Nếu truyền vào locator type khác XPath sẽ sai vì hầu hết dynamic string locator đều tìm theo text
 	private String getDynamicXpath(String locatorType,String... dynamicValues) {
 		if(locatorType.startsWith("xpath=") || locatorType.startsWith("Xpath=") || locatorType.startsWith("XPATH=") || locatorType.startsWith("XPath=")) {
-			
 			locatorType = String.format(locatorType,(Object[]) dynamicValues);
 		}
 //		System.out.println(locatorType);
@@ -172,8 +167,12 @@ public class BasePage {
 		return driver.findElement(getByLocator(locatorType));
 	}
 	
-	private List<WebElement> getListWebElement(WebDriver driver,String locatorType){
+	public List<WebElement> getListWebElement(WebDriver driver,String locatorType){
 		return driver.findElements(getByLocator(locatorType));
+	}
+
+	public List<WebElement> getListWebElement(WebDriver driver,String locatorType,String... dynamicValues){
+		return driver.findElements(getByLocator(getDynamicXpath(locatorType,dynamicValues)));
 	}
 	
 	
@@ -240,7 +239,7 @@ public class BasePage {
 		}
 	}
 	
-	protected void sleepInSecond(long second) {
+	public void sleepInSecond(long second) {
 		try {
 			Thread.sleep(second*1000); // chờ load trang sau khi click -> thư viện của java
 		} catch (Exception e) {
@@ -313,7 +312,16 @@ public class BasePage {
 		Actions action = new Actions(driver);
 		action.moveToElement(getWebElement(driver, locatorType)).perform();
 	}
-	
+
+	public void pressKeyToElement(WebDriver driver, String locatorType, Keys key){
+		Actions action = new Actions(driver);
+		action.sendKeys(getWebElement(driver,locatorType),key).perform();
+	}
+	public void pressKeyToElement(WebDriver driver,String locatorType,Keys key,String... dynamicValues){
+		Actions action = new Actions(driver);
+		action.sendKeys(getWebElement(driver,getDynamicXpath(locatorType, dynamicValues)),key).perform();
+	}
+
 	//Upload sẽ học trong framework sau
 
 	

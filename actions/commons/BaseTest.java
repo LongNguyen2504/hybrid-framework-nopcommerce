@@ -47,19 +47,24 @@ public class BaseTest {
 		}else if (browserList == BrowserList.COCCOC) {
 			WebDriverManager.chromedriver().driverVersion("x").setup(); // x = version chrome driver trước 6 ver của CocCoc browser
 			ChromeOptions opt = new ChromeOptions();
-			opt.setBinary("C:\\Program Files\\CocCoc\\Browser\\Application\\browser.exe");
+			if(GlobalConstants.OS_NAME.startsWith("Windows")){
+				opt.setBinary("C:\\Program Files\\CocCoc\\Browser\\Application\\browser.exe");
+			}else{
+				opt.setBinary("C://...");
+			}
+
 			driverBaseTest = new ChromeDriver(opt);
 		}else {
 			throw new RuntimeException("Browser name invalid");
 		}
 		//Driver action here
-		driverBaseTest.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driverBaseTest.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
 		driverBaseTest.get(GlobalConstants.PORTAL_PAGE);
 		return driverBaseTest;
 	}
 
 
-	public WebDriver getBrowserDriver(String browserName,String environmentName) {
+/*	public WebDriver getBrowserDriver(String browserName,String environmentName) {
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 		System.out.println("Run on "+ browserName);
 
@@ -90,8 +95,44 @@ public class BaseTest {
 			throw new RuntimeException("Browser name invalid");
 		}
 		//Driver action here
-		driverBaseTest.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driverBaseTest.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
 		driverBaseTest.get(getEnvironmentUrl(environmentName));
+		return driverBaseTest;
+	}*/
+
+	public WebDriver getBrowserDriver(String browserName,String urlName) {
+		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
+		System.out.println("Run on "+ browserName);
+
+		if(browserList == BrowserList.FIREFOX) {
+//			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDriver\\geckodriver.exe");
+			WebDriverManager.firefoxdriver().setup(); // tự tải driver tương ứng và thay thế step setProperty
+			driverBaseTest = new FirefoxDriver();
+		}
+		else if (browserList == BrowserList.CHROME) {
+			WebDriverManager.chromedriver().setup();
+			driverBaseTest = new ChromeDriver();
+		}else if (browserList == BrowserList.EDGE) {
+			WebDriverManager.edgedriver().setup();
+			driverBaseTest = new EdgeDriver();
+		}else if (browserList == BrowserList.OPERA) {
+			//Selenium 4 không hỗ trợ opera và phantomJS chỉ có selenium 3.x
+			WebDriverManager.operadriver().setup();
+			driverBaseTest = new OperaDriver();
+		}else if (browserList == BrowserList.IE) {
+			WebDriverManager.iedriver().arch32().setup();
+			driverBaseTest = new InternetExplorerDriver();
+		}else if (browserList == BrowserList.COCCOC) {
+			WebDriverManager.chromedriver().driverVersion("x").setup(); // x = version chrome driver trước 6 ver của CocCoc browser
+			ChromeOptions opt = new ChromeOptions();
+			opt.setBinary("C:\\Program Files\\CocCoc\\Browser\\Application\\browser.exe");
+			driverBaseTest = new ChromeDriver(opt);
+		}else {
+			throw new RuntimeException("Browser name invalid");
+		}
+		//Driver action here
+		driverBaseTest.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+		driverBaseTest.get(urlName);
 		return driverBaseTest;
 	}
 
