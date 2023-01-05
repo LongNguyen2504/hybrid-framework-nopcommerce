@@ -16,6 +16,8 @@ import pageObjects.user.nopCommerce.UserAddressPageObject;
 import pageObjects.user.nopCommerce.UserCustomerInfoPageObject;
 import pageObjects.user.nopCommerce.UserHomePageObject;
 import pageObjects.user.nopCommerce.UserRewardPointPageObject;
+import pageUIs.jQuerryUploadFile.BasePageJQuerryUI;
+import pageUIs.jQuerryUploadFile.HomePageUI;
 import pageUIs.user.nopcommerce.BasePageUI;
 import pageUIs.user.nopcommerce.CustomerInfoPageUI;
 
@@ -269,7 +271,8 @@ public class BasePage {
 	protected int getListElementSize(WebDriver driver,String locatorType,String... dynamicValues) {
 		return getListWebElement(driver, getDynamicXpath(locatorType, dynamicValues)).size();
 	}
-	
+
+	/*Check to radio/input if not checked*/
 	protected void checkToDefaultCheckboxRadio(WebDriver driver,String locatorType) {
 		WebElement element = getWebElement(driver, locatorType);
 		if(!element.isSelected()) {
@@ -277,12 +280,28 @@ public class BasePage {
 		}
 		
 	}
+
+	protected void checkToDefaultCheckboxRadio(WebDriver driver,String locatorType,String... dynamicValues) {
+		WebElement element = getWebElement(driver, getDynamicXpath(locatorType, dynamicValues));
+		if(!element.isSelected()) {
+			element.click();
+		}
+
+	}
 	protected void unCheckToDefaultCheckboxRadio(WebDriver driver,String locatorType) {
 		WebElement element = getWebElement(driver, locatorType);
 		if(element.isSelected()) {
 			element.click();
 		}
 		
+	}
+
+	protected void unCheckToDefaultCheckboxRadio(WebDriver driver,String locatorType,String... dynamicValues) {
+		WebElement element = getWebElement(driver, getDynamicXpath(locatorType, dynamicValues));
+		if(element.isSelected()) {
+			element.click();
+		}
+
 	}
 	
 	protected boolean isElementDisplayed(WebDriver driver,String locatorType) {
@@ -393,11 +412,13 @@ public class BasePage {
 	protected boolean isImageLoaded(WebDriver driver, String locatorType) {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 		boolean status = (boolean) jsExecutor.executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", getWebElement(driver, locatorType));
-		if (status) {
-			return true;
-		} else {
-			return false;
-		}
+		return status;
+	}
+	public boolean isImageLoaded(WebDriver driver,String locatorType,String... dynamicValues) {
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+		boolean status = (boolean) jsExecutor.executeScript(
+				"return arguments[0].complete && typeof arguments[0].naturalWidth != 'undefined' && arguments[0].naturalWidth > 0",getWebElement(driver,getDynamicXpath(locatorType, dynamicValues)));
+		return status;
 	}
 
 
@@ -445,6 +466,21 @@ public class BasePage {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(getDynamicXpath(locatorType, dynamicValues))));
 	}
+
+	public void uploadMultipleFiles(WebDriver driver,String... fileNames){
+		//Đường dẫn thư mục uploadFile
+		String filePath = GlobalConstants.UPLOAD_FILE;
+
+		//Nhiều file : String[] fileNames = {"uploadTest","uploadTest01","uploadTest02"}
+		String fullFileName = "";
+		for (String file  : fileNames) {
+			fullFileName = fullFileName + filePath + file + "\n";
+		}
+		fullFileName = fullFileName.trim(); //firefox sẽ ko nhận \n và báo lỗi do đó cần dùng trim để cắt \n ở cuối chuỗi
+		getWebElement(driver, BasePageJQuerryUI.UPLOAD_FILE).sendKeys(fullFileName);
+
+	}
+
 
 
 	//----Các hàm switch page này cần để modifier public để testcase có thể truy cập qua instance của pageObject(đã extends basepage này)-----------------

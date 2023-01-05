@@ -2,13 +2,34 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite parallel="false" name="JQuerry">
 
-	<test name="Run on Firefox">
-		<parameter name="urlName" value="https://www.jqueryscript.net/demo/CRUD-Data-Grid-Plugin-jQuery-Quickgrid/" />
+<!--	<test name="Run on Firefox">
+		&lt;!&ndash;These para for data table demo of jQuerry sites&ndash;&gt;
+		&lt;!&ndash;<parameter name="urlName" value="https://www.jqueryscript.net/demo/CRUD-Data-Grid-Plugin-jQuery-Quickgrid/" />&ndash;&gt;
+		&lt;!&ndash;<parameter name="urlName" value="https://www.jqueryscript.net/demo/jQuery-Dynamic-Data-Grid-Plugin-appendGrid/" />&ndash;&gt;
+		&lt;!&ndash;&ndash;&gt;
+
+		<parameter name="urlName" value="https://blueimp.github.io/jQuery-File-Upload/" />
 		<parameter name="browser" value="firefox" />
 		<classes>
-			<class name="com.jquerry.datatable.Level_10_DataTable_DataGrid" />
+			&lt;!&ndash;<class name="com.jquerry.Level_10_DataTable_DataGrid" />&ndash;&gt;
+			<class name="com.jquerry.Level_11_Upload_Files" />
+		</classes>
+	</test>-->
+
+	<test name="Run on Firefox">
+		<!--These para for data table demo of jQuerry sites-->
+		<!--<parameter name="urlName" value="https://www.jqueryscript.net/demo/CRUD-Data-Grid-Plugin-jQuery-Quickgrid/" />-->
+		<!--<parameter name="urlName" value="https://www.jqueryscript.net/demo/jQuery-Dynamic-Data-Grid-Plugin-appendGrid/" />-->
+		<!---->
+
+		<parameter name="urlName" value="https://blueimp.github.io/jQuery-File-Upload/" />
+		<parameter name="browser" value="head_firefox" />
+		<classes>
+			<!--<class name="com.jquerry.Level_10_DataTable_DataGrid" />-->
+			<class name="com.jquerry.Level_11_Upload_Files" />
 		</classes>
 	</test>
+
 
 
 	

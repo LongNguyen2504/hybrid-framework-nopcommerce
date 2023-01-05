@@ -1,10 +1,10 @@
-package pageObjects.jQuerry;
+package pageObjects.jQuerryDataTableDataGrid;
 
 import commons.BasePage;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import pageUIs.jQuerry.HomePageUI;
+import pageUIs.jQuerryDataTableDataGrid.HomePageUI;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,5 +71,47 @@ public class HomePageObject extends BasePage {
         return listOfColumnData;
 
 
+    }
+
+    public void enterToTxtBoxByColumnNameAtRowNumber(String columnName, String rowIndex, String keyToSend) {
+        int columnIndex = getListElementSize(driver,HomePageUI.COLUMN_INDEX_BY_NAME,columnName) +1; //đếm index hiện tại của Column title và gán vào columnIndex có thể gán vào HomePageUI.TEXTBOX_BY_COLUMN_INDEX_AND_ROW_INDEX và lấy ra các td theo một cột.(+1 là tổng quát(
+
+        //Send key vào row nào column nào (<tr> index nào và <td> index nào)
+        waitForElementVisible(driver,HomePageUI.TEXTBOX_BY_COLUMN_INDEX_AND_ROW_INDEX,rowIndex,String.valueOf(columnIndex));
+        sendkeyToElement(driver,HomePageUI.TEXTBOX_BY_COLUMN_INDEX_AND_ROW_INDEX,keyToSend,rowIndex,String.valueOf(columnIndex));
+
+    }
+
+    public void selectDropDownByColumnNameAtRowNumber(String columnName, String rowIndex, String valueToSelect) {
+        int columnIndex = getListElementSize(driver,HomePageUI.COLUMN_INDEX_BY_NAME,columnName) +1;
+        waitForElementClickable(driver,HomePageUI.DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX,rowIndex,String.valueOf(columnIndex));
+        selectItemDefaultDropdown(driver,HomePageUI.DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX,valueToSelect,rowIndex,String.valueOf(columnIndex));
+
+
+    }
+
+    public void clickToDataLoadButton() {
+        waitForElementClickable(driver,HomePageUI.BUTTON_LOAD_DATA);
+        clickToElement(driver,HomePageUI.BUTTON_LOAD_DATA);
+    }
+
+    public void checkToCheckboxByColumnNameAtRowNumber(String columnName, String rowIndex) {
+
+        int columnIndex = getListElementSize(driver,HomePageUI.COLUMN_INDEX_BY_NAME,columnName) +1;
+        waitForElementClickable(driver,HomePageUI.CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX,rowIndex,String.valueOf(columnIndex));
+        checkToDefaultCheckboxRadio(driver,HomePageUI.CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX,rowIndex,String.valueOf(columnIndex));
+
+    }
+    public void checkToUnCheckboxByColumnNameAtRowNumber(String columnName, String rowIndex) {
+
+        int columnIndex = getListElementSize(driver,HomePageUI.COLUMN_INDEX_BY_NAME,columnName) +1;
+        waitForElementClickable(driver,HomePageUI.CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX,rowIndex,String.valueOf(columnIndex));
+        checkToDefaultCheckboxRadio(driver,HomePageUI.CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX,rowIndex,String.valueOf(columnIndex));
+
+    }
+
+    public void clickToIconAtRowNumberWithTitle(String rowIndex, String iconTitile) {
+        waitForElementClickable(driver,HomePageUI.ICON_BY_ROW_INDEX_WITH_TITLE,rowIndex,iconTitile);
+        clickToElement(driver,HomePageUI.ICON_BY_ROW_INDEX_WITH_TITLE,rowIndex,iconTitile);
     }
 }

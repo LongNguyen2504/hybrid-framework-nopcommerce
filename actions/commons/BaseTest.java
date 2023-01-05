@@ -108,10 +108,22 @@ public class BaseTest {
 //			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDriver\\geckodriver.exe");
 			WebDriverManager.firefoxdriver().setup(); // tự tải driver tương ứng và thay thế step setProperty
 			driverBaseTest = new FirefoxDriver();
+		}else if (browserList == BrowserList.HEAD_FIREFOX) {
+			WebDriverManager.firefoxdriver().setup();
+			FirefoxOptions options = new FirefoxOptions();
+			options.addArguments("--headless");
+			options.addArguments("window-size=1920x1080");
+			driverBaseTest = new FirefoxDriver(options);
 		}
 		else if (browserList == BrowserList.CHROME) {
 			WebDriverManager.chromedriver().setup();
 			driverBaseTest = new ChromeDriver();
+		}else if (browserList == BrowserList.HEAD_CHROME) {
+			WebDriverManager.chromedriver().setup();
+			ChromeOptions option = new ChromeOptions();
+			option.addArguments("--headless");
+			option.addArguments("window-size=1920x1080");
+			driverBaseTest = new ChromeDriver(option);
 		}else if (browserList == BrowserList.EDGE) {
 			WebDriverManager.edgedriver().setup();
 			driverBaseTest = new EdgeDriver();

@@ -1,4 +1,4 @@
-package pageObjects.jQuerry;
+package pageObjects.jQuerryDataTableDataGrid;
 
 import org.openqa.selenium.WebDriver;
 
