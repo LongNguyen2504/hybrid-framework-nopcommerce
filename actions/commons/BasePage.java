@@ -2,6 +2,7 @@ package commons;
 
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -17,9 +18,7 @@ import pageObjects.user.nopCommerce.UserCustomerInfoPageObject;
 import pageObjects.user.nopCommerce.UserHomePageObject;
 import pageObjects.user.nopCommerce.UserRewardPointPageObject;
 import pageUIs.jQuerryUploadFile.BasePageJQuerryUI;
-import pageUIs.jQuerryUploadFile.HomePageUI;
 import pageUIs.user.nopcommerce.BasePageUI;
-import pageUIs.user.nopcommerce.CustomerInfoPageUI;
 
 //Chứa các hàm dùng chung cho các class ở tầng page objects(gọi là các page của webapp) với dạng automation testing theo mô hình modular
 //Class basepage có thể dùng cho các dự án web tương tự hoặc import sang một thư viện để tái sử dụng,update,..
@@ -30,7 +29,7 @@ import pageUIs.user.nopcommerce.CustomerInfoPageUI;
 //Common class chứa các common functions
 public class BasePage {
 	private long longTimeout = GlobalConstants.LONG_TIMEOUT;
-//	private long shortTimeout = 5;
+	private long shortTimeout = GlobalConstants.SHORT_TIMEOUT;
 	
 	public static BasePage getBasePageObject() {
 		return new BasePage();
@@ -168,7 +167,11 @@ public class BasePage {
 	private WebElement getWebElement(WebDriver driver,String locatorType) {
 		return driver.findElement(getByLocator(locatorType));
 	}
-	
+
+	public void overrideImplicitTimeout(WebDriver driver, long timeOut){
+		driver.manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
+	}
+
 	public List<WebElement> getListWebElement(WebDriver driver,String locatorType){
 		return driver.findElements(getByLocator(locatorType));
 	}
@@ -303,14 +306,82 @@ public class BasePage {
 		}
 
 	}
-	
+
+	/*------------------------------------------------------------------------------------------------------*/
+	/*Apply cho element display or undisplayed nhưng vẫn có trong DOM*/
 	protected boolean isElementDisplayed(WebDriver driver,String locatorType) {
+		waitForElementVisible(driver, locatorType);
 		return getWebElement(driver, locatorType).isDisplayed();
 	}
+
+	//Không display thì không cần wait trước hoặc có thể bổ sung wait explicit invisible
+	protected boolean isElementUndisplayed(WebDriver driver,String locatorType) {
+		if(getWebElement(driver,locatorType).isDisplayed()){
+			return false;
+		}
+		return true;
+	}
+
 	protected boolean isElementDisplayed(WebDriver driver,String locatorType,String... dynamicValues) {
+		waitForElementVisible(driver, getDynamicXpath(locatorType, dynamicValues));
 		return getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)).isDisplayed();
 	}
-	
+
+	protected boolean isElementUndisplayed(WebDriver driver,String locatorType,String... dynamicValues) {
+		if(getWebElement(driver,getDynamicXpath(locatorType, dynamicValues)).isDisplayed()){
+			return false;
+		}
+		return true;
+	}
+	/*------------------------------------------------------------------------------------------------------*/
+
+
+	/*------------------------------------------------------------------------------------------------------*/
+	/*Apply cho element display or undisplayed nhưng vẫn có trong DOM và case undisplay + không có trong DOM*/
+	/*Lưu ý : chỉ nên truyền các locator có kết quả trả về tương ứng cho 1 element để truyền vào hàm này vì mục đích chỉ check 1 element displayed hay undisplayed*/
+	public boolean isElementUndisplayedWithImplicitOverride(WebDriver driver,String locator){
+		//Gán timeout mới = 5s để không phải chờ findElement 30s sau mới trả về vì đây có thể là trường hợp ko có trong DOM
+		overrideImplicitTimeout(driver,shortTimeout);
+		List<WebElement> elements = getListWebElement(driver,locator);
+		//Phải trả về timeout implicit như cũ để các step sau có thể sử dụng
+		overrideImplicitTimeout(driver,longTimeout);
+		if(elements.size() == 0){
+			/*Cho case ko display + không có trong DOM*/
+			return true;
+		}else if(elements.size() > 0 && !elements.get(0).isDisplayed()){
+			/*Cho case không display + có trong DOM*/
+			return true;
+		}else {
+			/*Cho case có display + có trong DOM -> case này nên dùng hàm isDisplayed bình thường vì không phải phụ thuộc implicit timout*/
+			return false;
+		}
+	}
+
+	/*Dùng dể check displayed/undisplayed của các elements có locator tương tự nhau như trên cùng 1 menu,..*/
+	/*Lưu ý : chỉ nên truyền các locator có kết quả trả về tương ứng cho 1 element để truyền vào hàm này vì mục đích chỉ check 1 element displayed hay undisplayed*/
+	public boolean isElementUndisplayedWithImplicitOverride(WebDriver driver,String locator,String... dynamicValues){
+		//Gán timeout mới = 5s để không phải chờ findElement 30s sau mới trả về vì đây có thể là trường hợp ko có trong DOM
+		overrideImplicitTimeout(driver,shortTimeout);
+		List<WebElement> elements = getListWebElement(driver,getDynamicXpath(locator, dynamicValues));
+
+		//Phải trả về timeout implicit như cũ để các step sau có thể sử dụng
+		overrideImplicitTimeout(driver,longTimeout);
+		if(elements.size() == 0){
+			/*Cho case ko display + không có trong DOM*/
+			return true;
+		}else if(elements.size() > 0 && !elements.get(0).isDisplayed()){
+			/*Cho case không display + có trong DOM*/
+			return true;
+		}else {
+			/*Cho case có display + có trong DOM -> case này nên dùng hàm isDisplayed bình thường vì không phải phụ thuộc implicit timout*/
+			return false;
+		}
+	}
+
+	/*------------------------------------------------------------------------------------------------------*/
+
+
+
 	protected boolean isElementEnabled(WebDriver driver,String locatorType) {
 		return getWebElement(driver, locatorType).isEnabled();
 	}
@@ -444,6 +515,15 @@ public class BasePage {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(locatorType)));
 	}
+
+	/*Wait for element undisplayed in DOM or not in DOM and override implicit timeout*/
+	protected void waitForElementUndisplayed(WebDriver driver, String locatorType) {
+		WebDriverWait explicitWait = new WebDriverWait(driver, shortTimeout);
+		overrideImplicitTimeout(driver,shortTimeout);
+		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(locatorType)));
+		overrideImplicitTimeout(driver,longTimeout);
+	}
+
 	protected void waitForElementInvisible(WebDriver driver, String locatorType,String... dynamicValues) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(getDynamicXpath(locatorType, dynamicValues))));

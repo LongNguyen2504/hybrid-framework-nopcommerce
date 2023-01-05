@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel="false" name="NopCommerce">
+<suite parallel="false" name="Facebook">
 
 	<listeners>
 		<listener class-name="commons.MethodListener"></listener> <!--demo Assert Verify-->
 	</listeners>
 	<test name="Run on Firefox">
 		<parameter name="browser" value="firefox" />
+		<parameter name="url" value="https://www.facebook.com/" />
 		<classes>
-			<class name="com.nopcommerce.user.Level_12_Assert_Verify" />
+			<class name="com.facebook.register.Level_13_Verify_Element_Undisplayed" />
 		</classes>
 	</test>
 
