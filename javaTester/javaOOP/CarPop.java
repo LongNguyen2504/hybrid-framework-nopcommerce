@@ -1,6 +1,5 @@
 package javaOOP;
 
-import ch.qos.logback.core.net.SyslogOutputStream;
 import net.bytebuddy.implementation.bind.MethodDelegationBinder;
 
 public class CarPop {

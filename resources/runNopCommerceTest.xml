@@ -3,12 +3,18 @@
 <suite parallel="false" name="NopCommerce">
 
 	<listeners>
-		<listener class-name="commons.MethodListener"></listener> <!--demo Assert Verify-->
+		<listener class-name="commons.MethodListener"></listener> <!--demo Assert Verify - MethodListener trả về lỗi của testcase-->
+		<!--ReportNG configure-->
+
+		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener> <!--trỏ đến thư viện reportNG và tìm class HTMLReporter để có thể generate report -> sau khi run sẽ attack report vào file index.html ở folder test-output/html-->
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener> <!--Line này optional nhưng bắt buộc khi configure trên jenkins vì ở đây cần tạo ra file report xml để sử dụng trên jenkins -> sau khi run sẽ attack report vào file .xml ở folder test-output/xml-->
+		<listener class-name="reportConfig.ReportNGListener"></listener> <!--Line này demo chụp màn hình tại fail testcase và attach ảnh vào reportNG-->
+
 	</listeners>
 	<test name="Run on Firefox">
 		<parameter name="browser" value="firefox" />
 		<classes>
-			<class name="com.nopcommerce.user.Level_12_Assert_Verify" />
+			<class name="com.nopcommerce.user.Level_15_ReportNG_Screenshot" />
 		</classes>
 	</test>
 

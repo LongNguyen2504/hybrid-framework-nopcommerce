@@ -26,18 +26,22 @@ public class Level_13_Verify_Element_Undisplayed extends BaseTest{
 	}
 
 	@Test
-	public void TC_01_Verify_Element_Displayed() {
+	public void TC_01_Register() {
 		loginPage.clickToCreateNewAccountBtn();
 		verifyTrue(loginPage.isEmailAddressTxtBoxDisplayed());
 
+
+
+
+
 	}@Test
 	public void TC_02_Verify_Element_Undisplayed() {
-		//Verify true cho hàm trả về undisplayed (mặc định confirm email txtbox là undisplayed và có trong DOM)
+		log.info("Register - Step 06: Verify Confirm Email textbox is undispslayed but present in DOM ");
 		verifyTrue(loginPage.isConfirmEmailAddressTxtBoxUndisplayed());
 
 	}@Test
 	public void TC_03_Verify_Element_Undisplayed_Not_In_DOM() {
-		//Close pop-up register
+		log.info("Register - Step 07: Close Register Form by clicking in close icon ");
 		loginPage.clickToCloseRegisterFormIcon();
 		loginPage.sleepInSecond(3);
 

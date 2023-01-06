@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/hybrid-framework-nopcommerce.iml" filepath="$PROJECT_DIR$/hybrid-framework-nopcommerce.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../02-Selenium WebDriver/selenium-java-testng.iml" filepath="$PROJECT_DIR$/../02-Selenium WebDriver/selenium-java-testng.iml" />
     </modules>
   </component>
 </project>
