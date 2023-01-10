@@ -9,12 +9,14 @@
 		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener> <!--trỏ đến thư viện reportNG và tìm class HTMLReporter để có thể generate report -> sau khi run sẽ attack report vào file index.html ở folder test-output/html-->
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener> <!--Line này optional nhưng bắt buộc khi configure trên jenkins vì ở đây cần tạo ra file report xml để sử dụng trên jenkins -> sau khi run sẽ attack report vào file .xml ở folder test-output/xml-->
 		<listener class-name="reportConfig.ReportNGListener"></listener> <!--Line này demo chụp màn hình tại fail testcase và attach ảnh vào reportNG-->
-
+		<listener class-name="reportConfig.ExtentReportListenerV2"></listener><!--line này cho extent report Version 2 không có attach screenshot-->
+		<listener class-name="reportConfig.ExtentTestListenerV2WithScreenshot"></listener>
 	</listeners>
 	<test name="Run on Firefox">
 		<parameter name="browser" value="firefox" />
 		<classes>
-			<class name="com.nopcommerce.user.Level_15_ReportNG_Screenshot" />
+			<!--<class name="com.nopcommerce.user.Level_15_ReportNG_Screenshot" />-->
+			<class name="com.nopcommerce.user.Level_15_ExtentReportV2_Screenshot" /><!--Demo extent v2 with screenshot và có cơ chế log khác reportNG nên cần tạo 1 class test mới-->
 		</classes>
 	</test>
 

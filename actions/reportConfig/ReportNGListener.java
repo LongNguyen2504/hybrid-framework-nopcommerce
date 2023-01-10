@@ -36,8 +36,10 @@ public class ReportNGListener implements ITestListener {
 
         Object testClass = result.getInstance();
         WebDriver webDriver = ((BaseTest) testClass).getDriverInstance(); //get driver từ basetest để có thể dùng ở captureScreenshot()
-
-        String screenshotPath = captureScreenshot(webDriver, result.getName()); //result.getName() -> lấy ra testcase name để truyền vào para screenshotName của captureScreenshot() và + "_" + ngày tháng giờ phút fail test case + ".png"
+        //Cách 1 : Theo img bình thường
+        //String screenshotPath = captureScreenshot(webDriver, result.getName()); //result.getName() -> lấy ra testcase name để truyền vào para screenshotName của captureScreenshot() và + "_" + ngày tháng giờ phút fail test case + ".png"
+        //Cách 1 : Theo img base64
+        String screenshotPath = captureScreenshotBase64(webDriver, result.getName()); //result.getName() -> lấy ra testcase name để truyền vào para screenshotName của captureScreenshot() và + "_" + ngày tháng giờ phút fail test case + ".png"
         Reporter.getCurrentTestResult();
         /*Chọn 1 trong 2 sau đây để chọn source ảnh là local/online hay base64 */
         //Img local/online
@@ -45,7 +47,7 @@ public class ReportNGListener implements ITestListener {
         Reporter.log("<br><a target=\"_blank\" href=\"file:///" + screenshotPath + "\">" + "<img src=\"file:///" + screenshotPath + "\" " + "height='100' width='150'/> " + "</a></br>");
 */
         //Img base64
-        Reporter.log("<br><a target=\"_blank\" href=\"data:image/png;base64," + screenshotPath + "\">" + "<img src=\"data:image/png;base64," + screenshotPath + "\" " + "height='100' width='150'/> " + "</a></br>");
+        Reporter.log("<br><a href=\"data:image/png;base64," + screenshotPath + "\">" + "<img src=\"data:image/png;base64," + screenshotPath + "\" " + "height='100' width='150'/> " + "</a></br>");
         Reporter.setCurrentTestResult(null);
 
     }

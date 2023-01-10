@@ -58,11 +58,12 @@ public class Level_15_ReportNG_Screenshot extends BaseTest{
 		log.info("Register - Step 08: Verify register success message is displayed");
 		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed..");
 		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed....");
-		log.info("Register - Step 09: Click to Continue button");
-		homePage = registerPage.clickToContinueButton();
+
 	}
 	@Test
 	public void User_02_User_Login() {
+		log.info("Register - Step 09: Click to Continue button");
+		homePage = registerPage.clickToContinueButton();
 		log.info("Login - Step 01: Navigate to Login page");
 		loginPage = homePage.clickToLoginLink();// Cách 2 : page manager
 		log.info("Login - Step 02: Enter to Email address textbox with value is '" + email + "'");
