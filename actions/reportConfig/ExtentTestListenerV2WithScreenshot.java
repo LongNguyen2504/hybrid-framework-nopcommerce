@@ -1,3 +1,5 @@
+/*Không dùng vì đã upgrade lên extent report v5*/
+/*
 package reportConfig;
 
 import org.openqa.selenium.OutputType;
@@ -20,8 +22,8 @@ public class ExtentTestListenerV2WithScreenshot extends BaseTest implements ITes
 
     @Override
     public void onFinish(ITestContext context) {
-        ExtentManager.endTest();
-        ExtentManager.getReporter().flush();
+        ExtentManagerV2.endTest();
+        ExtentManagerV2.getReporter().flush();
     }
 
     @Override
@@ -31,7 +33,7 @@ public class ExtentTestListenerV2WithScreenshot extends BaseTest implements ITes
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        ExtentManager.getTest().log(LogStatus.PASS, "Test Passed");
+        ExtentManagerV2.getTest().log(LogStatus.PASS, "Test Passed");
     }
 
     @Override
@@ -39,12 +41,12 @@ public class ExtentTestListenerV2WithScreenshot extends BaseTest implements ITes
         Object testClass = result.getInstance();
         WebDriver webDriver = ((BaseTest) testClass).getDriverInstance();
         String base64Screenshot = "data:image/png;base64," + ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.BASE64);
-        ExtentManager.getTest().log(LogStatus.FAIL, "Test Failed", ExtentManager.getTest().addBase64ScreenShot(base64Screenshot));
+        ExtentManagerV2.getTest().log(LogStatus.FAIL, "Test Failed", ExtentManagerV2.getTest().addBase64ScreenShot(base64Screenshot));
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
-        ExtentManager.getTest().log(LogStatus.SKIP, "Test Skipped");
+        ExtentManagerV2.getTest().log(LogStatus.SKIP, "Test Skipped");
     }
 
     @Override
@@ -53,3 +55,4 @@ public class ExtentTestListenerV2WithScreenshot extends BaseTest implements ITes
 
 
 }
+*/

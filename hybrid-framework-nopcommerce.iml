@@ -71,6 +71,7 @@
     <orderEntry type="library" exported="" name="libWebDriverManager" level="project" />
     <orderEntry type="library" exported="" name="libLog4J" level="project" />
     <orderEntry type="library" exported="" name="libReportNG" level="project" />
-    <orderEntry type="library" exported="" name="libExtentReportV2" level="project" />
+    <orderEntry type="library" exported="" name="extentreports-5.0.8" level="project" />
+    <orderEntry type="library" exported="" name="libAllure" level="project" />
   </component>
 </module>

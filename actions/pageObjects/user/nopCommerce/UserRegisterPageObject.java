@@ -1,5 +1,6 @@
 package pageObjects.user.nopCommerce;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
@@ -63,6 +64,7 @@ public class UserRegisterPageObject extends BasePage{
 
 	}
 
+	@Step("Enter to Firstname txtbox with value is {0}") // cơ chế allure tự hiểu {0} = giá trụ của tham số firstname
 	public void inputToFirstnameTxtBox(String firstName) {
 		// TODO Auto-generated method stub
 		waitForElementVisible(driver, RegisterPageUI.FIRST_NAME_TEXTBOX);
@@ -70,6 +72,7 @@ public class UserRegisterPageObject extends BasePage{
 		
 	}
 
+	@Step("Enter to Lastname txtbox with value is {0}") // cơ chế allure tự hiểu {0} = giá trụ của tham số lastName
 	public void inputToLastnameTxtBox(String lastName) {
 		// TODO Auto-generated method stub
 		waitForElementVisible(driver, RegisterPageUI.LAST_NAME_TEXTBOX);
@@ -109,6 +112,7 @@ public class UserRegisterPageObject extends BasePage{
 	}
 
 
+	@Step("Click to continue button after success register}")
 	public UserHomePageObject clickToContinueButton() {
 		// TODO Auto-generated method stub
 		waitForElementClickable(driver, RegisterPageUI.CONTINUE_BUTTON);

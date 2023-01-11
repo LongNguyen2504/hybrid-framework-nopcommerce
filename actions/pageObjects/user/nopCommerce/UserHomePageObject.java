@@ -1,5 +1,6 @@
 package pageObjects.user.nopCommerce;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
@@ -13,6 +14,7 @@ public class UserHomePageObject extends BasePage{
 		this.driver = driver;
 	}
 
+	@Step("Navigate to Register page")
 	public UserRegisterPageObject clickToRegisterLink() {
 		// TODO Auto-generated method stub
 		waitForElementClickable(driver, HomePageUI.REGISTER_LINK);
@@ -20,7 +22,7 @@ public class UserHomePageObject extends BasePage{
 		//return new RegisterPageObject(driver);//return new RegisterPageObject(driver); //Cách 2 : page manager
 		return PageGeneratorManager.getUserRegisterPageObject(driver); //Cách 3 : thông qua hàm của PageGeneratorManager
 	}
-
+	@Step("Navigate to Login page")
 	public UserLoginPageObject clickToLoginLink() {
 		// TODO Auto-generated method stub
 		waitForElementClickable(driver, HomePageUI.LOGIN_LINK);
@@ -30,11 +32,12 @@ public class UserHomePageObject extends BasePage{
 		
 	}
 
+	@Step("Verify 'My Account' link is displayed")
 	public boolean isMyAccountLinkDisplayed() {
 		waitForElementVisible(driver, HomePageUI.MY_ACCOUNT_LINK);
 		return isElementDisplayed(driver, HomePageUI.MY_ACCOUNT_LINK);
 	}
-
+	@Step("Navigate to My Account page")
 	public UserCustomerInfoPageObject clickToMyAccountLink() {
 		// TODO Auto-generated method stub
 		waitForElementClickable(driver, HomePageUI.MY_ACCOUNT_LINK);

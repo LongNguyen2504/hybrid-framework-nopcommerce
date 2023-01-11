@@ -2,19 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d834ba9-5c5d-4ebb-9d74-6243437d09d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/libExtentReportV2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/reportConfig/ExtentManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/reportConfig/ExtentReportListenerV2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/reportConfig/ExtentTestListenerV2WithScreenshot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_15_ExtentReportV2_Screenshot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/extentreports_5_0_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/libAllure.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RunAllure.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/reportConfig/AllureTestListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/reportConfig/ExtentManagerV5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/reportConfig/ExtentReportListenerV5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/reportConfig/ExtentTestManagerV5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/allure.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_15_Allure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_15_ExtentReportV5_Screenshot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/libExtentReportV2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/reportConfig/ExtentReport.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/reportConfig/ReportNGListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/reportConfig/ReportNGListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/commons/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/commons/GlobalConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/GlobalConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/user/nopCommerce/UserCustomerInfoPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/user/nopCommerce/UserCustomerInfoPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/user/nopCommerce/UserHomePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/user/nopCommerce/UserHomePageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/user/nopCommerce/UserLoginPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/user/nopCommerce/UserLoginPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/user/nopCommerce/UserRegisterPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/user/nopCommerce/UserRegisterPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/reportConfig/AllureReport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/reportConfig/ExtentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/reportConfig/ExtentManagerV2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/reportConfig/ExtentReportListenerV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/reportConfig/ExtentReportListenerV2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/reportConfig/ExtentTestListenerV2WithScreenshot.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/reportConfig/ExtentTestListenerV2WithScreenshot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hybrid-framework-nopcommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hybrid-framework-nopcommerce.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/runNopCommerceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/runNopCommerceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scriptLogs/NopCommerce.log" beforeDir="false" afterPath="$PROJECT_DIR$/scriptLogs/NopCommerce.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scriptLogs/NopCommerce.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scriptLogs/NopCommerce.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_15_ReportNG_Screenshot.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_15_ReportNG_Screenshot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_15_ExtentReportV2_Screenshot.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_15_ExtentReportV2_Screenshot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,13 +60,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libExtentReportV2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\resources" />
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\libReportNG" />
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\libWebDriverManager" />
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\libLog4J" />
@@ -108,6 +121,7 @@
       <workItem from="1673000583747" duration="38000" />
       <workItem from="1673001045060" duration="8984000" />
       <workItem from="1673360822254" duration="5165000" />
+      <workItem from="1673434756562" duration="8101000" />
     </task>
     <servers />
   </component>

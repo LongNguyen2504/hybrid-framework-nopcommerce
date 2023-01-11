@@ -1,3 +1,5 @@
+/*Không dùng v2 nữa vì đã upgrade lên v5*/
+/*
 package reportConfig;
 
 import java.util.Calendar;
@@ -69,3 +71,4 @@ public class ExtentReportListenerV2 implements IReporter { //implements IReporte
         Reporter.log(message);
     }
 }
+*/
