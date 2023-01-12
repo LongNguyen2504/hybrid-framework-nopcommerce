@@ -144,3 +144,25 @@
 [INFO ] [2023-01-10 22:24:38,893] Login - Step 05: Verify 'My Account' link is displayed
 [INFO ] [2023-01-10 22:24:38,989] Login - Step 06: Navigte to 'My Account' link
 [INFO ] [2023-01-10 22:24:39,601] Login - Step 07: Verify to 'Customer Info' link
+[INFO ] [2023-01-12 21:13:09,163] Login - Step 01: Navigate to Login page
+[INFO ] [2023-01-12 21:13:10,772] Login - Step 02: Enter to Email address textbox with value is 'afc22896@mail.vn'
+[INFO ] [2023-01-12 21:13:10,862] Login - Step 03: Enter to Pasword textbox with value is '123456'
+[INFO ] [2023-01-12 21:13:10,934] Login - Step 04: Click to Login button
+[INFO ] [2023-01-12 22:19:55,594] Login - Step 01: Navigate to Login page
+[INFO ] [2023-01-12 22:19:56,813] Login - Step 02: Enter to Email address textbox with value is 'null'
+[INFO ] [2023-01-12 22:23:26,656] Pre-Condition - Step 01: Navigate to Login page
+[INFO ] [2023-01-12 22:23:29,952] Pre-Condition - Step 02: Set cookie and reload page 'null'
+[INFO ] [2023-01-12 22:23:38,387] Pre-Condition - Step 05: Verify 'My Account' link is displayed
+[INFO ] [2023-01-12 22:25:42,897] Pre-Condition - Step 01: Navigate to Login page
+[INFO ] [2023-01-12 22:25:43,715] Pre-Condition - Step 02: Set cookie and reload page 'null'
+[INFO ] [2023-01-12 22:25:50,122] Pre-Condition - Step 05: Verify 'My Account' link is displayed
+[INFO ] [2023-01-12 22:26:39,030] Pre-Condition - Step 01: Navigate to Login page
+[INFO ] [2023-01-12 22:26:40,281] Pre-Condition - Step 02: Set cookie and reload page 'null'
+[INFO ] [2023-01-12 22:26:45,455] Pre-Condition - Step 05: Verify 'My Account' link is displayed
+[INFO ] [2023-01-12 22:35:02,156] Pre-Condition - Step 01: Navigate to Login page
+[INFO ] [2023-01-12 22:35:02,875] Pre-Condition - Step 02: Set cookie and reload page ''
+[INFO ] [2023-01-12 22:35:07,515] Pre-Condition - Step 05: Verify 'My Account' link is displayed
+[INFO ] [2023-01-12 22:39:40,987] Pre-Condition - Step 01: Navigate to Login page
+[INFO ] [2023-01-12 22:39:41,671] Pre-Condition - Step 02: Set cookie and reload page ''
+[INFO ] [2023-01-12 22:39:47,086] Pre-Condition - Step 05: Verify 'My Account' link is displayed
+[INFO ] [2023-01-12 22:39:47,173]  -------------------------- PASSED -------------------------- 

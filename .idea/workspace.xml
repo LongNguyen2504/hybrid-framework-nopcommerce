@@ -2,31 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d834ba9-5c5d-4ebb-9d74-6243437d09d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/extentreports_5_0_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/libAllure.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RunAllure.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/reportConfig/AllureTestListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/reportConfig/ExtentManagerV5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/reportConfig/ExtentReportListenerV5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/reportConfig/ExtentTestManagerV5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/allure.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_15_Allure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_15_ExtentReportV5_Screenshot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/libExtentReportV2.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/common/Common_01_Register_Cookie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/common/Common_01_Register_End_User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_16_Share_Data_A.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_16_Share_Data_B.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_16_Share_Data_C_With_Cookie_Demo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/commons/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/commons/GlobalConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/GlobalConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/pageObjects/user/nopCommerce/UserCustomerInfoPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/user/nopCommerce/UserCustomerInfoPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/pageObjects/user/nopCommerce/UserHomePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/user/nopCommerce/UserHomePageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/pageObjects/user/nopCommerce/UserLoginPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/user/nopCommerce/UserLoginPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/pageObjects/user/nopCommerce/UserRegisterPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/user/nopCommerce/UserRegisterPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/reportConfig/AllureReport.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/reportConfig/ExtentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/reportConfig/ExtentManagerV2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/reportConfig/ExtentReportListenerV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/reportConfig/ExtentReportListenerV2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/reportConfig/ExtentTestListenerV2WithScreenshot.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/reportConfig/ExtentTestListenerV2WithScreenshot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hybrid-framework-nopcommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hybrid-framework-nopcommerce.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/commons/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/022b7f03-40bb-4d47-9460-fab0e43bc0a7-attachment" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/07835374-dac2-4f56-abc9-509f84d90c86-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/1cd615af-34d6-4cd4-aff7-5f8d73c35e40-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/20a63459-9cf0-4885-94d5-4be498d89198-attachment" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/52fc5f44-4c70-484d-8c1a-913895f5e64d-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/81274c2e-a7ed-4848-bed0-2b8258cf6be4-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/885b8ead-d6f4-4366-80d9-52e39dc87d38-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/88609b14-22c4-47b0-a0b7-e597669d582c-attachment" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/9be7b5f8-201f-4a0e-9a71-cee006ce55e1-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/b7e56ca3-a59f-4245-b3d7-5f28d31054a0-attachment" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/cdbde46c-dd83-4fbd-a589-c7333cf385b3-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/d22c48cc-037b-4d5e-8ef0-a4382bc39d99-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/d39e1cd1-e0c6-4897-a749-a965046713d5-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/e8d78fc3-17a0-4bc2-808c-efa848cf7295-result.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/runNopCommerceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/runNopCommerceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_15_ExtentReportV2_Screenshot.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_15_ExtentReportV2_Screenshot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scriptLogs/NopCommerce.log" beforeDir="false" afterPath="$PROJECT_DIR$/scriptLogs/NopCommerce.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scriptLogs/NopCommerce.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scriptLogs/NopCommerce.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_14_Log_ReportNG.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_14_Log_ReportNG.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +57,7 @@
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -77,6 +79,7 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.nopcommerce.user" />
+      <recent name="com.nopcommerce.common" />
       <recent name="reportConfig" />
     </key>
   </component>
@@ -122,6 +125,7 @@
       <workItem from="1673001045060" duration="8984000" />
       <workItem from="1673360822254" duration="5165000" />
       <workItem from="1673434756562" duration="8101000" />
+      <workItem from="1673519505673" duration="9794000" />
     </task>
     <servers />
   </component>

@@ -74,7 +74,7 @@ public class Level_14_Log_ReportNG extends BaseTest{
 		log.info("Login - Step 06: Navigte to 'My Account' link");
 		customerInfoPage = homePage.clickToMyAccountLink();
 		log.info("Login - Step 07: Verify to 'Customer Info' link");
-		verifyTrue(customerInfoPage.isCustomerInfoPageDisplayed()); // set false intentionally
+		verifyFalse(customerInfoPage.isCustomerInfoPageDisplayed()); // set false intentionally
 
 
 	}
