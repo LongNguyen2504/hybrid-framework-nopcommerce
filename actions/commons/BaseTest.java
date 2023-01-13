@@ -2,6 +2,7 @@ package commons;
 //Chứa các hàm dùng chung cho cả tầng testcases
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -237,7 +238,7 @@ public class BaseTest {
 			File[] listOfFiles = file.listFiles();
 			for (int i = 0; i < listOfFiles.length; i++) {
 				if(listOfFiles[i].isFile()){
-					System.out.println(listOfFiles[i].getName());
+					//System.out.println(listOfFiles[i].getName());
 					new File(listOfFiles[i].toString()).delete();
 				}
 
@@ -246,6 +247,59 @@ public class BaseTest {
 			System.out.println(e.getMessage());
 		}
 	}
+	protected void closeBrowserDriver() {
+		String cmd = null;
+		try {
+			String osName = GlobalConstants.OS_NAME;
+			log.info("OS name = " + osName);
+
+			String driverInstanceName = driverBaseTest.toString().toLowerCase();
+			log.info("Driver instance name = " + driverInstanceName);
+
+			String browserDriverName = null;
+
+			if (driverInstanceName.contains("chrome")) {
+				browserDriverName = "chromedriver";
+			} else if (driverInstanceName.contains("internetexplorer")) {
+				browserDriverName = "IEDriverServer";
+			} else if (driverInstanceName.contains("firefox")) {
+				browserDriverName = "geckodriver";
+			} else if (driverInstanceName.contains("edge")) {
+				browserDriverName = "msedgedriver";
+			} else if (driverInstanceName.contains("opera")) {
+				browserDriverName = "operadriver";
+			} else {
+				browserDriverName = "safaridriver";
+			}
+
+			if (osName.contains("window")) {
+				cmd = "taskkill /F /FI \"IMAGENAME eq " + browserDriverName + "*\""; // trong cmd gõ trực tiếp thì chỉ gõ taskkill /F /FI "IMAGENAME eq " + browserDriverName + "*"
+			} else {
+				cmd = "pkill " + browserDriverName; // cmd này cho mac/linux
+			}
+
+			/*Case này dành cho IE vì sau khi tắt browser thì IE vẫn giữ cookie của session trước vừa chạy cho classtest*/
+			if (driverBaseTest != null) {
+				driverBaseTest.manage().deleteAllCookies();
+				driverBaseTest.quit();
+			}
+		} catch (Exception e) {
+			log.info(e.getMessage());
+		} finally {
+			try {
+				Process process = Runtime.getRuntime().exec(cmd);
+				process.waitFor();
+			} catch (IOException e) {
+				e.printStackTrace();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+
+
+
 
 
 

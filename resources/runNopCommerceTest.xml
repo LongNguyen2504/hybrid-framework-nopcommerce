@@ -24,11 +24,12 @@
 
 			<!--Trigger common class to get data for test classes below-->
 			<!--<class name="com.nopcommerce.common.Common_01_Register_End_User" />--><!--Đây là data common class để share data test(account đã đăng ký thành công) cho các testclass bên dưới,class Common_01_Register_End_User này sẽ được chạy trước tất cả các testclass bên dưới vì trong source chỉ dùng @BeforeTest-->
-			<class name="com.nopcommerce.common.Common_01_Register_Cookie" /><!--Đây là data common class theo cách sử dụng cookie để cho các testclass bên dưới có data(account đã đăng ký thành công) để sử dụng -->
+			<!--<class name="com.nopcommerce.common.Common_01_Register_Cookie" />--><!--Đây là data common class theo cách sử dụng cookie để cho các testclass bên dưới có data(account đã đăng ký thành công) để sử dụng -->
 			<!--Trigger common class to get data for test classes below-->
 
 			<!--<class name="com.nopcommerce.user.Level_16_Share_Data_A" />--><!--Demo shared data test common class to testclass Level_16_Share_Data_A -->
-			<class name="com.nopcommerce.user.Level_16_Share_Data_C_With_Cookie_Demo" /><!--Demo với common class theo cách cookie set -->
+			<!--<class name="com.nopcommerce.user.Level_16_Share_Data_C_With_Cookie_Demo" />--><!--Demo với common class theo cách cookie set -->
+			<class name="com.nopcommerce.user.Level_17_Custom_Close_Driver" /><!--Demo với common class theo cách cookie set -->
 		</classes>
 	</test>
 

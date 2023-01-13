@@ -455,6 +455,12 @@ public class BasePage {
 		jsExecutor.executeScript("arguments[0].scrollIntoView(true);", getWebElement(driver, locatorType));
 	}
 
+	//Method này dùng để lấy các value attribute của các element dc code bởi các framework javascript như VueJS,... vì không thể getText() như bình thường
+	public String getElementValueByJSWithXpath(WebDriver driver,String xpathLocator){
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+		xpathLocator = xpathLocator.replace("xpath=",""); // bỏ đoạn xpath= ra khỏi locator trước khi pass vào line dưới
+		return (String) jsExecutor.executeScript("return $(document.evaluate(\"" + xpathLocator + "\", document, null, XpathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue).val()");
+	}
 
 	protected void removeAttributeInDOM(WebDriver driver, String locatorType, String attributeRemove) {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
