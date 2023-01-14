@@ -13,7 +13,11 @@ public class BasePageUI {
 	
 	
 	public static final String USER_HOME_LOGOUT_LINK = "xpath=//div[@class='header-links']//a[text()='Log out']";
-	public static final String ADMIN_HOME_LOGOUT_LINK = "//div[@id='navbarText']//a[text()='Logout']']";
-	
-	
+	public static final String ADMIN_HOME_LOGOUT_LINK = "xpath=//div[@id='navbarText']//a[text()='Logout']']";
+
+	public static final String DYNAMIC_TEXTBOX_BY_ID = "xpath=//input[@id='%s']"; //Demo pattern Object ở Level_18_Pattern_Object tương tự dynamic locator tại line 10
+	public static final String DYNAMIC_BUTTON_BY_TEXT = "xpath=//button[text()='%s']";
+	public static final String DYNAMIC_DROPDOWN_BY_NAME = "xpath=//select[@name='%s']";
+	public static final String DYNAMIC_RADIO_BUTTON_BY_LABEL = "xpath=//label[text()='%s']/preceding-sibling::input";
+	public static final String DYNAMIC_CHECKBOX_BY_LABEL = "xpath=//label[contains(text(),'%s')]/following-sibling::input";
 }

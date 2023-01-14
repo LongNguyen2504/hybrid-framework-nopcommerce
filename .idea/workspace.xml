@@ -2,19 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d834ba9-5c5d-4ebb-9d74-6243437d09d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_17_Custom_Close_Driver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_18_Pattern_Object.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions/commons/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/commons/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/21c4862e-03f1-41b0-a546-9d880734b156-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/28b63b36-3713-4fda-a72b-18e14375f929-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/52ca5dce-855d-49b0-a69b-c2d1fae775a5-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/5372bfd1-6878-48bc-9092-9fb479934df7-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/705511b4-5070-4aac-b5b2-79a5945d476e-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/9a868209-4621-4ac8-a443-c7fb7b4f779b-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/d85f5df5-0d51-46fc-8bc5-496134b4a882-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/f3f0e0de-26e9-46c1-ab4d-63ca5e54f538-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/fc609944-1c81-475a-8000-9dabf91849a0-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/2d3c68ab-bf38-4013-8f18-f1e8141cc828-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/548fb1be-a69d-4192-8d42-b9c9b57e2b21-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/836fbd84-8cca-4ed2-bf3b-45be2c60cc20-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/ca82a1dc-b948-4ab0-a328-7e6f1d2d9f5f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/e1b18a49-ccbb-42f0-909d-9ba31540bcd1-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/f91c0fac-611b-4273-aea8-0ef738e100fa-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/user/nopcommerce/BasePageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/user/nopcommerce/BasePageUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/runNopCommerceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/runNopCommerceTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scriptLogs/NopCommerce.log" beforeDir="false" afterPath="$PROJECT_DIR$/scriptLogs/NopCommerce.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scriptLogs/NopCommerce.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scriptLogs/NopCommerce.txt" afterDir="false" />
@@ -117,6 +114,7 @@
       <workItem from="1673434756562" duration="8101000" />
       <workItem from="1673519505673" duration="9794000" />
       <workItem from="1673588652950" duration="5471000" />
+      <workItem from="1673666463994" duration="9677000" />
     </task>
     <servers />
   </component>
