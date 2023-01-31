@@ -46,7 +46,7 @@ public class BasePage {
 	}
 
 	//Get Page Url
-	protected String getPageUrl(WebDriver driver) {
+	public String getPageUrl(WebDriver driver) {
 		return driver.getCurrentUrl();
 	}
 	

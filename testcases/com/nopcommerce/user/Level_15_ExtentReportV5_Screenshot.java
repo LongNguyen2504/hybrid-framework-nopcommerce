@@ -30,7 +30,14 @@ public class Level_15_ExtentReportV5_Screenshot extends BaseTest{
 
 	@Parameters("browser")
 	@BeforeClass
-	public void beforeClass(String browserName) {
+	public void beforeClass(String browserName,Method method) {
+		/*Có thể làm các step pre-condition nhưng k nên đưa extentReport như 2 line 35 36 dưới đây vào BeforeClass vì khi đưa vào nó sẽ hiểu BeforeClass dc tính là 1 testcase -> tính số lượng testcases sai gây hiểu lầm
+		* do đó nếu muốn vẫn dùng log để in ra mà k cần gọi startTest  của extentReport  trong @BeforeClass thì có 2 cách :
+		* 1.Ta sẽ k cần ghi log cho pre-condition trong beforeClass như thế này
+		* 2.gọi getTest và log ra luôn mà k cần gọi startTest trước đó ví dụ : ExtentTestManagerV5.getTest().log(Status.INFO,"Pre-Condition - Step 01: ....")*/
+	//	ExtentTestManagerV5.startTest(method.getName(), "Pre-Condition for all testcases here"); //-> ko nên dùng startTest trong đây
+	//	ExtentTestManagerV5.getTest().log(Status.INFO,"Register - Step 01: Open 'Register' page"); // có thể dùng để gọi log mà k cần tới startTest trước nó -> recommend ko nên vì pre-condition có thể bỏ hẳn log
+
 		driver = getBrowserDriver(browserName);
 		homePage = PageGeneratorManager.getUserHomePageObject(driver);
 		firstName = "Automation";
@@ -45,7 +52,7 @@ public class Level_15_ExtentReportV5_Screenshot extends BaseTest{
 	@Test
 	public void User_01_User_Register(Method method) {
 		ExtentTestManagerV5.startTest(method.getName(), "User_01_User_Register");
-		ExtentTestManagerV5.getTest().log(Status.INFO,"Register - Step 01: Open 'Register' page");//log.info() = description note khi in ra log,dùng tên chức năng như tên testcase - Step x - mô tả nội dung step(navigate,action,close,...) + data
+		ExtentTestManagerV5.getTest().log(Status.INFO,"Register - Step 01: Open 'Register' page");//description note khi in ra log,dùng tên chức năng như tên testcase - Step x - mô tả nội dung step(navigate,action,close,...) + data
 		registerPage = homePage.clickToRegisterLink();
 		ExtentTestManagerV5.getTest().log(Status.INFO,"Register - Step 02: Enter to Firstname textbox with value is '" + firstName + "'");
 		registerPage.inputToFirstnameTxtBox(firstName);

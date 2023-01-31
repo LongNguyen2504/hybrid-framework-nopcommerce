@@ -124,7 +124,9 @@ public class BaseTest {
 		if(browserList == BrowserList.FIREFOX) {
 //			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDriver\\geckodriver.exe");
 			WebDriverManager.firefoxdriver().setup(); // tự tải driver tương ứng và thay thế step setProperty
-			driverBaseTest = new FirefoxDriver();
+			FirefoxOptions options = new FirefoxOptions();
+			options.setAcceptInsecureCerts(true); // by pass ssl certificate if prompted
+			driverBaseTest = new FirefoxDriver(options);
 		}else if (browserList == BrowserList.HEAD_FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions options = new FirefoxOptions();
@@ -134,7 +136,9 @@ public class BaseTest {
 		}
 		else if (browserList == BrowserList.CHROME) {
 			WebDriverManager.chromedriver().setup();
-			driverBaseTest = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			options.setAcceptInsecureCerts(true); // by pass ssl certificate if prompted
+			driverBaseTest = new ChromeDriver(options);
 		}else if (browserList == BrowserList.HEAD_CHROME) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions option = new ChromeOptions();
@@ -201,7 +205,6 @@ public class BaseTest {
 		return pass;
 	}
 
-
 	protected boolean verifyFalse(boolean condition) {
 		boolean pass = true;
 		try {
@@ -215,7 +218,6 @@ public class BaseTest {
 		}
 		return pass;
 	}
-
 
 	protected boolean verifyEquals(Object actual, Object expected) {
 		boolean pass = true;
@@ -247,6 +249,7 @@ public class BaseTest {
 			System.out.println(e.getMessage());
 		}
 	}
+
 	protected void closeBrowserDriver() {
 		String cmd = null;
 		try {
@@ -296,13 +299,6 @@ public class BaseTest {
 			}
 		}
 	}
-
-
-
-
-
-
-
 
 	protected int randNumber() {
 		Random rand = new Random();

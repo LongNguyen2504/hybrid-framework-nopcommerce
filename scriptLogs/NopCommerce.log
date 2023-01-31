@@ -346,3 +346,33 @@
 [INFO ] [2023-01-14 13:16:43,824] Login - Step 09: Verify to 'Customer Info' link
 [INFO ] [2023-01-14 13:16:43,960] OS name = Windows 10
 [INFO ] [2023-01-14 13:16:43,960] Driver instance name = firefoxdriver: firefox on windows (6a164c78-bfc6-45e6-8ff2-419fe247d033)
+[INFO ] [2023-01-31 21:46:06,710] Pre-condition - Step 01: Open browser and get admin URL
+[INFO ] [2023-01-31 21:46:10,809] Pre-condition - Step 02: Enter to Username textbox with value : automationFC
+[INFO ] [2023-01-31 21:46:11,053] Pre-condition - Step 03: Enter to Password textbox with value : automationfc
+[INFO ] [2023-01-31 21:46:11,201] Pre-condition - Step 04: Click to Log In button
+[INFO ] [2023-01-31 21:46:13,567] Create_Post - Step 01: Click to 'Posts' menu link
+[INFO ] [2023-01-31 21:46:14,810] Create_Post - Step 02: Get 'Search Posts' page Url
+[INFO ] [2023-01-31 21:46:14,819] Create_Post - Step 03: Click to 'Add New' button
+[INFO ] [2023-01-31 21:46:18,519] Create_Post - Step 04: Enter to post title
+[INFO ] [2023-01-31 21:46:23,515] Create_Post - Step 05: Enter to body
+[INFO ] [2023-01-31 21:46:24,677] Create_Post - Step 06: Click to 'Publish' button
+[INFO ] [2023-01-31 21:46:25,477] Create_Post - Step 07: Click to Confirm 'Publish' button
+[INFO ] [2023-01-31 21:46:45,519] Create_Post - Step 08: Verify 'Post published.' message is displayed
+[INFO ] [2023-01-31 21:46:47,039] Search_Post - Step 01: Open 'Search Post' page
+[INFO ] [2023-01-31 21:46:49,448] OS name = Windows 10
+[INFO ] [2023-01-31 21:46:49,448] Driver instance name = firefoxdriver: firefox on windows (fa03d0ff-13fb-400b-bba1-fe6523c2816b)
+[INFO ] [2023-01-31 21:50:52,526] Pre-condition - Step 01: Open browser and get admin URL
+[INFO ] [2023-01-31 21:51:32,446] Pre-condition - Step 02: Enter to Username textbox with value : automationFC
+[INFO ] [2023-01-31 21:51:32,617] Pre-condition - Step 03: Enter to Password textbox with value : automationfc
+[INFO ] [2023-01-31 21:51:32,758] Pre-condition - Step 04: Click to Log In button
+[INFO ] [2023-01-31 21:51:35,407] Create_Post - Step 01: Click to 'Posts' menu link
+[INFO ] [2023-01-31 21:51:38,632] Create_Post - Step 02: Get 'Search Posts' page Url
+[INFO ] [2023-01-31 21:51:38,638] Create_Post - Step 03: Click to 'Add New' button
+[INFO ] [2023-01-31 21:51:41,783] Create_Post - Step 04: Enter to post title
+[INFO ] [2023-01-31 21:51:42,224] Create_Post - Step 05: Enter to body
+[INFO ] [2023-01-31 21:51:43,445] Create_Post - Step 06: Click to 'Publish' button
+[INFO ] [2023-01-31 21:51:44,034] Create_Post - Step 07: Click to Confirm 'Publish' button
+[INFO ] [2023-01-31 21:51:44,347] Create_Post - Step 08: Verify 'Post published.' message is displayed
+[INFO ] [2023-01-31 21:52:14,452] Search_Post - Step 01: Open 'Search Post' page
+[INFO ] [2023-01-31 21:52:17,013] OS name = Windows 10
+[INFO ] [2023-01-31 21:52:17,013] Driver instance name = firefoxdriver: firefox on windows (049f92c2-eec2-4d84-8c7d-d174e30dfefd)

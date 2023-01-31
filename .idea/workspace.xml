@@ -2,19 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d834ba9-5c5d-4ebb-9d74-6243437d09d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_18_Pattern_Object.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminDashboardPO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminLoginPO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminPageGeneratorManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminPostAddNewPO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminPostCategoriesPO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminPostSearchPO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminPostTagPO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminProductAddNewPO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminProductAttributePO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminProductTagPO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/user/UserHomePO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/user/UserSearchPostPO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/admin/AdminDashboardPageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/admin/AdminLoginPageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/admin/AdminPostAddNewPageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/admin/AdminPostSearchPageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/admin/AdminPostTagPageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/user/UserHomePageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/user/UserPostSearchPageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/runWordPressAdmin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/com/wordpress/admin/Post_01_Create_Read_Update_Delete_Search.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions/commons/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/2d3c68ab-bf38-4013-8f18-f1e8141cc828-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/548fb1be-a69d-4192-8d42-b9c9b57e2b21-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/836fbd84-8cca-4ed2-bf3b-45be2c60cc20-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/ca82a1dc-b948-4ab0-a328-7e6f1d2d9f5f-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/e1b18a49-ccbb-42f0-909d-9ba31540bcd1-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/f91c0fac-611b-4273-aea8-0ef738e100fa-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/user/nopcommerce/BasePageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/user/nopcommerce/BasePageUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/runNopCommerceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/runNopCommerceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/commons/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/2f181e87-95a5-41df-94ac-99e37f475700-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/5f18dbb9-f1a6-49b2-a3d4-0da6eebfaef0-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/8cb28f30-cb88-4fd7-9f98-a12c8a4459c1-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/e54f16b5-5aac-41a0-8230-b5a3cbec45c9-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/ec5602ae-9298-45ca-aaa0-63113c23a2d1-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/log4j.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scriptLogs/NopCommerce.log" beforeDir="false" afterPath="$PROJECT_DIR$/scriptLogs/NopCommerce.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scriptLogs/NopCommerce.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scriptLogs/NopCommerce.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_15_ExtentReportV5_Screenshot.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_15_ExtentReportV5_Screenshot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +77,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\resources" />
+      <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\actions\pageObjects" />
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\libReportNG" />
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\libWebDriverManager" />
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\libLog4J" />
@@ -64,13 +85,18 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\conflictdependencies" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.wordpress.admin" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.nopcommerce.user" />
-      <recent name="com.nopcommerce.common" />
-      <recent name="reportConfig" />
+      <recent name="pageObjects.wordpress.admin" />
+      <recent name="pageUIs.wordpress.user" />
+      <recent name="pageUIs.wordpress.admin" />
+      <recent name="pageObjects.wordpress.user" />
+      <recent name="com.wordpress.posts" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.F:/Be Coding/QA automation/03-Java Hybrid Framework/resources/runNopCommerceTest.xml">
+  <component name="RunManager" selected="TestNG.F:/Be Coding/QA automation/03-Java Hybrid Framework/resources/runWordPressAdmin.xml">
     <configuration name="F:/Be Coding/QA automation/03-Java Hybrid Framework/resources/runFacebook.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="hybrid-framework-nopcommerce" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runFacebook.xml" />
@@ -91,8 +117,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="F:/Be Coding/QA automation/03-Java Hybrid Framework/resources/runWordPressAdmin.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="hybrid-framework-nopcommerce" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runWordPressAdmin.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.F:/Be Coding/QA automation/03-Java Hybrid Framework/resources/runWordPressAdmin.xml" />
         <item itemvalue="TestNG.F:/Be Coding/QA automation/03-Java Hybrid Framework/resources/runNopCommerceTest.xml" />
         <item itemvalue="TestNG.F:/Be Coding/QA automation/03-Java Hybrid Framework/resources/runFacebook.xml" />
       </list>
@@ -115,6 +152,9 @@
       <workItem from="1673519505673" duration="9794000" />
       <workItem from="1673588652950" duration="5471000" />
       <workItem from="1673666463994" duration="9677000" />
+      <workItem from="1674139925236" duration="4308000" />
+      <workItem from="1675082574363" duration="967000" />
+      <workItem from="1675161276759" duration="14288000" />
     </task>
     <servers />
   </component>
