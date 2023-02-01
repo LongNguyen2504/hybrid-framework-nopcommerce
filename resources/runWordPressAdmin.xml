@@ -18,7 +18,8 @@
 	</listeners>
 	<test name="Run on Firefox">
 		<parameter name="browser" value="firefox" />
-		<parameter name="urlName" value="http://userwordpress.net/wp-admin" />
+		<parameter name="urlAdmin" value="http://userwordpress.net/wp-admin" />
+		<parameter name="urlUser" value="http://userwordpress.net/" />
 		<classes>
 			<class name="com.wordpress.admin.Post_01_Create_Read_Update_Delete_Search" />
 		</classes>

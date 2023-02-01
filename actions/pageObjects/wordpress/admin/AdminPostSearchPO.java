@@ -16,4 +16,22 @@ public class AdminPostSearchPO extends BasePage {
         return AdminPageGeneratorManager.getAdminPostAddNewPO(driver);
 
     }
+
+    public void enterToSearchTextbox(String postTitle) {
+        waitForElementVisible(driver,AdminPostSearchPageUI.SEARCH_TEXTBOX);
+        sendkeyToElement(driver,AdminPostSearchPageUI.SEARCH_TEXTBOX,postTitle);
+    }
+
+    public void clickToSearchPostsButton() {
+        waitForElementClickable(driver, AdminPostSearchPageUI.SEARCH_BUTTON);
+        clickToElement(driver, AdminPostSearchPageUI.SEARCH_BUTTON);
+    }
+
+    public boolean isPostSearchTableDisplayed(String headerID, String cellValue) {
+        int headerIndex = getListElementSize(driver,AdminPostSearchPageUI.TABLE_HEADER_INDEX_BY_HEADER_NAME,headerID) + 1;
+        waitForElementVisible(driver,AdminPostSearchPageUI.TABLE_ROW_VALUE_BY_HEADER_INDEX,String.valueOf(headerIndex),cellValue);
+        return isElementDisplayed(driver,AdminPostSearchPageUI.TABLE_ROW_VALUE_BY_HEADER_INDEX,String.valueOf(headerIndex),cellValue);
+
+
+    }
 }

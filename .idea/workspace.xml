@@ -2,39 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d834ba9-5c5d-4ebb-9d74-6243437d09d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminDashboardPO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminLoginPO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminPageGeneratorManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminPostAddNewPO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminPostCategoriesPO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminPostSearchPO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminPostTagPO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminProductAddNewPO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminProductAttributePO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminProductTagPO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/user/UserHomePO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/user/UserSearchPostPO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/admin/AdminDashboardPageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/admin/AdminLoginPageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/admin/AdminPostAddNewPageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/admin/AdminPostSearchPageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/admin/AdminPostTagPageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/user/UserHomePageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/user/UserPostSearchPageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/runWordPressAdmin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/com/wordpress/admin/Post_01_Create_Read_Update_Delete_Search.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/libJodaTime.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/user/UserPageGeneratorManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libJodaTime/joda-time-2.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions/commons/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions/commons/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/2f181e87-95a5-41df-94ac-99e37f475700-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/5f18dbb9-f1a6-49b2-a3d4-0da6eebfaef0-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/8cb28f30-cb88-4fd7-9f98-a12c8a4459c1-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/e54f16b5-5aac-41a0-8230-b5a3cbec45c9-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/ec5602ae-9298-45ca-aaa0-63113c23a2d1-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/log4j.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminPostSearchPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminPostSearchPO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/wordpress/user/UserHomePO.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/user/UserHomePO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/wordpress/user/UserSearchPostPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/user/UserPostDetailPO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/0d41867e-79f9-44b8-80f1-82fab0702abe-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/2950a0ac-7c59-4081-afb2-8f8b3a6ed8b8-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/2b1ebd8e-2ce3-456f-9419-5fa64559feb9-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/2f3896c7-3829-41a7-947d-351164452bf7-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/61eaecc9-6c7e-4f43-b315-12044575d570-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/c54df92e-943a-47fd-a572-97c137705a9c-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/d1f2c250-6228-4c60-b296-0f5c91d30137-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/ed6d72c5-5425-4403-ae74-520f08c32185-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid-framework-nopcommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hybrid-framework-nopcommerce.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/admin/AdminPostSearchPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/admin/AdminPostSearchPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/user/UserHomePageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/user/UserHomePageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/user/UserPostSearchPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/user/UserPostDetailPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/runWordPressAdmin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/runWordPressAdmin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scriptLogs/NopCommerce.log" beforeDir="false" afterPath="$PROJECT_DIR$/scriptLogs/NopCommerce.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scriptLogs/NopCommerce.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scriptLogs/NopCommerce.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_15_ExtentReportV5_Screenshot.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_15_ExtentReportV5_Screenshot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/com/wordpress/admin/Post_01_Create_Read_Update_Delete_Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/wordpress/admin/Post_01_Create_Read_Update_Delete_Search.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,18 +61,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/libJodaTime" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\libJodaTime" />
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\resources" />
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\actions\pageObjects" />
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\libReportNG" />
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\libWebDriverManager" />
-      <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\libLog4J" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\conflictdependencies" />
@@ -89,10 +81,10 @@
       <recent name="com.wordpress.admin" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pageObjects.wordpress.user" />
       <recent name="pageObjects.wordpress.admin" />
       <recent name="pageUIs.wordpress.user" />
       <recent name="pageUIs.wordpress.admin" />
-      <recent name="pageObjects.wordpress.user" />
       <recent name="com.wordpress.posts" />
     </key>
   </component>
@@ -155,6 +147,7 @@
       <workItem from="1674139925236" duration="4308000" />
       <workItem from="1675082574363" duration="967000" />
       <workItem from="1675161276759" duration="14288000" />
+      <workItem from="1675244771462" duration="13505000" />
     </task>
     <servers />
   </component>

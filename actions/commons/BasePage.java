@@ -17,6 +17,8 @@ import pageObjects.user.nopCommerce.UserAddressPageObject;
 import pageObjects.user.nopCommerce.UserCustomerInfoPageObject;
 import pageObjects.user.nopCommerce.UserHomePageObject;
 import pageObjects.user.nopCommerce.UserRewardPointPageObject;
+import pageObjects.wordpress.user.UserHomePO;
+import pageObjects.wordpress.user.UserPageGeneratorManager;
 import pageUIs.jQuerryUploadFile.BasePageJQuerryUI;
 import pageUIs.user.nopcommerce.BasePageUI;
 
@@ -702,5 +704,10 @@ public class BasePage {
 	public String getTextboxValueByID(WebDriver driver ,String textboxID) {
 		waitForElementVisible(driver,BasePageUI.DYNAMIC_TEXTBOX_BY_ID,textboxID);
 		return getElementAttribute(driver,BasePageUI.DYNAMIC_TEXTBOX_BY_ID,"value",textboxID);
+	}
+
+	public UserHomePO openEndUserSite(WebDriver driver , String urlUser) {
+		openPageUrl(driver,urlUser);
+		return UserPageGeneratorManager.getUserHomePO(driver);
 	}
 }

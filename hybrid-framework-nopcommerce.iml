@@ -73,5 +73,6 @@
     <orderEntry type="library" exported="" name="libReportNG" level="project" />
     <orderEntry type="library" exported="" name="extentreports-5.0.8" level="project" />
     <orderEntry type="library" exported="" name="libAllure" level="project" />
+    <orderEntry type="library" exported="" name="libJodaTime" level="project" />
   </component>
 </module>
