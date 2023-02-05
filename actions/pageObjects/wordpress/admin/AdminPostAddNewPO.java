@@ -28,6 +28,12 @@ public class AdminPostAddNewPO extends BasePage {
         waitForElementClickable(driver,AdminPostAddNewPageUI.PUBLISH_BUTTON);
         clickToElement(driver,AdminPostAddNewPageUI.PUBLISH_BUTTON);
     }
+
+    public void clickToUpdateButton() {
+        waitForElementClickable(driver,AdminPostAddNewPageUI.UPDATE_BUTTON);
+        clickToElement(driver,AdminPostAddNewPageUI.UPDATE_BUTTON);
+    }
+
     public void clickToConfirmPublishButton() {
         waitForElementClickable(driver,AdminPostAddNewPageUI.CONFIRM_PUBLISH_BUTTON);
         clickToElement(driver,AdminPostAddNewPageUI.CONFIRM_PUBLISH_BUTTON);
@@ -35,6 +41,11 @@ public class AdminPostAddNewPO extends BasePage {
     public boolean isPostPublishedMessageDisplay(String postPublishedMessage) {
         waitForElementVisible(driver,AdminPostAddNewPageUI.PUBLISH_MESSAGE,postPublishedMessage);
         return isElementDisplayed(driver,AdminPostAddNewPageUI.PUBLISH_MESSAGE,postPublishedMessage);
+    }
+
+    public boolean isPostUpdatedMessageDisplay(String postUpdatedMessage) {
+        waitForElementVisible(driver,AdminPostAddNewPageUI.UPDATE_MESSAGE,postUpdatedMessage);
+        return isElementDisplayed(driver,AdminPostAddNewPageUI.UPDATE_MESSAGE,postUpdatedMessage);
     }
 
     public AdminPostSearchPO openSearchPostPageUrl(String searchPostUrl) {

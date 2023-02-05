@@ -17,6 +17,8 @@ import pageObjects.user.nopCommerce.UserAddressPageObject;
 import pageObjects.user.nopCommerce.UserCustomerInfoPageObject;
 import pageObjects.user.nopCommerce.UserHomePageObject;
 import pageObjects.user.nopCommerce.UserRewardPointPageObject;
+import pageObjects.wordpress.admin.AdminDashboardPO;
+import pageObjects.wordpress.admin.AdminPageGeneratorManager;
 import pageObjects.wordpress.user.UserHomePO;
 import pageObjects.wordpress.user.UserPageGeneratorManager;
 import pageUIs.jQuerryUploadFile.BasePageJQuerryUI;
@@ -205,13 +207,23 @@ public class BasePage {
 	protected void sendkeyToElement(WebDriver driver,String locatorType,String keysToSend) {
 		WebElement element = getWebElement(driver,locatorType);
 		element.clear();
+		clearValueInElementByPressKeys(driver,locatorType);
 		element.sendKeys(keysToSend);
 	}
 	protected void sendkeyToElement(WebDriver driver,String locatorType,String keysToSend,String... dynamicValues) {
 		WebElement element = getWebElement(driver,getDynamicXpath(locatorType, dynamicValues));
 		element.clear();
+		clearValueInElementByPressKeys(driver,locatorType);
 		element.sendKeys(keysToSend);
 	}
+
+	protected void clearValueInElementByPressKeys(WebDriver driver,String locatorType) {
+		WebElement element = getWebElement(driver,locatorType);
+		element.sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
+	}
+
+
+
 	
 	protected String getElementText(WebDriver driver,String locatorType) {
 		return getWebElement(driver,locatorType).getText();
@@ -706,8 +718,16 @@ public class BasePage {
 		return getElementAttribute(driver,BasePageUI.DYNAMIC_TEXTBOX_BY_ID,"value",textboxID);
 	}
 
+	/*Live Coding Wordpress*/
+
 	public UserHomePO openEndUserSite(WebDriver driver , String urlUser) {
 		openPageUrl(driver,urlUser);
 		return UserPageGeneratorManager.getUserHomePO(driver);
 	}
+
+	public AdminDashboardPO openAdminDashboardSite(WebDriver driver , String urlAdmin) {
+		openPageUrl(driver,urlAdmin);
+		return AdminPageGeneratorManager.getAdminDashboardPO(driver);
+	}
+
 }

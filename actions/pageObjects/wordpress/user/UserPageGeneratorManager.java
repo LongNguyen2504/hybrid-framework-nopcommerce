@@ -9,6 +9,9 @@ public class UserPageGeneratorManager {
 	public static UserHomePO getUserHomePO(WebDriver driver) {
 		return new UserHomePO(driver);
 	}
+	public static UserSearchPostPO getUserSearchPostPO(WebDriver driver) {
+		return new UserSearchPostPO(driver);
+	}
 
 
 }

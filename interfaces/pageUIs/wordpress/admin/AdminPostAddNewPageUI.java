@@ -7,6 +7,8 @@ public class AdminPostAddNewPageUI {
     public static final String PUBLISH_BUTTON = "xpath=//div[@class='edit-post-header__settings']/button[text()='Publish']";
     public static final String CONFIRM_PUBLISH_BUTTON = "xpath=//div[@class='editor-post-publish-panel__header-publish-button']/button";
     public static final String PUBLISH_MESSAGE = "xpath=//div[@class='components-snackbar__content' and text()='%s']";
+    public static final String UPDATE_MESSAGE = "xpath=//div[@class='components-snackbar__content' and text()='%s']";
+    public static final String UPDATE_BUTTON = "xpath=//div[@class='edit-post-header__settings']/button[text()='Update']";
 
 
 }

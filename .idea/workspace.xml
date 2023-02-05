@@ -2,28 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d834ba9-5c5d-4ebb-9d74-6243437d09d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/libJodaTime.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/user/UserPageGeneratorManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libJodaTime/joda-time-2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/user/UserSearchPostPO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/user/UserSearchPostPageUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions/commons/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/commons/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminPostAddNewPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminPostAddNewPO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminPostSearchPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/admin/AdminPostSearchPO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions/pageObjects/wordpress/user/UserHomePO.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/user/UserHomePO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/pageObjects/wordpress/user/UserSearchPostPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/user/UserPostDetailPO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/0d41867e-79f9-44b8-80f1-82fab0702abe-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/2950a0ac-7c59-4081-afb2-8f8b3a6ed8b8-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/2b1ebd8e-2ce3-456f-9419-5fa64559feb9-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/2f3896c7-3829-41a7-947d-351164452bf7-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/61eaecc9-6c7e-4f43-b315-12044575d570-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/c54df92e-943a-47fd-a572-97c137705a9c-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/d1f2c250-6228-4c60-b296-0f5c91d30137-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/ed6d72c5-5425-4403-ae74-520f08c32185-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hybrid-framework-nopcommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hybrid-framework-nopcommerce.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/wordpress/user/UserPageGeneratorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/wordpress/user/UserPageGeneratorManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/1b7bca08-e640-493b-afa4-7e38f99f65e9-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/2d823cd5-ae0b-4c3a-8efe-c32176e268b1-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/4d987dd6-a9fd-4695-b94e-53a1e6d0a989-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/a4924408-8b97-42dd-88a7-696beee6e9f8-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/c19d1a21-0dda-4f1b-b14b-87b96e25cb90-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/cb49500f-5cce-4c07-ad28-74850805e628-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/fa1b9c1e-5a39-4ede-a424-e56595e605e4-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/admin/AdminPostAddNewPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/admin/AdminPostAddNewPageUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/admin/AdminPostSearchPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/admin/AdminPostSearchPageUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/user/UserHomePageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/user/UserHomePageUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/user/UserPostSearchPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/wordpress/user/UserPostDetailPageUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/runWordPressAdmin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/runWordPressAdmin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scriptLogs/NopCommerce.log" beforeDir="false" afterPath="$PROJECT_DIR$/scriptLogs/NopCommerce.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scriptLogs/NopCommerce.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scriptLogs/NopCommerce.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcases/com/wordpress/admin/Post_01_Create_Read_Update_Delete_Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/wordpress/admin/Post_01_Create_Read_Update_Delete_Search.java" afterDir="false" />
@@ -82,8 +78,8 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="pageObjects.wordpress.user" />
-      <recent name="pageObjects.wordpress.admin" />
       <recent name="pageUIs.wordpress.user" />
+      <recent name="pageObjects.wordpress.admin" />
       <recent name="pageUIs.wordpress.admin" />
       <recent name="com.wordpress.posts" />
     </key>
@@ -148,6 +144,8 @@
       <workItem from="1675082574363" duration="967000" />
       <workItem from="1675161276759" duration="14288000" />
       <workItem from="1675244771462" duration="13505000" />
+      <workItem from="1675417533302" duration="6897000" />
+      <workItem from="1675583112239" duration="5938000" />
     </task>
     <servers />
   </component>
