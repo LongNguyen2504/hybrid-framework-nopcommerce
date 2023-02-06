@@ -3,6 +3,9 @@ package commons;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -46,11 +49,44 @@ public class BaseTest {
 		if(browserList == BrowserList.FIREFOX) {
 //			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDriver\\geckodriver.exe");
 			WebDriverManager.firefoxdriver().setup(); // tự tải driver tương ứng và thay thế step setProperty
-			driverBaseTest = new FirefoxDriver();
+			//Lấy log in console và lưu vào .log để xem lại nhằm mục đích review resources của app và tối ưu thời gian load
+			System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE,"true");
+			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,GlobalConstants.PROJECT_PATH + "/browserLog/FirefoxLog.log");
+			//Setting browser capability
+			FirefoxOptions opt = new FirefoxOptions();
+			opt.addArguments("--disable-notifications"); // chặn popup notification
+			//Chạy ẩn danh
+			opt.addArguments("-private");
+
+			driverBaseTest = new FirefoxDriver(opt);
 		}
 		else if (browserList == BrowserList.CHROME) {
 			WebDriverManager.chromedriver().setup();
-			driverBaseTest = new ChromeDriver();
+			//Disable log in console
+			System.setProperty("webdriver.chrome.args","--disable-logging");
+			System.setProperty("webdriver.chrome.silentOutput","true");
+
+			//Setting browser capability
+			ChromeOptions opt = new ChromeOptions();
+			opt.addArguments("--lang=vi");
+			opt.addArguments("--disable-notifications"); // chặn popup notification
+			opt.addArguments("--disable-geolocation"); //disable geo location
+			//Disable khung "Chrome is being controlled by automated test software"
+			opt.setExperimentalOption("useAutomationExtension",false);
+			opt.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+			//Disable save password prompted
+			Map<String,Object> prefs = new HashMap<String,Object>();
+			prefs.put("credentials_enable_service",false);
+			prefs.put("profile.password_manager_enabled",false);
+			opt.setExperimentalOption("prefs",prefs);
+			//Auto save file dowload when prompted
+/*			prefs.put("profile.default_content_settings.popups",0);
+			prefs.put("dowload.default_directory",GlobalConstants.PROJECT_PATH + "/dowloadFiles");*/
+
+			//Chạy ẩn danh
+//			opt.addArguments("--incognito");
+
+			driverBaseTest = new ChromeDriver(opt);
 		}else if (browserList == BrowserList.EDGE) {
 			WebDriverManager.edgedriver().setup();
 			driverBaseTest = new EdgeDriver();
@@ -128,6 +164,10 @@ public class BaseTest {
 			WebDriverManager.firefoxdriver().setup(); // tự tải driver tương ứng và thay thế step setProperty
 			FirefoxOptions options = new FirefoxOptions();
 			options.setAcceptInsecureCerts(true); // by pass ssl certificate if prompted
+			//Lấy log in console và lưu vào .log để xem lại nhằm mục đích review resources của app và tối ưu thời gian load
+			System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE,"true");
+			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,GlobalConstants.PROJECT_PATH + "/browserLog/FirefoxLog.log");
+
 			driverBaseTest = new FirefoxDriver(options);
 		}else if (browserList == BrowserList.HEAD_FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
@@ -140,6 +180,10 @@ public class BaseTest {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.setAcceptInsecureCerts(true); // by pass ssl certificate if prompted
+			//Disable log in console
+			System.setProperty("webdriver.chrome.args","--disable-logging");
+			System.setProperty("webdriver.chrome.silentOutput","true");
+
 			driverBaseTest = new ChromeDriver(options);
 		}else if (browserList == BrowserList.HEAD_CHROME) {
 			WebDriverManager.chromedriver().setup();

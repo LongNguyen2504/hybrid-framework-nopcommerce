@@ -1067,3 +1067,91 @@
 [INFO ] [2023-02-05 16:23:45,841]  -------------------------- PASSED -------------------------- 
 [INFO ] [2023-02-05 16:23:45,843] OS name = Windows 10
 [INFO ] [2023-02-05 16:23:45,843] Driver instance name = firefoxdriver: firefox on windows (f1d559f0-c808-4cbf-84e3-30b57277dd97)
+[INFO ] [2023-02-06 18:45:22,658] Register - Step 01: Open 'Register' page
+[INFO ] [2023-02-06 18:45:24,212] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-02-06 18:45:54,407] Register - Step 09: Click to Continue button
+[INFO ] [2023-02-06 18:46:24,509] OS name = Windows 10
+[INFO ] [2023-02-06 18:46:24,509] Driver instance name = firefoxdriver: firefox on windows (b49d3c90-5c3c-4c1d-b0da-b3c036952afe)
+[INFO ] [2023-02-06 18:49:04,375] Register - Step 01: Open 'Register' page
+[INFO ] [2023-02-06 18:49:05,335] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-02-06 18:49:35,515] Register - Step 09: Click to Continue button
+[INFO ] [2023-02-06 18:50:05,578] OS name = Windows 10
+[INFO ] [2023-02-06 18:50:05,579] Driver instance name = firefoxdriver: firefox on windows (92c9ffa6-8bbc-4e59-8000-2fa5255182a8)
+[INFO ] [2023-02-06 18:52:55,727] Register - Step 01: Open 'Register' page
+[INFO ] [2023-02-06 18:52:56,698] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-02-06 18:55:59,036] Register - Step 01: Open 'Register' page
+[INFO ] [2023-02-06 18:55:59,868] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-02-06 18:56:30,047] Register - Step 09: Click to Continue button
+[INFO ] [2023-02-06 18:57:00,108] OS name = Windows 10
+[INFO ] [2023-02-06 18:57:00,108] Driver instance name = firefoxdriver: firefox on windows (ee9e1e45-4cdf-459a-886d-a10b86fc200d)
+[INFO ] [2023-02-06 18:58:51,530] Register - Step 01: Open 'Register' page
+[INFO ] [2023-02-06 18:58:52,484] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-02-06 18:59:22,658] Register - Step 09: Click to Continue button
+[INFO ] [2023-02-06 18:59:52,703] OS name = Windows 10
+[INFO ] [2023-02-06 18:59:52,703] Driver instance name = firefoxdriver: firefox on windows (5d25ebe5-599c-4669-b0a2-a03acee29ed6)
+[INFO ] [2023-02-06 19:00:42,867] Register - Step 01: Open 'Register' page
+[INFO ] [2023-02-06 19:00:43,805] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[INFO ] [2023-02-06 19:01:13,976] Register - Step 09: Click to Continue button
+[INFO ] [2023-02-06 19:01:44,026] OS name = Windows 10
+[INFO ] [2023-02-06 19:01:44,026] Driver instance name = firefoxdriver: firefox on windows (2477b8e7-2f27-4f4c-b27a-566b1b63d977)
+[INFO ] [2023-02-06 19:04:58,432] Register - Step 01: Open 'Register' page
+[INFO ] [2023-02-06 19:04:59,445] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-02-06 19:06:51,649] Register - Step 01: Open 'Register' page
+[INFO ] [2023-02-06 19:06:52,473] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-02-06 19:07:22,812] Register - Step 09: Click to Continue button
+[INFO ] [2023-02-06 19:07:52,944] OS name = Windows 10
+[INFO ] [2023-02-06 19:07:52,944] Driver instance name = chromedriver: chrome on windows (22bd56f75d54cb738b942a0e44b47524)
+[INFO ] [2023-02-06 19:12:56,396] Register - Step 01: Open 'Register' page
+[INFO ] [2023-02-06 19:12:57,410] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-02-06 19:13:27,609] Register - Step 09: Click to Continue button
+[INFO ] [2023-02-06 19:13:57,686] OS name = Windows 10
+[INFO ] [2023-02-06 19:13:57,687] Driver instance name = firefoxdriver: firefox on windows (574f69dc-d77c-4c49-8520-7914d8cd7159)
+[INFO ] [2023-02-06 19:18:54,535] Register - Step 01: Open 'Register' page
+[INFO ] [2023-02-06 19:18:55,876] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-02-06 19:19:26,046] Register - Step 09: Click to Continue button
+[INFO ] [2023-02-06 19:19:56,098] OS name = Windows 10
+[INFO ] [2023-02-06 19:19:56,098] Driver instance name = firefoxdriver: firefox on windows (15516219-6ac1-4633-9c15-4310e9b47308)
+[INFO ] [2023-02-06 19:21:11,742] Register - Step 01: Open 'Register' page
+[INFO ] [2023-02-06 19:21:13,026] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-02-06 19:22:52,889] Pre-condition - Step 01: Open browser and Admin site
+[INFO ] [2023-02-06 19:33:53,327] Register - Step 01: Open 'Register' page
+[INFO ] [2023-02-06 19:33:54,421] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-02-06 19:34:24,602] Register - Step 09: Click to Continue button
+[INFO ] [2023-02-06 19:34:54,664] OS name = Windows 10
+[INFO ] [2023-02-06 19:34:54,664] Driver instance name = firefoxdriver: firefox on windows (ab90eb85-6f37-4e93-b835-2096418704d2)
+[INFO ] [2023-02-06 19:36:01,366] Register - Step 01: Open 'Register' page
+[INFO ] [2023-02-06 19:36:02,443] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-02-06 19:41:56,722] Register - Step 01: Open 'Register' page
+[INFO ] [2023-02-06 19:41:58,092] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-02-06 19:42:28,266] Register - Step 09: Click to Continue button
+[INFO ] [2023-02-06 19:42:58,322] OS name = Windows 10
+[INFO ] [2023-02-06 19:42:58,322] Driver instance name = firefoxdriver: firefox on windows (6fa15d9f-1c0c-47d7-b2bd-93c4651555ca)
+[INFO ] [2023-02-06 19:46:08,262] Register - Step 01: Open 'Register' page
+[INFO ] [2023-02-06 19:46:09,240] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-02-06 19:46:39,419] Register - Step 09: Click to Continue button
+[INFO ] [2023-02-06 19:47:09,480] OS name = Windows 10
+[INFO ] [2023-02-06 19:47:09,480] Driver instance name = firefoxdriver: firefox on windows (745174f3-e3a0-4006-8af5-2b0c91c203a1)
+[INFO ] [2023-02-06 19:51:29,394] Register - Step 01: Open 'Register' page
+[INFO ] [2023-02-06 19:51:30,338] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-02-06 19:51:30,455] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[INFO ] [2023-02-06 19:51:30,557] Register - Step 03: Enter date of birth with value is '10'
+[INFO ] [2023-02-06 19:51:30,891] Register - Step 03: Enter month of birth with value is 'August'
+[INFO ] [2023-02-06 19:51:31,201] Register - Step 03: Enter year of birth with value is '1996'
+[INFO ] [2023-02-06 19:51:31,507] Register - Step 04: Enter to Email address textbox with value is 'afc76821@mail.vn'
+[INFO ] [2023-02-06 19:51:31,666] Register - Step 05: Enter to Pasword textbox with value is '123456'
+[INFO ] [2023-02-06 19:51:31,777] Register - Step 06: Enter to Confirm Pasword textbox with value is '123456'
+[INFO ] [2023-02-06 19:51:31,883] Register - Step 07: Click to Register button
+[INFO ] [2023-02-06 19:51:32,643] Register - Step 08: Verify register success message is displayed
+[INFO ] [2023-02-06 19:51:32,793] Register - Step 09: Click to Continue button
+[INFO ] [2023-02-06 19:51:33,361] Login - Step 01: Navigate to Login page
+[INFO ] [2023-02-06 19:51:33,930] Login - Step 02: Enter to Email address textbox with value is 'afc76821@mail.vn'
+[INFO ] [2023-02-06 19:51:34,117] Login - Step 03: Enter to Pasword textbox with value is '123456'
+[INFO ] [2023-02-06 19:51:34,223] Login - Step 04: Click to Login button
+[INFO ] [2023-02-06 19:51:35,013] Login - Step 05: Verify 'My Account' link is displayed
+[INFO ] [2023-02-06 19:51:35,167] Login - Step 06: Navigte to 'My Account' link
+[INFO ] [2023-02-06 19:51:35,737] Login - Step 06: Verify 'First name' value
+[INFO ] [2023-02-06 19:51:35,832] Login - Step 07: Verify 'Last name' value
+[INFO ] [2023-02-06 19:51:35,894] Login - Step 08: Verify 'Email name' value
+[INFO ] [2023-02-06 19:51:35,957] Login - Step 09: Verify to 'Customer Info' link
+[INFO ] [2023-02-06 19:51:36,107] OS name = Windows 10
+[INFO ] [2023-02-06 19:51:36,107] Driver instance name = firefoxdriver: firefox on windows (ed4dd96c-ca17-4b65-966a-716f19887f12)

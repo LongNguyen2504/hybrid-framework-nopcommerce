@@ -47,13 +47,13 @@ public class Level_18_Pattern_Object extends BaseTest{
 		log.info("Register - Step 01: Open 'Register' page"); //log.info() = description note khi in ra log,dùng tên chức năng như tên testcase - Step x - mô tả nội dung step(navigate,action,close,...) + data
 		registerPage = homePage.clickToRegisterLink();
 
-		registerPage.clickToRadioButtonByLabel(driver,"Female");
+		registerPage.clickToRadioButtonByLabel(driver,"Male");
 
 		log.info("Register - Step 02: Enter to Firstname textbox with value is '" + firstName + "'");
-		registerPage.inpuToTextboxByID(driver,"FirstName",firstName); //Pattern Object
+		registerPage.inputToTextboxWithID(driver,"FirstName",firstName); //Pattern Object
 
 		log.info("Register - Step 03: Enter to Lastname textbox with value is '" + lastName + "'");
-		registerPage.inpuToTextboxByID(driver,"LastName",lastName); //Pattern Object
+		registerPage.inputToTextboxWithID(driver,"LastName",lastName); //Pattern Object
 
 		log.info("Register - Step 03: Enter date of birth with value is '" + date + "'");
 		registerPage.selectToDropdownByName(driver,"DateOfBirthDay",date);
@@ -65,15 +65,15 @@ public class Level_18_Pattern_Object extends BaseTest{
 		registerPage.selectToDropdownByName(driver,"DateOfBirthYear",year);
 
 		log.info("Register - Step 04: Enter to Email address textbox with value is '" + email + "'");
-		registerPage.inpuToTextboxByID(driver,"Email",email); //Pattern Object
+		registerPage.inputToTextboxWithID(driver,"Email",email); //Pattern Object
 
 		registerPage.clickToCheckboxByLabel(driver,"Newsletter");
 
 		log.info("Register - Step 05: Enter to Pasword textbox with value is '" + validPassword + "'");
-		registerPage.inpuToTextboxByID(driver,"Password",validPassword); //Pattern Object
+		registerPage.inputToTextboxWithID(driver,"Password",validPassword); //Pattern Object
 
 		log.info("Register - Step 06: Enter to Confirm Pasword textbox with value is '" + confirmPassword + "'");
-		registerPage.inpuToTextboxByID(driver,"ConfirmPassword",confirmPassword); //Pattern Object
+		registerPage.inputToTextboxWithID(driver,"ConfirmPassword",confirmPassword); //Pattern Object
 
 
 		log.info("Register - Step 07: Click to Register button");
@@ -92,10 +92,10 @@ public class Level_18_Pattern_Object extends BaseTest{
 		loginPage = homePage.clickToLoginLink();
 
 		log.info("Login - Step 02: Enter to Email address textbox with value is '" + email + "'");
-		loginPage.inpuToTextboxByID(driver,"Email",email);
+		loginPage.inputToTextboxWithID(driver,"Email",email);
 
 		log.info("Login - Step 03: Enter to Pasword textbox with value is '" + validPassword + "'");
-		loginPage.inpuToTextboxByID(driver,"Password",validPassword);
+		loginPage.inputToTextboxWithID(driver,"Password",validPassword);
 
 		log.info("Login - Step 04: Click to Login button");
 		loginPage.clickToButtonByText(driver,"Log in");

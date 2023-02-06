@@ -176,7 +176,7 @@ public class BasePage {
 		if(locatorType.startsWith("xpath=") || locatorType.startsWith("Xpath=") || locatorType.startsWith("XPATH=") || locatorType.startsWith("XPath=")) {
 			locatorType = String.format(locatorType,(Object[]) dynamicValues);
 		}
-//		System.out.println(locatorType);
+//		System.out.println("locator : " + locatorType);
 		return locatorType;
 	}
 	
@@ -213,12 +213,16 @@ public class BasePage {
 	protected void sendkeyToElement(WebDriver driver,String locatorType,String keysToSend,String... dynamicValues) {
 		WebElement element = getWebElement(driver,getDynamicXpath(locatorType, dynamicValues));
 		element.clear();
-		clearValueInElementByPressKeys(driver,locatorType);
+		clearValueInElementByPressKeys(driver,locatorType,dynamicValues);
 		element.sendKeys(keysToSend);
 	}
 
 	protected void clearValueInElementByPressKeys(WebDriver driver,String locatorType) {
 		WebElement element = getWebElement(driver,locatorType);
+		element.sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
+	}
+	protected void clearValueInElementByPressKeys(WebDriver driver,String locatorType,String... dynamicValues) {
+		WebElement element = getWebElement(driver,getDynamicXpath(locatorType, dynamicValues));
 		element.sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
 	}
 
@@ -525,56 +529,56 @@ public class BasePage {
 	}
 
 
-	protected void waitForElementVisible(WebDriver driver, String locatorType) {
+	public void waitForElementVisible(WebDriver driver, String locatorType) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByLocator(locatorType)));
 	}
-	protected void waitForElementVisible(WebDriver driver, String locatorType,String... dynamicValues) {
+	public void waitForElementVisible(WebDriver driver, String locatorType,String... dynamicValues) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByLocator(getDynamicXpath(locatorType, dynamicValues))));
 	}
 
-	protected void waitForAllElementVisible(WebDriver driver, String locatorType) {
+	public void waitForAllElementVisible(WebDriver driver, String locatorType) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(getByLocator(locatorType)));
 	}
-	protected void waitForAllElementVisible(WebDriver driver, String locatorType,String... dynamicValues) {
+	public void waitForAllElementVisible(WebDriver driver, String locatorType,String... dynamicValues) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(getByLocator(getDynamicXpath(locatorType, dynamicValues))));
 	}
 
-	protected void waitForElementInvisible(WebDriver driver, String locatorType) {
+	public void waitForElementInvisible(WebDriver driver, String locatorType) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(locatorType)));
 	}
 
 	/*Wait for element undisplayed in DOM or not in DOM and override implicit timeout*/
-	protected void waitForElementUndisplayed(WebDriver driver, String locatorType) {
+	public void waitForElementUndisplayed(WebDriver driver, String locatorType) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, shortTimeout);
 		overrideImplicitTimeout(driver,shortTimeout);
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(locatorType)));
 		overrideImplicitTimeout(driver,longTimeout);
 	}
 
-	protected void waitForElementInvisible(WebDriver driver, String locatorType,String... dynamicValues) {
+	public void waitForElementInvisible(WebDriver driver, String locatorType,String... dynamicValues) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(getDynamicXpath(locatorType, dynamicValues))));
 	}
-	
-	protected void waitForAllElementInvisible(WebDriver driver, String locatorType) {
+
+	public void waitForAllElementInvisible(WebDriver driver, String locatorType) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.invisibilityOfAllElements(getListWebElement(driver,locatorType)));
 	}
-	protected void waitForAllElementInvisible(WebDriver driver, String locatorType,String... dynamicValues) {
+	public void waitForAllElementInvisible(WebDriver driver, String locatorType,String... dynamicValues) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.invisibilityOfAllElements(getListWebElement(driver,getDynamicXpath(locatorType, dynamicValues))));
 	}
-	
-	protected void waitForElementClickable(WebDriver driver, String locatorType) {
+
+	public void waitForElementClickable(WebDriver driver, String locatorType) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(locatorType)));
 	}
-	protected void waitForElementClickable(WebDriver driver, String locatorType,String... dynamicValues) {
+	public void waitForElementClickable(WebDriver driver, String locatorType,String... dynamicValues) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(getDynamicXpath(locatorType, dynamicValues))));
 	}
@@ -664,8 +668,8 @@ public class BasePage {
 	 * @param textboxID
 	 * @param keyToSend
 	 */
-	public void inpuToTextboxByID(WebDriver driver,String textboxID, String keyToSend) {
-		waitForAllElementVisible(driver,BasePageUI.DYNAMIC_TEXTBOX_BY_ID,textboxID);
+	public void inputToTextboxWithID(WebDriver driver, String textboxID, String keyToSend) {
+		waitForElementVisible(driver,BasePageUI.DYNAMIC_TEXTBOX_BY_ID,textboxID);
 		sendkeyToElement(driver,BasePageUI.DYNAMIC_TEXTBOX_BY_ID,keyToSend,textboxID);
 	}
 
