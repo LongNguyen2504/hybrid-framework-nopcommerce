@@ -3,18 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3d834ba9-5c5d-4ebb-9d74-6243437d09d8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/commons/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions/commons/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/24bf4201-b49e-43e8-a9e1-a09f50e5b954-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/39c238aa-b1e4-4d68-8d01-2424eb92284f-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/61162ac8-6ac6-473d-83b7-632e6c3fc643-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/7a1d35bd-3ff7-49ce-be9a-6415041f4036-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/9f39a088-fade-49b5-8801-29f88e2ccd0f-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/e21625b6-3d7c-43b8-a2cb-25a1e2276847-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/e6aba8ef-8c69-4a8a-8f3c-feb554a2e8ca-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scriptLogs/NopCommerce.log" beforeDir="false" afterPath="$PROJECT_DIR$/scriptLogs/NopCommerce.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scriptLogs/NopCommerce.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scriptLogs/NopCommerce.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_18_Pattern_Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_18_Pattern_Object.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,6 +128,7 @@
       <workItem from="1675417533302" duration="6897000" />
       <workItem from="1675583112239" duration="5940000" />
       <workItem from="1675649123800" duration="10257000" />
+      <workItem from="1675766541665" duration="5403000" />
     </task>
     <servers />
   </component>

@@ -21,6 +21,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -90,6 +91,9 @@ public class BaseTest {
 		}else if (browserList == BrowserList.EDGE) {
 			WebDriverManager.edgedriver().setup();
 			driverBaseTest = new EdgeDriver();
+		} else if (browserList == BrowserList.SAFARI) {
+			//WebDriverManager.safaridriver().setup();// safari driver đã dc installed sẵn trong MacOS,chỉ cần active trong cmd là có thể dùng nên k cần line này
+			driverBaseTest = new SafariDriver();
 		}else if (browserList == BrowserList.OPERA) {
 			//Selenium 4 không hỗ trợ opera và phantomJS chỉ có selenium 3.x
 			WebDriverManager.operadriver().setup();
