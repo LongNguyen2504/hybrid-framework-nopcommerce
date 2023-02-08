@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d834ba9-5c5d-4ebb-9d74-6243437d09d8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/sauceLab/LoginPagePO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/sauceLab/PageGeneratorManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/sauceLab/ProductPO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/sauceLab/sort/LoginPageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/sauceLab/sort/ProductPageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/runSauceLab.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/com/saucelab/sort/Level_19_Sort_Asc_Desc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/commons/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/142bc5ea-efcc-405c-8234-00fb6c7b0c1d-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/424fa696-ae8e-4092-885e-1c6cc8c64014-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/44451d06-0cbe-4fd3-bf04-a0f02ac2e4b5-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/9bb9b49f-64fc-4a7a-b30b-8baea2ebd36f-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/f3a0ab9b-ae18-455c-b897-58e5ea970b0f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/browserLog/FirefoxLog.log" beforeDir="false" afterPath="$PROJECT_DIR$/browserLog/FirefoxLog.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scriptLogs/NopCommerce.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scriptLogs/NopCommerce.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,15 +51,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libJodaTime" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\libJodaTime" />
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\resources" />
+      <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\libJodaTime" />
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\actions\pageObjects" />
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\libReportNG" />
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\libWebDriverManager" />
@@ -58,14 +71,14 @@
       <recent name="com.wordpress.admin" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pageUIs.sauceLab.sort" />
+      <recent name="pageObjects.sauceLab" />
+      <recent name="com.saucelab.sort" />
       <recent name="pageObjects.wordpress.user" />
       <recent name="pageUIs.wordpress.user" />
-      <recent name="pageObjects.wordpress.admin" />
-      <recent name="pageUIs.wordpress.admin" />
-      <recent name="com.wordpress.posts" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.F:/Be Coding/QA automation/03-Java Hybrid Framework/resources/runNopCommerceTest.xml">
+  <component name="RunManager" selected="TestNG.F:/Be Coding/QA automation/03-Java Hybrid Framework/resources/runSauceLab.xml">
     <configuration name="F:/Be Coding/QA automation/03-Java Hybrid Framework/resources/runFacebook.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="hybrid-framework-nopcommerce" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runFacebook.xml" />
@@ -86,6 +99,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="F:/Be Coding/QA automation/03-Java Hybrid Framework/resources/runSauceLab.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="hybrid-framework-nopcommerce" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runSauceLab.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="F:/Be Coding/QA automation/03-Java Hybrid Framework/resources/runWordPressAdmin.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="hybrid-framework-nopcommerce" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/runWordPressAdmin.xml" />
@@ -98,6 +121,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.F:/Be Coding/QA automation/03-Java Hybrid Framework/resources/runSauceLab.xml" />
         <item itemvalue="TestNG.F:/Be Coding/QA automation/03-Java Hybrid Framework/resources/runNopCommerceTest.xml" />
         <item itemvalue="TestNG.F:/Be Coding/QA automation/03-Java Hybrid Framework/resources/runWordPressAdmin.xml" />
         <item itemvalue="TestNG.F:/Be Coding/QA automation/03-Java Hybrid Framework/resources/runFacebook.xml" />
@@ -129,6 +153,7 @@
       <workItem from="1675583112239" duration="5940000" />
       <workItem from="1675649123800" duration="10257000" />
       <workItem from="1675766541665" duration="5403000" />
+      <workItem from="1675860631532" duration="7222000" />
     </task>
     <servers />
   </component>
