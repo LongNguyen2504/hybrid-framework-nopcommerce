@@ -3,10 +3,7 @@ package commons;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.logging.Log;
@@ -383,6 +380,16 @@ public class BaseTest {
 
 	protected String getCurrentDate() {
 		return getCurrentDay() + "/" + getCurrentMonth() + "/" + getCurrentYear();
+	}
+
+	//Get random number by date time minute second(No duplicate)
+	protected static long getRandomNumberByDateTime(){
+		return Calendar.getInstance().getTimeInMillis() % 100000;
+	}
+
+	//Random email (for better fake data please use generatedata.com,etc...)
+	protected static String getRandomEmail(){
+		return "automation" + getRandomNumberByDateTime() + "@live.com";
 	}
 
 }
