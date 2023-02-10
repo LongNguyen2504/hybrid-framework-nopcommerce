@@ -8,9 +8,13 @@
       <root url="jar://$PROJECT_DIR$/libExtentReportV5/reactive-streams-1.0.3.jar!/" />
       <root url="jar://$PROJECT_DIR$/libExtentReportV5/rxjava-3.0.4.jar!/" />
       <root url="file://$PROJECT_DIR$/libExtentReportV5" />
+      <root url="file://$PROJECT_DIR$/libsFaker" />
+      <root url="file://$PROJECT_DIR$/libsJackson" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
     <jarDirectory url="file://$PROJECT_DIR$/libExtentReportV5" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/libsFaker" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/libsJackson" recursive="false" />
   </library>
 </component>

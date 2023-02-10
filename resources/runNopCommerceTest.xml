@@ -30,7 +30,7 @@
 			<!--<class name="com.nopcommerce.user.Level_16_Share_Data_A" />--><!--Demo shared data test common class to testclass Level_16_Share_Data_A -->
 			<!--<class name="com.nopcommerce.user.Level_16_Share_Data_C_With_Cookie_Demo" />--><!--Demo với common class theo cách cookie set -->
 			<!--<class name="com.nopcommerce.user.Level_17_Custom_Close_Driver" />--><!--Demo với common class theo cách cookie set -->
-			<class name="com.nopcommerce.user.Level_18_Pattern_Object" /><!--Demo pattern object -->
+			<class name="com.nopcommerce.user.Level_20_Fake_Data" /><!--Demo pattern object -->
 		</classes>
 	</test>
 

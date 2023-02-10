@@ -1,0 +1,24 @@
+[INFO ] [2023-02-10 12:13:48,724] Register - Step 01: Open 'Register' page
+[INFO ] [2023-02-10 12:13:49,755] Register - Step 02: Enter to Firstname textbox with value is 'Leigh'
+[INFO ] [2023-02-10 12:13:49,869] Register - Step 03: Enter to Lastname textbox with value is 'Bruen'
+[INFO ] [2023-02-10 12:13:49,977] Register - Step 03: Enter date of birth with value is '10'
+[INFO ] [2023-02-10 12:13:50,308] Register - Step 03: Enter month of birth with value is 'August'
+[INFO ] [2023-02-10 12:13:50,619] Register - Step 03: Enter year of birth with value is '1996'
+[INFO ] [2023-02-10 12:13:50,955] Register - Step 04: Enter to Email address textbox with value is 'evette.willms@yahoo.com'
+[INFO ] [2023-02-10 12:13:51,114] Register - Step 05: Enter to Pasword textbox with value is '30F5DsT'
+[INFO ] [2023-02-10 12:13:51,220] Register - Step 06: Enter to Confirm Pasword textbox with value is '30F5DsT'
+[INFO ] [2023-02-10 12:13:51,327] Register - Step 07: Click to Register button
+[INFO ] [2023-02-10 12:13:52,137] Register - Step 08: Verify register success message is displayed
+[INFO ] [2023-02-10 12:13:52,278] Register - Step 09: Click to Continue button
+[INFO ] [2023-02-10 12:13:52,808] Login - Step 01: Navigate to Login page
+[INFO ] [2023-02-10 12:13:53,323] Login - Step 02: Enter to Email address textbox with value is 'evette.willms@yahoo.com'
+[INFO ] [2023-02-10 12:13:53,477] Login - Step 03: Enter to Pasword textbox with value is '30F5DsT'
+[INFO ] [2023-02-10 12:13:53,578] Login - Step 04: Click to Login button
+[INFO ] [2023-02-10 12:13:54,343] Login - Step 05: Verify 'My Account' link is displayed
+[INFO ] [2023-02-10 12:13:54,498] Login - Step 06: Navigte to 'My Account' link
+[INFO ] [2023-02-10 12:13:54,974] Login - Step 06: Verify 'First name' value
+[INFO ] [2023-02-10 12:13:55,085] Login - Step 07: Verify 'Last name' value
+[INFO ] [2023-02-10 12:13:55,146] Login - Step 08: Verify 'Email name' value
+[INFO ] [2023-02-10 12:13:55,209] Login - Step 09: Verify to 'Customer Info' link
+[INFO ] [2023-02-10 12:13:55,379] OS name = Windows 10
+[INFO ] [2023-02-10 12:13:55,379] Driver instance name = firefoxdriver: firefox on windows (f2c5c9e5-806f-4b61-818c-a4c786b46f64)
