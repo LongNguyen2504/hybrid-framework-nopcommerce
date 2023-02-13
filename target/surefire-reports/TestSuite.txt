@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 13.005 s <<< FAILURE! - in TestSuite
+User_02_User_Login(com.nopcommerce.user.Level_20_Fake_Data)  Time elapsed: 3.149 s  <<< FAILURE!
+java.lang.AssertionError: expected [false] but found [true]
+	at com.nopcommerce.user.Level_20_Fake_Data.User_02_User_Login(Level_20_Fake_Data.java:151)
+

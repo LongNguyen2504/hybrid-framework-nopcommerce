@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import commons.GlobalConstants;
 
 import java.io.File;
+import java.util.List;
 
 //Class này dùng để đọc và store data vào các biến từ file UserData.json trong folder resource
 public class UserDataMapper {
@@ -58,6 +59,8 @@ public class UserDataMapper {
     }
 
 
+
+
     public String getFirstName() {
         return firstName;
     }
@@ -93,4 +96,34 @@ public class UserDataMapper {
     public String getPass() {
         return login.pass;
     }
+
+
+    //Tương tự ta cũng có thể lưu vào 1 list
+/*    @JsonProperty("subjects")
+    private List<Subject> subjects ;
+
+    public List<Subject> getSubjects(){
+        return subjects;
+    }
+
+    public static class Subject{
+        @JsonProperty("name")
+        private String name;
+
+        @JsonProperty("point")
+        private String point;
+
+        public String getName(){
+            return name;
+        }
+
+        public String getpoint(){
+            return point;
+        }
+    }*/
+
+
+
+
+
 }
