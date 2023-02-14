@@ -178,7 +178,7 @@
                     <!-- Argument -->
                     <argLine>
                         <!--configure allure report-->
-                        <!--nếu dùng argLine này với allure sẽ gặp lỗi ? -->
+                        <!--nếu dùng argLine này với allure để chụp screenshot -->
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
                 </configuration>

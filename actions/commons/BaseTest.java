@@ -322,7 +322,7 @@ public class BaseTest {
 				browserDriverName = "safaridriver";
 			}
 
-			if (osName.contains("window")) {
+			if (osName.contains("Window")) {
 				cmd = "taskkill /F /FI \"IMAGENAME eq " + browserDriverName + "*\""; // trong cmd gõ trực tiếp thì chỉ gõ taskkill /F /FI "IMAGENAME eq " + browserDriverName + "*"
 			} else {
 				cmd = "pkill " + browserDriverName; // cmd này cho mac/linux
