@@ -47,6 +47,7 @@ utilities\JDBCHelper.class
 pageUIs\wordpress\admin\AdminPostTagPageUI.class
 pageObjects\sauceLab\ProductPO.class
 pageObjects\user\nopCommerce\UserRegisterPageObject.class
+utilities\Environment.class
 reportConfig\AllureTestListener.class
 pageUIs\wordpress\user\UserSearchPostPageUI.class
 pageObjects\user\nopCommerce\UserLoginPageObject.class

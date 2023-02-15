@@ -120,7 +120,8 @@ public class BaseTest {
 
 
 
-/*	public WebDriver getBrowserDriver(String browserName,String environmentName) {
+/*
+	public WebDriver getBrowserDriver(String browserName,String appURL) {
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 		System.out.println("Run on "+ browserName);
 
@@ -152,11 +153,12 @@ public class BaseTest {
 		}
 		//Driver action here
 		driverBaseTest.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
-		driverBaseTest.get(getEnvironmentUrl(environmentName));
+		driverBaseTest.get(appURL);
 		return driverBaseTest;
-	}*/
+	}
+*/
 
-	public WebDriver getBrowserDriver(String browserName,String urlName) {
+	public WebDriver getBrowserDriver(String browserName,String environmentName) {
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 		System.out.println("Run on "+ browserName);
 
@@ -212,7 +214,7 @@ public class BaseTest {
 		}
 		//Driver action here
 		driverBaseTest.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
-		driverBaseTest.get(urlName);
+		driverBaseTest.get(getEnvironmentUrl(environmentName));
 		return driverBaseTest;
 	}
 
@@ -229,8 +231,10 @@ public class BaseTest {
 			envUrl = "https://admin-demo.nopcommerce.com/";
 		}else if (environment == EnvironmentList.STAGING){
 			envUrl = "https://staging.orangehrmlive.com/";
-		}else if (environment == EnvironmentList.PRODUCTION){
+		}else if (environment == EnvironmentList.PROD){
 			envUrl = "https://production.orangehrmlive.com/";
+		}else {
+			envUrl = null;
 		}
 		return envUrl;
 	}
@@ -322,7 +326,7 @@ public class BaseTest {
 				browserDriverName = "safaridriver";
 			}
 
-			if (osName.contains("window")) {
+			if (osName.contains("Window")) {
 				cmd = "taskkill /F /FI \"IMAGENAME eq " + browserDriverName + "*\""; // trong cmd gõ trực tiếp thì chỉ gõ taskkill /F /FI "IMAGENAME eq " + browserDriverName + "*"
 			} else {
 				cmd = "pkill " + browserDriverName; // cmd này cho mac/linux

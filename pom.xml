@@ -33,6 +33,9 @@
         <faker.version>1.0.1</faker.version>
         <log4j.version>1.2.16</log4j.version>
         <reportng.version>1.1.4</reportng.version>
+
+        <!--Default value - cách đặt tên biến và giá trị để sử dụng trong cmd ví dụ : mvn clean test -Denvironment=dev như sau-->
+        <!--<environment>dev</environment>--> <!--biến environment = dev-->
     </properties>
 
     <!-- Quản lí thư viện -->
@@ -147,6 +150,15 @@
             <artifactId>aspectjweaver</artifactId>
             <version>${aspectj.version}</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.aeonbits.owner/owner -->
+        <!--dependencies cho multiple environment test-->
+        <dependency>
+            <groupId>org.aeonbits.owner</groupId>
+            <artifactId>owner</artifactId>
+            <version>1.0.10</version>
+        </dependency>
+
     </dependencies>
 
     <!-- Compiler/ Run Test -->

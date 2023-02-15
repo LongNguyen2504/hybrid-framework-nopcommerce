@@ -1,12 +1,10 @@
-1676299635284	geckodriver	INFO	Listening on 127.0.0.1:28669
-1676299635504	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--disable-notifications" "-private" "-no-remote" "-profile" "C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofile4kCEvX"
-1676299635776	Marionette	INFO	Marionette enabled
-1676299635780	Marionette	INFO	Listening on port 62042
-Read port: 62042
-1676299635996	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofile4kCEvX\\search.json.mozlz4", (void 0)))
-JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
-JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+1676459199108	geckodriver	INFO	Listening on 127.0.0.1:36256
+1676459199347	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofileNCkwbV"
+1676459199650	Marionette	INFO	Marionette enabled
+1676459199653	Marionette	INFO	Listening on port 56701
+Read port: 56701
+1676459199919	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Admin\\AppData\\Local\\Temp\\rust_mozprofileNCkwbV\\search.json.mozlz4", (void 0)))
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://demo.nopcommerce.com."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://demo.nopcommerce.com."
-1676299645668	Marionette	INFO	Stopped listening on port 62042
+1676459210113	Marionette	INFO	Stopped listening on port 56701

@@ -156,7 +156,7 @@ public class BaseTest {
 		return driverBaseTest;
 	}*/
 
-	public WebDriver getBrowserDriver(String browserName,String urlName) {
+	public WebDriver getBrowserDriver(String browserName,String environmentName) {
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 		System.out.println("Run on "+ browserName);
 
@@ -212,7 +212,7 @@ public class BaseTest {
 		}
 		//Driver action here
 		driverBaseTest.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
-		driverBaseTest.get(urlName);
+		driverBaseTest.get(getEnvironmentUrl(environmentName));
 		return driverBaseTest;
 	}
 

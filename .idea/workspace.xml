@@ -5,9 +5,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d834ba9-5c5d-4ebb-9d74-6243437d09d8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aeonbits_owner_owner_1_0_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/Environment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/nopcommerce/user/Level_21_Multiple_Environment_LibOwner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/nopcommerce/user/Level_21_Multiple_Environment_TestNG_Parameter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/user/Level_21_Multiple_Environment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions/commons/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/19bd334a-f5b2-4825-866b-38f5e6a148cd-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/c3ae58c9-448f-4af5-ac46-a9b3fde32bd5-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/cc657e4c-957c-4857-bb36-8013699f6050-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/e93087ee-921c-4340-999f-b46039b78afd-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/f6130433-a5c8-482d-8a5d-dee16fb60108-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/browserLog/FirefoxLog.log" beforeDir="false" afterPath="$PROJECT_DIR$/browserLog/FirefoxLog.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hybrid-framework-nopcommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hybrid-framework-nopcommerce.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scriptLogs/NopCommerce.log" beforeDir="false" afterPath="$PROJECT_DIR$/scriptLogs/NopCommerce.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scriptLogs/NopCommerce.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scriptLogs/NopCommerce.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commons/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commons/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commons/EnvironmentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commons/EnvironmentList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/runNopCommerceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/runNopCommerceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/staging.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/staging.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/commons/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/commons/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/commons/EnvironmentList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/commons/EnvironmentList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/NopCommerce/Run on Firefox.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/NopCommerce/Run on Firefox.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/NopCommerce/Run on Firefox.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/NopCommerce/Run on Firefox.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/NopCommerce/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/NopCommerce/testng-failed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/html/output.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/html/output.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/html/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/html/overview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/html/suite1_test1_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/html/suite1_test1_results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-com.nopcommerce.user.Level_20_Fake_Data.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/NopCommerce/classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/NopCommerce/classes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/NopCommerce/methods-alphabetical.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/NopCommerce/methods-alphabetical.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/NopCommerce/methods.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/NopCommerce/methods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/NopCommerce/reporter-output.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/NopCommerce/reporter-output.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/NopCommerce/testng.xml.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/NopCommerce/testng.xml.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-failed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/xml/com.nopcommerce.user.Level_20_Fake_Data_results.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/runNopCommerceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runNopCommerceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/staging.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/staging.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +67,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -57,20 +107,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/com/nopcommerce/user" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\src\test\java\com\nopcommerce\user" />
+      <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\src\main\java\commons" />
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\src\test\resources" />
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\src\main\java" />
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\src\test\java\com\nopcommerce" />
-      <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\src\test\java" />
-      <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\src\test" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\conflictdependencies" />
@@ -196,6 +246,9 @@
       <workItem from="1676293689233" duration="189000" />
       <workItem from="1676293950078" duration="8359000" />
       <workItem from="1676348006845" duration="7425000" />
+      <workItem from="1676453647817" duration="6703000" />
+      <workItem from="1676462801509" duration="1315000" />
+      <workItem from="1676467302134" duration="1191000" />
     </task>
     <servers />
   </component>
