@@ -120,7 +120,6 @@ public class BaseTest {
 
 
 
-/*
 	public WebDriver getBrowserDriver(String browserName,String appURL) {
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 		System.out.println("Run on "+ browserName);
@@ -156,9 +155,8 @@ public class BaseTest {
 		driverBaseTest.get(appURL);
 		return driverBaseTest;
 	}
-*/
 
-	public WebDriver getBrowserDriver(String browserName,String environmentName) {
+/*	public WebDriver getBrowserDriver(String browserName,String environmentName) {
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 		System.out.println("Run on "+ browserName);
 
@@ -216,7 +214,7 @@ public class BaseTest {
 		driverBaseTest.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
 		driverBaseTest.get(getEnvironmentUrl(environmentName));
 		return driverBaseTest;
-	}
+	}*/
 
 	public WebDriver getDriverInstance(){ // tạo method này để reportNG có thể gọi dc
 		return this.driverBaseTest;

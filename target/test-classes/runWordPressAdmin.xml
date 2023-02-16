@@ -21,7 +21,7 @@
 		<parameter name="urlAdmin" value="http://userwordpress.net/wp-admin" />
 		<parameter name="urlUser" value="http://userwordpress.net/" />
 		<classes>
-			<class name="com.wordpress.admin.Post_01_Create_Read_Update_Delete_Search" />
+			<class name="com.wordpress.user.User_01_View_User" />
 		</classes>
 		
 <!--		<packages>
