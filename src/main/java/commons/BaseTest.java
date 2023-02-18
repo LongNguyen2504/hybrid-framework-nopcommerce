@@ -1,8 +1,11 @@
 package commons;
 //Chứa các hàm dùng chung cho cả tầng testcases
+//Selenium ver 3 no longer supporting Edge Chromium -> refactor
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
@@ -10,14 +13,18 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 
@@ -156,7 +163,7 @@ public class BaseTest {
 		return driverBaseTest;
 	}
 
-/*	public WebDriver getBrowserDriver(String browserName,String environmentName) {
+/*	public WebDriver getBrowserDriver(String browserName,String environmentName) { //demo cho Level_21_Multiple_Environment_LibOwner
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 		System.out.println("Run on "+ browserName);
 
@@ -215,6 +222,111 @@ public class BaseTest {
 		driverBaseTest.get(getEnvironmentUrl(environmentName));
 		return driverBaseTest;
 	}*/
+
+	public WebDriver getBrowserDriverGrid(String browserName,String environmentName,String osName,String ipAddress,String portNumber) {
+		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
+		System.out.println("Run on "+ browserName);
+
+/*		if(browserList == BrowserList.FIREFOX) {
+//			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDriver\\geckodriver.exe");
+			WebDriverManager.firefoxdriver().setup(); // tự tải driver tương ứng và thay thế step setProperty
+			FirefoxOptions options = new FirefoxOptions();
+			options.setAcceptInsecureCerts(true); // by pass ssl certificate if prompted
+			//Lấy log in console và lưu vào .log để xem lại nhằm mục đích review resources của app và tối ưu thời gian load
+			System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE,"true");
+			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,GlobalConstants.PROJECT_PATH + "/browserLog/FirefoxLog.log");
+
+			driverBaseTest = new FirefoxDriver(options);
+		}else if (browserList == BrowserList.HEAD_FIREFOX) {
+			WebDriverManager.firefoxdriver().setup();
+			FirefoxOptions options = new FirefoxOptions();
+			options.addArguments("--headless");
+			options.addArguments("window-size=1920x1080");
+			driverBaseTest = new FirefoxDriver(options);
+		}
+		else if (browserList == BrowserList.CHROME) {
+			WebDriverManager.chromedriver().setup();
+			ChromeOptions options = new ChromeOptions();
+			options.setAcceptInsecureCerts(true); // by pass ssl certificate if prompted
+			//Disable log in console
+			System.setProperty("webdriver.chrome.args","--disable-logging");
+			System.setProperty("webdriver.chrome.silentOutput","true");
+
+			driverBaseTest = new ChromeDriver(options);
+		}else if (browserList == BrowserList.HEAD_CHROME) {
+			WebDriverManager.chromedriver().setup();
+			ChromeOptions option = new ChromeOptions();
+			option.addArguments("--headless");
+			option.addArguments("window-size=1920x1080");
+			driverBaseTest = new ChromeDriver(option);
+		}else if (browserList == BrowserList.EDGE) {
+			WebDriverManager.edgedriver().setup();
+			driverBaseTest = new EdgeDriver();
+		}else if (browserList == BrowserList.OPERA) {
+			//Selenium 4 không hỗ trợ opera và phantomJS chỉ có selenium 3.x
+			WebDriverManager.operadriver().setup();
+			driverBaseTest = new OperaDriver();
+		}else if (browserList == BrowserList.IE) {
+			WebDriverManager.iedriver().arch32().setup();
+			driverBaseTest = new InternetExplorerDriver();
+		}else if (browserList == BrowserList.COCCOC) {
+			WebDriverManager.chromedriver().driverVersion("x").setup(); // x = version chrome driver trước 6 ver của CocCoc browser
+			ChromeOptions opt = new ChromeOptions();
+			opt.setBinary("C:\\Program Files\\CocCoc\\Browser\\Application\\browser.exe");
+			driverBaseTest = new ChromeDriver(opt);
+		}else {
+			throw new RuntimeException("Browser name invalid");
+		}*/
+
+		DesiredCapabilities capability = null;
+		Platform platform = null;
+
+		if (osName.contains("windows")) {
+			platform = Platform.WINDOWS;
+		} else {
+			platform = Platform.MAC;
+		}
+
+		switch (browserName) {
+			case "firefox" :
+				capability = DesiredCapabilities.firefox();
+				capability.setBrowserName("firefox");
+				capability.setPlatform(platform);
+
+				FirefoxOptions fOptions = new FirefoxOptions();
+				fOptions.merge(capability);
+				break;
+			case "chrome" :
+				capability = DesiredCapabilities.chrome();
+				capability.setBrowserName("chrome");
+				capability.setPlatform(platform);
+
+				ChromeOptions cOptions = new ChromeOptions();
+				cOptions.merge(capability);
+				break;
+			case "edge" :
+				capability = DesiredCapabilities.edge();
+				capability.setBrowserName("edge");
+				capability.setPlatform(platform);
+
+				EdgeOptions eOptions = new EdgeOptions();
+				eOptions.merge(capability);
+				break;
+			default :
+				throw new RuntimeException("Browser is not valid!");
+		}
+
+		try {
+			driverBaseTest = new RemoteWebDriver(new URL(String.format("http://%s:%s/wd/hub", ipAddress, portNumber)), capability); // https wont work
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+		//Driver action here
+		driverBaseTest.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+		driverBaseTest.get(getEnvironmentUrl(environmentName));
+		driverBaseTest.manage().window().maximize(); // phóng to screen để hạn chế bị fail click element
+		return driverBaseTest;
+	}
 
 	public WebDriver getDriverInstance(){ // tạo method này để reportNG có thể gọi dc
 		return this.driverBaseTest;

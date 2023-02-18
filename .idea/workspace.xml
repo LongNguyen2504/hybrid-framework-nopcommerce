@@ -5,83 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d834ba9-5c5d-4ebb-9d74-6243437d09d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_microsoft_sqlserver_mssql_jdbc_11_2_3_jre11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_28.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libJDBCJava11/mssql-jdbc-9.4.1.jre11.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jdbcTest/MySQLConnUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jdbcTest/MySQLTestConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jdbcTest/SQLServerConnUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jdbcTest/SQLTestConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/wordpress/admin/AdminUserPO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageUIs/wordpress/admin/AdminUserPageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/MySQLConnUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/wordpress/user/User_01_View_User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/nopcommerce/grid/Level_23_Selenium_Grid_Apply_In_Framework.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/runNopCommerceGridForLevel23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/startHub.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/28fb4ebb-44bb-4d7c-9847-3dc3936df90a-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/685ba2f1-4102-4b47-b804-31f0f6359034-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/9869f47f-a865-48bd-9d52-a61f41798009-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/d4b204bf-ee39-4202-9a7e-376da4f74320-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/fb8bcd5e-543d-48cc-ba5b-2a8fd11e8dd8-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/browserLog/FirefoxLog.log" beforeDir="false" afterPath="$PROJECT_DIR$/browserLog/FirefoxLog.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hybrid-framework-nopcommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hybrid-framework-nopcommerce.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scriptLogs/NopCommerce.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scriptLogs/NopCommerce.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commons/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commons/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/wordpress/admin/AdminDashboardPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/wordpress/admin/AdminDashboardPO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/wordpress/admin/AdminPageGeneratorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/wordpress/admin/AdminPageGeneratorManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageUIs/wordpress/admin/AdminDashboardPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageUIs/wordpress/admin/AdminDashboardPageUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/runWordPressAdmin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/runWordPressAdmin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/commons/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/commons/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/wordpress/admin/AdminDashboardPO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/wordpress/admin/AdminDashboardPO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageObjects/wordpress/admin/AdminPageGeneratorManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageObjects/wordpress/admin/AdminPageGeneratorManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pageUIs/wordpress/admin/AdminDashboardPageUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageUIs/wordpress/admin/AdminDashboardPageUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/NopCommerce/Run on Firefox.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/NopCommerce/Run on Firefox.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/NopCommerce/testng-failed.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/bullet_point.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/collapseall.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/failed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/html/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/html/output.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/html/overview.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/html/reportng.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/html/reportng.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/html/sorttable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/html/suite1_test1_results.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/html/suites.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/jquery-1.7.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-com.nopcommerce.user.Level_21_Multiple_Environment_LibOwner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/navigator-bullet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/NopCommerce/Run on Firefox.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/NopCommerce/classes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/NopCommerce/groups.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/NopCommerce/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/NopCommerce/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/NopCommerce/methods-alphabetical.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/NopCommerce/methods-not-run.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/NopCommerce/methods.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/NopCommerce/reporter-output.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/NopCommerce/testng.xml.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/NopCommerce/toc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/passed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/skipped.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-failed.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-reports.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-reports.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/xml/com.nopcommerce.user.Level_21_Multiple_Environment_LibOwner_results.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/runWordPressAdmin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runWordPressAdmin.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +60,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libJDBCJava11/mssql-jdbc-9.4.1.jre11.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -141,10 +69,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\src\test\resources" />
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\libJDBCJava11" />
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\src\test\java\com\nopcommerce\user" />
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\src\main\java\commons" />
-      <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\src\test\resources" />
       <recent name="F:\Be Coding\QA automation\03-Java Hybrid Framework\src\main\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -154,11 +82,11 @@
       <recent name="com.wordpress.admin" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.nopcommerce.grid" />
       <recent name="utilities" />
       <recent name="pageUIs.wordpress.admin" />
       <recent name="pageObjects.wordpress.admin" />
       <recent name="com.wordpress.user" />
-      <recent name="com.nopcommerce.user" />
     </key>
   </component>
   <component name="RunManager" selected="TestNG.F:/Be Coding/QA automation/03-Java Hybrid Framework/src/test/resources/runWordPressAdmin.xml">
@@ -274,6 +202,8 @@
       <workItem from="1676462801509" duration="1315000" />
       <workItem from="1676467302134" duration="1191000" />
       <workItem from="1676526141701" duration="16481000" />
+      <workItem from="1676628579100" duration="693000" />
+      <workItem from="1676722228064" duration="5905000" />
     </task>
     <servers />
   </component>
