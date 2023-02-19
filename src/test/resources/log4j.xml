@@ -51,6 +51,14 @@
         <appender-ref ref="testng" />
     </category>
 
+    <category name="com.nopcommerce.grid"> <!--package chứa testcase cần apply-->
+        <priority value="all" />
+        <appender-ref ref="console" />
+        <appender-ref ref="logfile" />
+        <appender-ref ref="file" />
+        <appender-ref ref="testng" />
+    </category>
+
    <!-- <category name="com.bankguru.payment">
         <priority value="all" />
         <appender-ref ref="console" />

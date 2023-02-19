@@ -12,7 +12,6 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateTime;
-import org.joda.time.DateTimeZone;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -31,8 +30,6 @@ import org.testng.Assert;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeSuite;
-import pageObjects.user.nopCommerce.UserHomePageObject;
-import pageObjects.user.nopCommerce.UserRegisterPageObject;
 
 public class BaseTest {
 	private WebDriver driverBaseTest;
@@ -123,8 +120,6 @@ public class BaseTest {
 		driverBaseTest.get(GlobalConstants.PORTAL_PAGE);
 		return driverBaseTest;
 	}
-
-
 
 
 	public WebDriver getBrowserDriver(String browserName,String appURL) {
@@ -226,7 +221,7 @@ public class BaseTest {
 	public WebDriver getBrowserDriverGrid(String browserName,String environmentName,String osName,String ipAddress,String portNumber) {
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 		System.out.println("Run on "+ browserName);
-
+//		đoạn này chưa refactor cho method này
 /*		if(browserList == BrowserList.FIREFOX) {
 //			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDriver\\geckodriver.exe");
 			WebDriverManager.firefoxdriver().setup(); // tự tải driver tương ứng và thay thế step setProperty
@@ -320,6 +315,38 @@ public class BaseTest {
 			driverBaseTest = new RemoteWebDriver(new URL(String.format("http://%s:%s/wd/hub", ipAddress, portNumber)), capability); // https wont work
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
+		}
+		//Driver action here
+		driverBaseTest.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+		driverBaseTest.get(getEnvironmentUrl(environmentName));
+		driverBaseTest.manage().window().maximize(); // phóng to screen để hạn chế bị fail click element
+		return driverBaseTest;
+	}
+
+	//For Cloud testing demo(Browserstack)
+	public WebDriver getBrowserDriverCloudBrowserStack(String browserName, String environmentName, String osName, String osVersion) {
+		System.out.println("Run on "+ browserName);
+
+
+		DesiredCapabilities capability = null;
+		capability.setCapability("os", osName);
+		capability.setCapability("os_version", osVersion);
+		capability.setCapability("browser", browserName);
+		capability.setCapability("browser_version", "latest");
+		capability.setCapability("browserstack.debug", "true");
+		capability.setCapability("project", "NopCommerce");
+		capability.setCapability("name", "Run on " + osName + " and " + browserName );
+
+		try {
+			driverBaseTest = new RemoteWebDriver(new URL(GlobalConstants.BROWSER_STACK_URL), capability);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+
+		if (osName.contains("windows")) {
+			capability.setCapability("resolution","1920x1080"); // xem các option configure có sẵn của browser stack để configure cho code mình
+		} else {
+			capability.setCapability("resolution","1920x1080");
 		}
 		//Driver action here
 		driverBaseTest.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);

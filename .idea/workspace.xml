@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d834ba9-5c5d-4ebb-9d74-6243437d09d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/nopcommerce/grid/Level_23_Selenium_Grid_Apply_In_Framework.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/runNopCommerceGridForLevel23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/startHub.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/nopcommerce/grid/Level_23_Selenium_Cloud_Testing_BrowserStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/runNopCommerceCloudTestingForLevel23.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commons/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commons/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commons/GlobalConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commons/GlobalConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/log4j.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,6 +205,7 @@
       <workItem from="1676526141701" duration="16481000" />
       <workItem from="1676628579100" duration="693000" />
       <workItem from="1676722228064" duration="5905000" />
+      <workItem from="1676798841649" duration="7591000" />
     </task>
     <servers />
   </component>

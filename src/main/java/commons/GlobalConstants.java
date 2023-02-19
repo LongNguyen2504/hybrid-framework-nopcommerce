@@ -34,6 +34,10 @@ public class GlobalConstants {
 	public static final long LONG_TIMEOUT = 30;
 	public static final long RETRY_TEST_FAIL = 3;
 
+	//For cloud testing demo(BrowserStack)
+	public static final String BROWSER_USERNAME = "automationfc1"; // coi trong page profile account để lấy
+	public static final String BROWSER_AUTOMATE_KEY = "HzcRC4Q1fzuQhRJYSkhz";// coi trong page profile account để lấy
+	public static final String BROWSER_STACK_URL = "https://" + BROWSER_USERNAME + ":" + BROWSER_AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 
 
 }
