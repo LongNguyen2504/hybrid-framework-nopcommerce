@@ -39,5 +39,19 @@ public class GlobalConstants {
 	public static final String BROWSER_AUTOMATE_KEY = "HzcRC4Q1fzuQhRJYSkhz";// coi trong page profile account để lấy
 	public static final String BROWSER_STACK_URL = "https://" + BROWSER_USERNAME + ":" + BROWSER_AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 
+	//For cloud testing demo(Saucelab)
+	public static final String SAUCE_USERNAME = "automationfc";
+	public static final String SAUCE_AUTOMATE_KEY = "f8117ac5-9793-4f8d-89ca-6a3c1d7216a5";
+	public static final String SAUCE_URL = "https://" + SAUCE_USERNAME + ":" + SAUCE_AUTOMATE_KEY + "@ondemand.eu-central-1.saucelabs.com:443/wd/hub";
+
+	//For cloud testing demo(CrossBrowser)
+	public static final String CROSS_USERNAME = "damdm@vntesters.com".replaceAll("@", "%40");
+	public static final String CROSS_ACCESS_KEY = "uad436a40401a0c2";
+	public static final String CROSS_URL = "http://" + CROSS_USERNAME + ":" + CROSS_ACCESS_KEY + "@hub.crossbrowsertesting.com:80/wd/hub"; // đây là http không như https của saucelab và browserstack
+
+	//For cloud testing demo(Lambda)
+	public static final String LAMBDA_USERNAME = "automationfc.com";
+	public static final String LAMBDA_ACCESS_KEY = "fillhere";
+	public static final String LAMBDA_URL = "https://" + LAMBDA_USERNAME + ":" + LAMBDA_ACCESS_KEY + "@hub.lambdatest.com/wd/hub";
 
 }

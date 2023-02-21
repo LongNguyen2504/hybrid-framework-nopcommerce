@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
+import factoryEnvironment.*;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateTime;
@@ -44,6 +45,9 @@ public class BaseTest {
 		log = LogFactory.getLog(getClass());
 	}
 
+	public WebDriver getDriverInstance(){ // tạo method này để reportNG có thể gọi dc
+		return this.driverBaseTest;
+	}
 	public WebDriver getBrowserDriver(String browserName) {
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 		System.out.println("Run on "+ browserName);
@@ -218,11 +222,12 @@ public class BaseTest {
 		return driverBaseTest;
 	}*/
 
+	//Của bài selenium grid
 	public WebDriver getBrowserDriverGrid(String browserName,String environmentName,String osName,String ipAddress,String portNumber) {
-		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
-		System.out.println("Run on "+ browserName);
 //		đoạn này chưa refactor cho method này
-/*		if(browserList == BrowserList.FIREFOX) {
+/*		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
+		System.out.println("Run on "+ browserName);
+		if(browserList == BrowserList.FIREFOX) {
 //			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDriver\\geckodriver.exe");
 			WebDriverManager.firefoxdriver().setup(); // tự tải driver tương ứng và thay thế step setProperty
 			FirefoxOptions options = new FirefoxOptions();
@@ -312,7 +317,7 @@ public class BaseTest {
 		}
 
 		try {
-			driverBaseTest = new RemoteWebDriver(new URL(String.format("http://%s:%s/wd/hub", ipAddress, portNumber)), capability); // https wont work
+			driverBaseTest = new RemoteWebDriver(new URL(String.format("http://%s:%s/wd/hub", ipAddress, portNumber)), capability); // https wont work , truyền ipAddress và portNumber của máy hub
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
@@ -323,7 +328,7 @@ public class BaseTest {
 		return driverBaseTest;
 	}
 
-	//For Cloud testing demo(Browserstack)
+	//For Cloud testing demo(Browserstack,còn thiếu saucelab,crossbrowser và lambda nên đã implement trong package factoryEnvironment)
 	public WebDriver getBrowserDriverCloudBrowserStack(String browserName, String environmentName, String osName, String osVersion) {
 		System.out.println("Run on "+ browserName);
 
@@ -334,7 +339,12 @@ public class BaseTest {
 		capability.setCapability("browser", browserName);
 		capability.setCapability("browser_version", "latest");
 		capability.setCapability("browserstack.debug", "true");
-		capability.setCapability("project", "NopCommerce");
+		capability.setCapability("project", "Fill here");
+		if (osName.contains("windows")) {
+			capability.setCapability("resolution","1920x1080"); // xem các option configure có sẵn của browser stack để configure cho code mình
+		} else {
+			capability.setCapability("resolution","1920x1080");
+		}
 		capability.setCapability("name", "Run on " + osName + " and " + browserName );
 
 		try {
@@ -343,11 +353,7 @@ public class BaseTest {
 			e.printStackTrace();
 		}
 
-		if (osName.contains("windows")) {
-			capability.setCapability("resolution","1920x1080"); // xem các option configure có sẵn của browser stack để configure cho code mình
-		} else {
-			capability.setCapability("resolution","1920x1080");
-		}
+
 		//Driver action here
 		driverBaseTest.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
 		driverBaseTest.get(getEnvironmentUrl(environmentName));
@@ -355,11 +361,39 @@ public class BaseTest {
 		return driverBaseTest;
 	}
 
-	public WebDriver getDriverInstance(){ // tạo method này để reportNG có thể gọi dc
-		return this.driverBaseTest;
+
+	//getBrowserDriverFinal demo tại bài [Online 18] - Topic 80 (Framework - Refactor Multiple Environment)
+	protected WebDriver getBrowserDriverFinal(String browserName,String serverName,String envName,String ipAddress,String portNumber,String osName,String osVersion){
+		switch (envName){ // envName = "local","grid","browserStack","Saucelab","CrossBrowserTesting",...
+			case "local":
+				driverBaseTest = new LocalFactory(browserName).createDriver();
+				break;
+			case "grid":
+				driverBaseTest = new GridFactory(browserName,ipAddress,portNumber,osName).createDriver();
+				break;
+			case "browserStack":
+				driverBaseTest = new BrowserStackFactory(browserName,osName,osVersion).createDriver();
+				break;
+			case "sauceLab":
+				driverBaseTest = new SauceLabFactory(browserName,osName).createDriver();
+				break;
+			case "crossBrowser":
+				driverBaseTest = new CrossBrowserFactory(browserName,osName).createDriver();
+				break;
+			case "lambda":
+				driverBaseTest = new LambdaFactory(browserName,osName).createDriver();
+				break;
+			default:
+				driverBaseTest = new LocalFactory(browserName).createDriver();
+				break;
+
+		}
+		driverBaseTest.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+		driverBaseTest.get(getEnvironmentUrl(serverName)); // serverName = TEST,STAGING,PRODUCT,DEV,...
+		return driverBaseTest;
 	}
 
-	private String getEnvironmentUrl(String environmentName){
+	private String getEnvironmentUrl(String environmentName){ // get STAGING,PRODUCTION,TESTING,DEV,..environment a.k.a serverName
 		String envUrl = null;
 		EnvironmentList environment = EnvironmentList.valueOf(environmentName.toUpperCase());
 		if(environment == EnvironmentList.DEV){

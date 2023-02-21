@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="false"  name="NopCommerce">
+
+	<listeners>
+		<listener class-name="commons.MethodListener"></listener> <!--demo Assert Verify - MethodListener trả về lỗi của testcase-->
+		<!--ReportNG configure-->
+
+		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener> <!--trỏ đến thư viện reportNG và tìm class HTMLReporter để có thể generate report -> sau khi run sẽ attack report vào file index.html ở folder test-output/html-->
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener> <!--Line này optional nhưng bắt buộc khi configure trên jenkins vì ở đây cần tạo ra file report xml để sử dụng trên jenkins -> sau khi run sẽ attack report vào file .xml ở folder test-output/xml-->
+		<listener class-name="reportConfig.ReportNGListener"></listener> <!--Line này demo chụp màn hình tại fail testcase và attach ảnh vào reportNG-->
+		<!--<listener class-name="reportConfig.ExtentReportListenerV2"></listener>--><!--line này cho extent report Version 2 không có attach screenshot-->
+		<!--<listener class-name="reportConfig.ExtentTestListenerV2WithScreenshot"></listener>--><!--Line này không dùng vì đã có extent v5 thay thế-->
+		<!--<listener class-name="reportConfig.ExtentReportListenerV5"></listener>-->
+		<!--<listener class-name="reportConfig.AllureTestListener"></listener>-->
+	</listeners>
+	<!--Global parameter goes here-->
+	<parameter name="envName" value="local" /> <!--Demo Level_24_Multi_Envi_Local_Grid_Cloud_Refactor--> <!--value = local,grid,browserStack,sauceLab,CrossBrowser,Lambda,..-->
+	<parameter name="serverName" value="dev" /> <!--Demo Level 21 Multiple Environment_TestNG_Parameter-->
+
+
+	<test name="Run on Firefox">
+		<!--Local parameter-->
+		<!--Số lượng tham số dưới đây tùy thuộc vào môi trường local,grid hay cloud mà testcases cần sử dụng : tối thiểu cần serverName,browser + 1 trong các môi trường sau : grid(envName=grid,ipAddress,portNumber) / cloud(osName,osVersion -> tùy cloud )-->
+		<parameter name="browser" value="firefox" />
+		<parameter name="ipAddress" value="localhost" /> <!-- truyền ipAddress và portNumber của máy hub-->
+		<parameter name="portNumber" value="4444" /> <!-- truyền ipAddress và portNumber của máy hub-->
+		<parameter name="osName" value="windows" /> <!--env = browserStack,Saucelab,CrossBrowser,lambda sẽ sử dụng-->
+		<parameter name="osVersion" value="10" /> <!--env = browserStack,Saucelab,CrossBrowser,lambda sẽ sử dụng-->
+		<classes>
+			<class name="com.nopcommerce.MultiEnvironmentRefactor.Level_24_Multi_Envi_Local_Grid_Cloud_Refactor"></class>
+		</classes>
+	</test>
+
+
+
+
+</suite> <!-- Suite -->
