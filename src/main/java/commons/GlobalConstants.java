@@ -13,9 +13,9 @@ public class GlobalConstants {
 	public static final String OS_NAME = System.getProperty("os.name");
 
 	//File.separator cho phép thay đổi '/' (cho MAC/LINUX/WINDOW) hoặc '\' (chỉ dành cho Window)
-	public static final String UPLOAD_FILE = PROJECT_PATH + File.separator + "uploadFiles" + File.separator;;
+	public static final String UPLOAD_FILE = PROJECT_PATH + File.separator + "uploadFiles" + File.separator;
 	public static final String DOWLOAD_FILE = PROJECT_PATH + File.separator + "dowloadFiles";
-	public static final String BROWSER_LOG = PROJECT_PATH + File.separator + "browserLog";
+	public static final String BROWSER_LOG = PROJECT_PATH + File.separator + "browserLog" + File.separator;
 	public static final String DRAG_DROP_HTML5 = PROJECT_PATH + File.separator + "dragDropHTML5";
 	public static final String AUTO_IT_SCRIPT = PROJECT_PATH + File.separator + "autoIT";
 	public static final String REPORTING_SCREENSHOT = PROJECT_PATH + File.separator + "reportNGImages" + File.separator;

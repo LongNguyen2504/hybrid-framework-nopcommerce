@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests"  name="NopCommerce">
+
+	<listeners>
+		<listener class-name="commons.MethodListener"></listener> <!--demo Assert Verify - MethodListener trả về lỗi của testcase-->
+		<!--ReportNG configure-->
+
+		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener> <!--trỏ đến thư viện reportNG và tìm class HTMLReporter để có thể generate report -> sau khi run sẽ attack report vào file index.html ở folder test-output/html-->
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener> <!--Line này optional nhưng bắt buộc khi configure trên jenkins vì ở đây cần tạo ra file report xml để sử dụng trên jenkins -> sau khi run sẽ attack report vào file .xml ở folder test-output/xml-->
+		<listener class-name="reportConfig.ReportNGListener"></listener> <!--Line này demo chụp màn hình tại fail testcase và attach ảnh vào reportNG-->
+		<!--<listener class-name="reportConfig.ExtentReportListenerV2"></listener>--><!--line này cho extent report Version 2 không có attach screenshot-->
+		<!--<listener class-name="reportConfig.ExtentTestListenerV2WithScreenshot"></listener>--><!--Line này không dùng vì đã có extent v5 thay thế-->
+		<!--<listener class-name="reportConfig.ExtentReportListenerV5"></listener>-->
+		<!--<listener class-name="reportConfig.AllureTestListener"></listener>-->
+	</listeners>
+	<!--Global parameter goes here-->
+	<parameter name="environmentName" value="dev" /> <!--Demo Level 21 Multiple Environment_TestNG_Parameter-->
+
+
+	<test name="Run on Firefox">
+		<!--Local parameter-->
+		<parameter name="browser" value="firefox" />
+		<parameter name="osName" value="windows" />
+		<parameter name="osVersion" value="10" />
+		<classes>
+			<class name="com.nopcommerce.grid.Level_23_Selenium_Cloud_Testing_BrowserStack"></class>
+		</classes>
+	</test>
+
+	<test name="Run on Chrome">
+		<!--Local parameter-->
+		<parameter name="browser" value="chrome" />
+		<parameter name="osName" value="OS X" />
+		<parameter name="osVersion" value="Big Sur" />
+		<classes>
+			<class name="com.nopcommerce.grid.Level_23_Selenium_Cloud_Testing_BrowserStack"></class>
+		</classes>
+	</test>
+
+
+
+</suite> <!-- Suite -->

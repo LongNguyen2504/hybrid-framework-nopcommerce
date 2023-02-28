@@ -2,6 +2,7 @@ package factoryEnvironment;
 
 import commons.BrowserList;
 import commons.GlobalConstants;
+import factoryBrowser.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,7 +25,7 @@ public class LocalFactory {
         BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
         System.out.println("Run on "+ browserName);
 
-        if(browserList == BrowserList.FIREFOX) {
+/*        if(browserList == BrowserList.FIREFOX) {
 //			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDriver\\geckodriver.exe");
             WebDriverManager.firefoxdriver().setup(); // tự tải driver tương ứng và thay thế step setProperty
             FirefoxOptions options = new FirefoxOptions();
@@ -74,6 +75,35 @@ public class LocalFactory {
         }else {
             throw new RuntimeException("Browser name invalid");
         }
+
+ */
+        //bài BrowserDriverFactory sẽ sử dụng đoạn sau  (final đã refactor)
+        switch (browserList){
+            case CHROME:
+                driver = new ChromeDriverFactory().getBrowserDriver();
+                break;
+            case FIREFOX:
+                driver = new FirefoxDriverFactory().getBrowserDriver();
+                break;
+            case SAFARI:
+                driver = new SafariDriverFactory().getBrowserDriver();
+                break;
+            case IE:
+                driver = new IEDriverFactory().getBrowserDriver();
+                break;
+            case EDGE: //chromium not legacy
+                driver = new ChromeDriverFactory().getBrowserDriver();
+                break;
+            case HEAD_CHROME:
+                driver = new HeadlessChromeDriverFactory().getBrowserDriver();
+                break;
+            case HEAD_FIREFOX:
+                driver = new HeadlessFirefoxDriverFactory().getBrowserDriver();
+                break;
+            default:
+                throw new BrowserNotSupportedException(browserName);
+        }
+
         return driver;
     }
 }

@@ -5,17 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d834ba9-5c5d-4ebb-9d74-6243437d09d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/factoryEnvironment/BrowserStackFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/factoryEnvironment/CrossBrowserFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/factoryEnvironment/GridFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/factoryEnvironment/LambdaFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/factoryEnvironment/LocalFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/factoryEnvironment/SauceLabFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/nopcommerce/MultiEnvironmentRefactor/Level_24_Multi_Envi_Local_Grid_Cloud_Refactor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/runNopCommerceForLocalGridCloudEnvironment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/factoryBrowser/BrowserFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/factoryBrowser/BrowserNotSupportedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/factoryBrowser/ChromeDriverFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/factoryBrowser/EdgeDriverFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/factoryBrowser/FirefoxDriverFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/factoryBrowser/HeadlessChromeDriverFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/factoryBrowser/HeadlessFirefoxDriverFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/factoryBrowser/IEDriverFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/factoryBrowser/SafariDriverFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commons/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commons/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/40b0a8b6-c662-4a61-a6cc-cd8ef35339ce-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/944b75a8-26c2-44e3-b0f3-69b71ac74ba5-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/d8b4954e-5823-49e9-993b-4b05195d3cec-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/fde57538-33e0-4934-b1b3-9acf8b6dd4ea-result.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commons/GlobalConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commons/GlobalConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factoryEnvironment/GridFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factoryEnvironment/GridFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factoryEnvironment/LocalFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factoryEnvironment/LocalFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/commons/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/commons/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/commons/GlobalConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/commons/GlobalConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/log4j.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,27 +97,14 @@
       <recent name="com.wordpress.admin" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="factoryBrowser" />
       <recent name="com.nopcommerce.MultiEnvironmentRefactor" />
       <recent name="factoryEnvironment" />
       <recent name="com.nopcommerce.grid" />
       <recent name="utilities" />
-      <recent name="pageUIs.wordpress.admin" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.F:/Be Coding/QA automation/03-Java Hybrid Framework/src/test/resources/runWordPressAdmin.xml">
-    <configuration name="JsonHelper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="utilities.JsonHelper" />
-      <module name="hybrid-framework-nopcommerce" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="utilities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.F:/Be Coding/QA automation/03-Java Hybrid Framework/src/test/resources/runNopCommerceForLocalGridCloudEnvironment.xml">
     <configuration name="MySQLTestConnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="jdbcTest.MySQLTestConnection" />
       <module name="hybrid-framework-nopcommerce" />
@@ -135,6 +131,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="F:/Be Coding/QA automation/03-Java Hybrid Framework/src/test/resources/runNopCommerceForLocalGridCloudEnvironment.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="hybrid-framework-nopcommerce" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/runNopCommerceForLocalGridCloudEnvironment.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="F:/Be Coding/QA automation/03-Java Hybrid Framework/src/test/resources/runNopCommerceTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="hybrid-framework-nopcommerce" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/runNopCommerceTest.xml" />
@@ -157,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.F:/Be Coding/QA automation/03-Java Hybrid Framework/src/test/resources/runNopCommerceForLocalGridCloudEnvironment.xml" />
         <item itemvalue="TestNG.F:/Be Coding/QA automation/03-Java Hybrid Framework/src/test/resources/runWordPressAdmin.xml" />
         <item itemvalue="Application.MySQLTestConnection" />
         <item itemvalue="Application.SQLTestConnection" />
         <item itemvalue="TestNG.F:/Be Coding/QA automation/03-Java Hybrid Framework/src/test/resources/runNopCommerceTest.xml" />
-        <item itemvalue="Application.JsonHelper" />
       </list>
     </recent_temporary>
   </component>
@@ -212,6 +218,8 @@
       <workItem from="1676722228064" duration="5905000" />
       <workItem from="1676798841649" duration="7591000" />
       <workItem from="1676948016185" duration="7396000" />
+      <workItem from="1676981168332" duration="613000" />
+      <workItem from="1677578244364" duration="5641000" />
     </task>
     <servers />
   </component>
